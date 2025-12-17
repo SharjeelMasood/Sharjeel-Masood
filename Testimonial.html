@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharjeel Masood</title>
+  <link rel="icon" href="/img/sharjeel masood.png" type="image/png">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <nav>
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="/img/logo.png" alt="">
+    </a>
+
+
+    <!-- Hamburger icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navbar menu -->
+    <ul class="navbar" id="navbarMenu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li class="dropdown">
+        <a href="About.html">About <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">My Introduction</a></li>
+          <li><a href="#">My Skills</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Services.html">Services <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">WordPress</a></li>
+          <li><a href="#">Figma Design</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Project.html">Projects <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Project 1</a></li>
+          <li><a href="#">Project 2</a></li>
+          <li><a href="#">Project 3</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Blog.html">Blog <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="nested-dropdown">
+            <a href="#">More Blogs <span class="arrow">▼</span></a>
+            <ul class="nested-menu">
+              <li><a href="#">Bootstrap</a></li>
+              <li><a href="#">Figma</a></li>
+              <li><a href="#">WordPress</a></li>
+              <li><a href="#">Elementor</a></li>
+              <li><a href="#">Git / GitHub</a></li>
+              <li><a href="#">WooCommerce</a></li>
+              <li><a href="#">Tailwind CSS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="Testimonial.html">Testimonial</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Social media icons -->
+    <div class="social-icons">
+      <a href="https://wa.me/+923708023058" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <h1>Client Testimonials & Feedback</h1>
+    <p>Real feedback from clients with project details and ratings.</p>
+    <button>Let's Connect</button>
+  </section>
+
+ <!-- CUSTOM TESTIMONIAL CARDS (6 SAME) -->
+<section class="custom-testimonial-grid">
+  <div class="custom-testimonial-card big">
+    <p>"Delivered my website on time with amazing design and performance."</p>
+    <h4>Oliver Brown</h4>
+    <span>Business Owner</span>
+  </div>
+  <div class="custom-testimonial-card big">
+    <p>"Clean code, fast communication, and excellent results."</p>
+    <h4>Emma Wilson</h4>
+    <span>Startup Founder</span>
+  </div>
+  <div class="custom-testimonial-card">
+    <p>"Understood requirements clearly and delivered exactly."</p>
+    <h4>Lucas Johnson</h4>
+    <span>Client</span>
+  </div>
+  <div class="custom-testimonial-card">
+    <p>"Outstanding experience! Website looks fantastic."</p>
+    <h4>Chloe Martin</h4>
+    <span>Entrepreneur</span>
+  </div>
+  <div class="custom-testimonial-card">
+    <p>"Professional, creative, and reliable."</p>
+    <h4>Henry Lee</h4>
+    <span>Business Owner</span>
+  </div>
+  <div class="custom-testimonial-card">
+    <p>"Timely delivery with exceptional quality."</p>
+    <h4>Sophia Davis</h4>
+    <span>Startup Founder</span>
+  </div>
+</section>
+
+  <!-- CLIENT FEEDBACK -->
+  <section class="client-feedback" id="feedbackSection">
+    <h3>Client Feedback</h3>
+    <span class="add-feedback-label">Add Your Feedback</span>
+  </section>
+
+  <button id="seeMoreBtn">See More Reviews</button>
+
+  <!-- FORM (UNCHANGED) -->
+  <div class="new-comment">
+    <input type="text" id="newName" placeholder="Your Name">
+    <textarea id="newComment" placeholder="Your Feedback"></textarea>
+    <label>Rating:
+      <select id="newRating">
+        <option value="1">★</option>
+        <option value="2">★★</option>
+        <option value="3">★★★</option>
+        <option value="4">★★★★</option>
+        <option value="5" selected>★★★★★</option>
+      </select>
+    </label>
+    <button id="submitFeedback">Submit Feedback</button>
+  </div>
+ <!-- Contact section -->
+
+  <section class="contact-cta">
+    <h2>Let’s Work Together</h2>
+    <p>Have a project in mind? Let’s talk.</p>
+
+    <div class="contact-buttons">
+      <a href="mailto:sharjeelmasood1256@gmail.com?subject=Website%20Project%20Inquiry" class="contact-btn primary">
+        <i class="fas fa-envelope"></i> Email Me
+      </a>
+      <a href="Contact.html" class="contact-btn">
+        Contact us
+      </a>
+    </div>
+  </section>
+  <!-- footer -->
+  <button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/img/logo.png" alt="Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="Blog.html">Blogs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-legal">
+        <h4>Legal</h4>
+        <a href="terms&condition.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+          <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Sharjeel Masood. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>const customTestimonials = document.querySelectorAll('.custom-testimonial-card');
+
+function showCustomTestimonials() {
+  const triggerPoint = window.innerHeight * 0.85;
+  customTestimonials.forEach(card => {
+    if (card.getBoundingClientRect().top < triggerPoint) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', showCustomTestimonials);
+window.addEventListener('load', showCustomTestimonials);
+
+    // FEEDBACK SYSTEM (NO REPLY)
+    const feedbackSection = document.getElementById('feedbackSection');
+    const seeMoreBtn = document.getElementById('seeMoreBtn');
+
+    let comments = JSON.parse(localStorage.getItem('clientComments')) || [
+      { name: "Oliver Brown", comment: "Amazing service!", rating: 5 },
+      { name: "Emma Wilson", comment: "Highly recommended.", rating: 5 },
+      { name: "Lucas Johnson", comment: "Very satisfied.", rating: 5 },
+      { name: "Chloe Martin", comment: "Excellent work.", rating: 5 },
+      { name: "Henry Lee", comment: "Professional developer.", rating: 5 },
+      { name: "Sophia Davis", comment: "Fast and reliable.", rating: 5 },
+    ];
+
+    let commentsToShow = 6;
+
+    function renderComments() {
+      const label = document.querySelector('.add-feedback-label');
+      feedbackSection.innerHTML = "";
+      feedbackSection.appendChild(label);
+
+      comments.slice().reverse().slice(0, commentsToShow).forEach(c => {
+        const div = document.createElement('div');
+        div.className = "comment";
+        div.innerHTML = `
+      <p><strong>${c.name}</strong>: ${c.comment}</p>
+      <div class="rating">${'★'.repeat(c.rating)}${'☆'.repeat(5 - c.rating)}</div>
+    `;
+        feedbackSection.appendChild(div);
+      });
+
+      seeMoreBtn.style.display = (commentsToShow >= comments.length) ? 'none' : 'block';
+    }
+
+    submitFeedback.onclick = () => {
+      if (!newName.value.trim() || !newComment.value.trim()) {
+        alert("Name aur feedback likho");
+        return;
+      }
+      comments.push({
+        name: newName.value.trim(),
+        comment: newComment.value.trim(),
+        rating: parseInt(newRating.value)
+      });
+      localStorage.setItem('clientComments', JSON.stringify(comments));
+      newName.value = '';
+      newComment.value = '';
+      newRating.value = '5';
+      commentsToShow = 6;
+      renderComments();
+    };
+
+    seeMoreBtn.onclick = () => {
+      commentsToShow += 6;
+      renderComments();
+    };
+
+    renderComments();
+    // Contact Section
+window.addEventListener("load",()=>{
+  document.querySelector(".contact-cta").classList.add("visible");
+});
+// footer
+
+// Auto year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Reveal animation
+window.addEventListener("load",()=>{
+  document.querySelector(".footer-top").classList.add("visible");
+});
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById("navbarMenu").classList.toggle("show");
+}
+
+// Active menu (perfect fix)
+const currentPage =
+  window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll(".navbar li a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.parentElement.classList.add("active");
+  }
+});
+  </script>
+
+
+</body>
+</html>

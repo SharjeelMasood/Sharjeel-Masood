@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Story of HTML: History, Importance & Uses</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: all 0.5s ease;
+    }
+
+    body.light-mode {
+      background: #fff;
+      color: #333;
+    }
+
+    a {
+      color: #00BFFF;
+      text-decoration: none;
+    }
+
+    body.light-mode a {
+      color: #007bff;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      transition: all 0.5s ease;
+    }
+
+    body.light-mode .top-bar {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .top-bar i {
+      font-size: 28px;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    body.light-mode .top-bar i {
+      color: #333;
+    }
+
+    .top-bar i:hover {
+      transform: scale(1.2);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      transition: all 0.5s ease;
+    }
+
+    body.light-mode .container {
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 25px;
+      color: #00BFFF;
+    }
+
+    body.light-mode h1 {
+      color: #007bff;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 40px;
+      color: #00BFFF;
+    }
+
+    body.light-mode h2 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+
+    .Berners-Lee {
+      
+      width: 50%;
+      height: 80vh;
+      border-radius: 12px;
+      margin: 25px 5%;
+      /* object-fit: cover;
+      object-position: top; */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .img1 {
+        width: 80%;
+        height: 80vh;
+        margin:20px 10%;
+        border-radius: 20px;
+        border: 1px solid #00BFFF;
+        object-fit:fill;
+         
+         
+
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .Berners-Lee,.img1 {
+        width:90%;
+        height: auto;
+        margin: auto 5%;
+          border-radius: 20px;
+      }
+    }
+      /* CSS */
+  #scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF; /* button color */
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* initially hidden */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  #scrollTop:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" title="Go Back" onclick="goBack()"></i>
+    <i class="fas fa-moon" id="themeToggle" title="Toggle Dark/Light"></i>
+  </div>
+
+  <div class="container">
+    <h1>The Story of HTML: History, Importance & Uses</h1>
+    <p>HTML, or HyperText Markup Language, is the backbone of the web. But did you know it was first developed in the early 1990s? Tim Berners-Lee, a scientist at CERN, created HTML to share documents over the internet in a standardized way. His goal was simple: make it easy for anyone to access and share information online.</p>
+
+    <img src="https://freecsc.com/Images/TimBernersLee.jpg" alt="Tim Berners-Lee" class="Berners-Lee">
+
+    <h2>Why HTML Was Created</h2>
+    <p>Before HTML, sharing documents between computers was messy and inconsistent. HTML allowed text, images, and links to be structured in a way that any browser could display correctly. It was the foundation for building websites, and it quickly became the universal language of the web.</p>
+
+    <img src="/img/Html illustraion.png" alt="HTML code illustration" class="img1">
+
+
+    <h2>Why You Should Learn HTML</h2>
+    <p>Learning HTML is your first step into web development. With HTML, you can:</p>
+    <ul>
+      <li>Create structured web pages with headings, paragraphs, and lists.</li>
+      <li>Add links, images, videos, and audio to your content.</li>
+      <li>Build interactive forms for user input.</li>
+      <li>Lay the foundation for styling with CSS and dynamic behavior with JavaScript.</li>
+      <li>Understand the structure behind every website you visit.</li>
+    </ul>
+
+    <img src="img/html structure.png" alt="HTML Structure" class="img1">
+
+    <h2>What You Can Do With HTML</h2>
+    <p>HTML is the first building block for:</p>
+    <ul>
+      <li>Personal websites and portfolios</li>
+      <li>Blogs and online articles</li>
+      <li>Interactive web applications</li>
+      <li>Landing pages for products or services</li>
+      <li>Educational content, tutorials, and e-learning platforms</li>
+    </ul>
+
+    <p>Mastering HTML gives you the confidence to start any web project and is the gateway to learning CSS, JavaScript, and beyond. It’s simple, yet incredibly powerful!</p>
+
+  </div>
+<button id="scrollTop">↑</button>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      if (document.body.classList.contains('light-mode')) {
+        themeToggle.classList.remove('fa-moon');
+        themeToggle.classList.add('fa-sun');
+      } else {
+        themeToggle.classList.remove('fa-sun');
+        themeToggle.classList.add('fa-moon');
+      }
+    });
+
+    function goBack() { window.history.back(); }
+      const scrollTopBtn = document.getElementById('scrollTop');
+
+  // Show button after scrolling 200px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top on click
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  </script>
+
+</body>
+
+</html>

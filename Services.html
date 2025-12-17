@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharjeel Masood</title>
+  <link rel="icon" href="/img/sharjeel masood.png" type="image/png">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <nav>
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="/img/logo.png" alt="">
+    </a>
+
+
+    <!-- Hamburger icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navbar menu -->
+    <ul class="navbar" id="navbarMenu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li class="dropdown">
+        <a href="About.html">About <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="My SKill.html">My Skills</a></li>
+          <li><a href="My Resume.html">My Resume</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Services.html">Services <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">WordPress</a></li>
+          <li><a href="#">Figma Design</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Project.html">Projects <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Project 1</a></li>
+          <li><a href="#">Project 2</a></li>
+          <li><a href="#">Project 3</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Blog.html">Blog <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="nested-dropdown">
+            <a href="#">More Blogs <span class="arrow">▼</span></a>
+            <ul class="nested-menu">
+              <li><a href="#">Bootstrap</a></li>
+              <li><a href="#">Figma</a></li>
+              <li><a href="#">WordPress</a></li>
+              <li><a href="#">Elementor</a></li>
+              <li><a href="#">Git / GitHub</a></li>
+              <li><a href="#">WooCommerce</a></li>
+              <li><a href="#">Tailwind CSS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="Testimonial.html">Testimonial</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Social media icons -->
+    <div class="social-icons">
+      <a href="https://wa.me/+923708023058" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+
+  <section class="services-section">
+    <div class="services-text">
+      <h1>Professional Web Development Services</h1>
+      <p>
+        I provide modern and responsive web development services including HTML, CSS, JavaScript, WordPress, and
+        Elementor Pro.
+        My goal is to build fast, optimized, and user-friendly websites for your business.
+      </p>
+      <a href="#quote" class="quote-btn"><i class="fa fa-paper-plane"></i> Get Quote</a>
+    </div>
+    <div class="services-img">
+      <img src="/img/servies.png" alt="Web Development Service" id="serviceImg">
+    </div>
+  </section>
+  <hr>
+
+
+  <!-- Services section -->
+  <section class="services" id="services">
+    <h2 class="section-titles">Services</h2>
+    <p class="section-subtitle">Services I offer to help build and grow your online presence.</p>
+
+    <div class="services-grid">
+      <!-- Service Box 1 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
+          <!-- yahan icon change kar saktay ho (Font Awesome) -->
+        </div>
+        <h3>Web Development</h3>
+        <p>
+          I build fast, responsive, and modern websites using clean HTML, CSS, and JavaScript.
+        </p>
+      </div>
+
+      <!-- Service Box 2 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-wordpress"></i>
+        </div>
+        <h3>WordPress Development</h3>
+        <p>
+          Custom WordPress websites, themes, and Elementor-based solutions that are easy to manage.
+        </p>
+      </div>
+
+      <!-- Service Box 3 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-figma"></i>
+        </div>
+        <h3>UI / UX Design</h3>
+        <p>
+          Clean and user-friendly UI designs created in Figma with a modern and professional look.
+        </p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <!-- Service Box 1 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
+          <!-- yahan icon change kar saktay ho (Font Awesome) -->
+        </div>
+        <h3>Web Development</h3>
+        <p>
+          I build fast, responsive, and modern websites using clean HTML, CSS, and JavaScript.
+        </p>
+      </div>
+
+      <!-- Service Box 2 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-wordpress"></i>
+        </div>
+        <h3>WordPress Development</h3>
+        <p>
+          Custom WordPress websites, themes, and Elementor-based solutions that are easy to manage.
+        </p>
+      </div>
+
+      <!-- Service Box 3 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-figma"></i>
+        </div>
+        <h3>UI / UX Design</h3>
+        <p>
+          Clean and user-friendly UI designs created in Figma with a modern and professional look.
+        </p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <!-- Service Box 1 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
+          <!-- yahan icon change kar saktay ho (Font Awesome) -->
+        </div>
+        <h3>Web Development</h3>
+        <p>
+          I build fast, responsive, and modern websites using clean HTML, CSS, and JavaScript.
+        </p>
+      </div>
+
+      <!-- Service Box 2 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-wordpress"></i>
+        </div>
+        <h3>WordPress Development</h3>
+        <p>
+          Custom WordPress websites, themes, and Elementor-based solutions that are easy to manage.
+        </p>
+      </div>
+
+      <!-- Service Box 3 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-figma"></i>
+        </div>
+        <h3>UI / UX Design</h3>
+        <p>
+          Clean and user-friendly UI designs created in Figma with a modern and professional look.
+        </p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <!-- Service Box 1 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
+          <!-- yahan icon change kar saktay ho (Font Awesome) -->
+        </div>
+        <h3>Web Development</h3>
+        <p>
+          I build fast, responsive, and modern websites using clean HTML, CSS, and JavaScript.
+        </p>
+      </div>
+
+      <!-- Service Box 2 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-wordpress"></i>
+        </div>
+        <h3>WordPress Development</h3>
+        <p>
+          Custom WordPress websites, themes, and Elementor-based solutions that are easy to manage.
+        </p>
+      </div>
+
+      <!-- Service Box 3 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-figma"></i>
+        </div>
+        <h3>UI / UX Design</h3>
+        <p>
+          Clean and user-friendly UI designs created in Figma with a modern and professional look.
+        </p>
+      </div>
+    </div>
+    <a href="Services.html"><button class="btn btn2">Read More Services <i class="fas fa-arrow-right"></i>
+      </button></a>
+  </section>
+  <hr>
+<!-- why you need a website -->
+ 
+
+<div class="tree-wrapper">
+  <h1>Why You Need a Website</h1>
+  <p>
+    A website is your digital identity. It helps you build trust, reach more people,
+    grow your business online, and stay available for your audience 24/7.
+  </p>
+
+  <div class="tree-container" id="tree">
+
+    <!-- Parent -->
+    <div class="node" id="parent">
+      <i class="fa-solid fa-globe"></i>
+      Website
+    </div>
+
+    <!-- Children -->
+    <div class="children">
+      <div class="node"><i class="fa-solid fa-id-card"></i>Online Identity</div>
+      <div class="node"><i class="fa-solid fa-clock"></i>24/7 Availability</div>
+      <div class="node"><i class="fa-solid fa-users"></i>More Customers</div>
+      <div class="node"><i class="fa-solid fa-shield"></i>Build Trust</div>
+      <div class="node"><i class="fa-solid fa-chart-line"></i>Business Growth</div>
+      <div class="node"><i class="fa-solid fa-bullhorn"></i>Marketing</div>
+      <div class="node"><i class="fa-solid fa-search"></i>Google Visibility</div>
+      <div class="node"><i class="fa-solid fa-cart-shopping"></i>Sell Online</div>
+      <div class="node"><i class="fa-solid fa-briefcase"></i>Professional Look</div>
+      <div class="node"><i class="fa-solid fa-comments"></i>Customer Support</div>
+      <div class="node"><i class="fa-solid fa-pen-nib"></i>Portfolio</div>
+      <div class="node"><i class="fa-solid fa-location-dot"></i>Global Reach</div>
+      <div class="node"><i class="fa-solid fa-lock"></i>Security</div>
+      <div class="node"><i class="fa-solid fa-rocket"></i>Future Ready</div>
+    </div>
+
+  </div>
+</div>
+<hr>
+<!-- Website Development Process tree -->
+
+<div class="process-tree-wrapper">
+  <h2>Website Development Process</h2>
+  <p>
+    A clear and structured process ensures your website is fast, secure,
+    user-friendly, and ready to grow your business online.
+  </p>
+
+  <div class="process-tree" id="processTree">
+
+    <div class="process-node" id="processParent">
+      <i class="fa-solid fa-diagram-project"></i>
+      Development Process
+    </div>
+
+    <div class="process-children">
+      <div class="process-node"><i class="fa-solid fa-lightbulb"></i>Planning</div>
+      <div class="process-node"><i class="fa-solid fa-pen-ruler"></i>UI / UX Design</div>
+      <div class="process-node"><i class="fa-solid fa-code"></i>Frontend</div>
+      <div class="process-node"><i class="fa-solid fa-database"></i>Backend</div>
+      <div class="process-node"><i class="fa-solid fa-vial"></i>Testing</div>
+      <div class="process-node"><i class="fa-solid fa-rocket"></i>Launch</div>
+      <div class="process-node"><i class="fa-solid fa-wrench"></i>Maintenance</div>
+    </div>
+
+  </div>
+</div>
+<hr>
+<!-- Website Types / Services tree -->
+<div class="services-tree-wrapper">
+  <h2>Website Types / Services</h2>
+  <p>
+    Explore the different types of websites and services we provide
+    to help you grow your online presence and business.
+  </p>
+
+  <div class="services-tree" id="servicesTree">
+
+    <div class="services-node" id="servicesParent">
+      <i class="fa-solid fa-layer-group"></i>
+      Services
+    </div>
+
+    <div class="services-children">
+      <div class="services-node"><i class="fa-solid fa-briefcase"></i>Business Website</div>
+      <div class="services-node"><i class="fa-solid fa-user-pen"></i>Portfolio</div>
+      <div class="services-node"><i class="fa-solid fa-bag-shopping"></i>E-commerce</div>
+      <div class="services-node"><i class="fa-solid fa-newspaper"></i>Blog / News</div>
+      <div class="services-node"><i class="fa-solid fa-rocket"></i>Landing Page</div>
+      <div class="services-node"><i class="fa-solid fa-code"></i>Web App</div>
+    </div>
+
+  </div>
+</div>
+ 
+  <!-- Contact section -->
+
+  <section class="contact-cta">
+    <h2>Let’s Work Together</h2>
+    <p>Have a project in mind? Let’s talk.</p>
+
+    <div class="contact-buttons">
+      <a href="mailto:sharjeelmasood1256@gmail.com?subject=Website%20Project%20Inquiry" class="contact-btn primary">
+        <i class="fas fa-envelope"></i> Email Me
+      </a>
+      <a href="Contact.html" class="contact-btn">
+        Contact us
+      </a>
+    </div>
+  </section>
+  <!-- footer -->
+  <button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/img/logo.png" alt="Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="Blog.html">Blogs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-legal">
+        <h4>Legal</h4>
+        <a href="terms&condition.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+          <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Sharjeel Masood. All Rights Reserved.
+    </div>
+  </footer>
+
+
+  <script>
+    //Services js
+    // ================== Mobile Menu Toggle ==================
+    const navbarMenu = document.getElementById("navbarMenu");
+    function toggleMenu() {
+      if (navbarMenu) navbarMenu.classList.toggle("show");
+    }
+
+    // ================== Active Menu ==================
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".navbar li a").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.parentElement.classList.add("active");
+      }
+    });
+
+    // Image animation on load
+    const serviceImg = document.getElementById('serviceImg');
+    window.addEventListener('load', () => {
+      serviceImg.classList.add('visible');
+    });
+
+    // Optional: image animate again on scroll into view
+    window.addEventListener('scroll', () => {
+      const imgPosition = serviceImg.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight - 100;
+      if (imgPosition < screenPosition) {
+        serviceImg.classList.add('visible');
+      }
+    });
+    // services cards
+    const boxes = document.querySelectorAll('.service-box');
+
+    function checkBoxes() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+          box.classList.add('visible'); // fade-up animation start
+        }
+      });
+    }
+    //tree//
+    
+function drawLines(){
+  const tree = document.getElementById('tree');
+  const oldSvg = tree.querySelector('svg');
+  if(oldSvg) oldSvg.remove();
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+  tree.appendChild(svg);
+
+  const parent = document.getElementById('parent');
+  const children = tree.querySelectorAll('.children .node');
+
+  const pRect = parent.getBoundingClientRect();
+  const tRect = tree.getBoundingClientRect();
+
+  children.forEach(child=>{
+    const cRect = child.getBoundingClientRect();
+
+    const x1 = pRect.left + pRect.width/2 - tRect.left;
+    const y1 = pRect.bottom - tRect.top;
+
+    const x2 = cRect.left + cRect.width/2 - tRect.left;
+    const y2 = cRect.top - tRect.top;
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+    path.setAttribute(
+      "d",
+      `M${x1},${y1}
+       C${x1},${(y1+y2)/2}
+       ${x2},${(y1+y2)/2}
+       ${x2},${y2}`
+    );
+    svg.appendChild(path);
+  });
+}
+
+window.addEventListener("load",drawLines);
+window.addEventListener("resize",drawLines);
+
+    window.addEventListener('scroll', checkBoxes);
+    window.addEventListener('load', checkBoxes); // page load par bhi trigger
+   
+window.addEventListener("load",()=>{
+  document.querySelector(".contact-cta").classList.add("visible");
+});
+// footer
+
+// Auto year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Reveal animation
+window.addEventListener("load",()=>{
+  document.querySelector(".footer-top").classList.add("visible");
+});
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+function drawProcessLines(){
+  const tree = document.getElementById('processTree');
+  const oldSvg = tree.querySelector('svg');
+  if(oldSvg) oldSvg.remove();
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+  tree.appendChild(svg);
+
+  const parent = document.getElementById('processParent');
+  const children = tree.querySelectorAll('.process-children .process-node'); // ✅ updated selector
+
+  const pRect = parent.getBoundingClientRect();
+  const tRect = tree.getBoundingClientRect();
+
+  children.forEach(child=>{
+    const cRect = child.getBoundingClientRect();
+
+    const x1 = pRect.left + pRect.width/2 - tRect.left;
+    const y1 = pRect.bottom - tRect.top;
+
+    const x2 = cRect.left + cRect.width/2 - tRect.left;
+    const y2 = cRect.top - tRect.top;
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+    path.setAttribute(
+      "d",
+      `M${x1},${y1}
+       C${x1},${(y1+y2)/2}
+       ${x2},${(y1+y2)/2}
+       ${x2},${y2}`
+    );
+    svg.appendChild(path);
+  });
+}
+
+window.addEventListener("load", drawProcessLines);
+window.addEventListener("resize", drawProcessLines);
+// Website Types / Services
+function drawServicesLines(){
+  const tree = document.getElementById('servicesTree');
+  const oldSvg = tree.querySelector('svg');
+  if(oldSvg) oldSvg.remove();
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+  tree.appendChild(svg);
+
+  const parent = document.getElementById('servicesParent');
+  const children = tree.querySelectorAll('.services-children .services-node');
+
+  const pRect = parent.getBoundingClientRect();
+  const tRect = tree.getBoundingClientRect();
+
+  children.forEach(child=>{
+    const cRect = child.getBoundingClientRect();
+
+    const x1 = pRect.left + pRect.width/2 - tRect.left;
+    const y1 = pRect.bottom - tRect.top;
+
+    const x2 = cRect.left + cRect.width/2 - tRect.left;
+    const y2 = cRect.top - tRect.top;
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+    path.setAttribute(
+      "d",
+      `M${x1},${y1}
+       C${x1},${(y1+y2)/2}
+       ${x2},${(y1+y2)/2}
+       ${x2},${y2}`
+    );
+    svg.appendChild(path);
+  });
+}
+
+window.addEventListener("load", drawServicesLines);
+window.addEventListener("resize", drawServicesLines);
+  </script>
+</body>
+
+</html>

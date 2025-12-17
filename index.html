@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharjeel Masood</title>
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <nav>
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="/img/logo.png" alt="Logo">
+    </a>
+    <!-- Hamburger icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- Navbar menu -->
+    <ul class="navbar" id="navbarMenu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li class="dropdown">
+        <a href="About.html">About <span class="arrow"><i class="fa-solid fa-caret-down"></i></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="My SKill.html">My Skills</a></li>
+          <li><a href="My Resume.html">My Resume</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Services.html">Services <span class="arrow"><i class="fa-solid fa-caret-down"></i></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">WordPress</a></li>
+          <li><a href="#">Figma Design</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Project.html">Projects <span class="arrow"><i class="fa-solid fa-caret-down"></i></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Project 1</a></li>
+          <li><a href="#">Project 2</a></li>
+          <li><a href="#">Project 3</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="Blog.html">Blog <span class="arrow"><i class="fa-solid fa-caret-down"></i></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#How i Learned">How I Learned</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="nested-dropdown">
+            <a href="#">More Blogs <span class="arrow"><i class="fa-solid fa-caret-down"></i></span></a>
+            <ul class="nested-menu">
+              <li><a href="#">Bootstrap</a></li>
+              <li><a href="#">Figma</a></li>
+              <li><a href="#">WordPress</a></li>
+              <li><a href="#">Elementor</a></li>
+              <li><a href="#">Git / GitHub</a></li>
+              <li><a href="#">WooCommerce</a></li>
+              <li><a href="#">Tailwind CSS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="Testimonial.html">Testimonial</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <!-- Social media icons -->
+    <div class="social-icons">
+      <a href="https://wa.me/+923708023058" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+  <!-- Hero section -->
+  <div class="hero">
+    <div class="intro">
+      <h2 class="Hey">Hey, I am</h2>
+      <div class="typing-container-sharjeel">
+        <span class="typing-text-sharjeel" id="typing-effect-sharjeel"></span>
+      </div>
+      <p>With over 2 years of experience in web development, I specialize in building WordPress websites that are both
+        functional and beautiful. Proficient in HTML, CSS, JavaScript, and Figma, I enjoy turning ideas into
+        digital experiences that engage users.</p>
+      <p>Custom & Scalable Websites for Growth.</p>
+      <a href="Contact.html"> <button class="btn">Hire Me</button></a>
+
+    </div>
+    <div class="myimg">
+      <img src="/img/sharjeel masood.png" alt="Sharjeel Masood">
+    </div>
+  </div>
+  <hr>
+  <!-- About section -->
+  <div class="Section1">
+    <div class="abouttext">
+      <h1>Who I Am?</h1>
+      <p>I’m a Web & WordPress Developer with 2+ years of experience building modern, responsive websites.
+        I specialize in WordPress, front-end development, and UI design using Figma.
+        I’m passionate about clean code, good design, and creating digital experiences that make an impact.
+      </p>
+      <a href="https://wa.me/+923708023058"><button class="btn">Get a quote</button></a>
+      <a href=""><button class="btn">Download CV
+        </button></a>
+    </div>
+    <div class="aboutimg"><img src="/img/About1.png" alt="img">
+    </div>
+  </div>
+  <hr>
+  <!-- Services section -->
+  <section class="services" id="services">
+    <h2 class="section-titles">Services</h2>
+    <p class="section-subtitle">Services I offer to help build and grow your online presence.</p>
+
+    <div class="services-grid">
+      <!-- Service Box 1 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
+          <!-- yahan icon change kar saktay ho (Font Awesome) -->
+        </div>
+        <h3>Web Development</h3>
+        <p>
+          I build fast, responsive, and modern websites using clean HTML, CSS, and JavaScript.
+        </p>
+      </div>
+
+      <!-- Service Box 2 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-wordpress"></i>
+        </div>
+        <h3>WordPress Development</h3>
+        <p>
+          Custom WordPress websites, themes, and Elementor-based solutions that are easy to manage.
+        </p>
+      </div>
+
+      <!-- Service Box 3 -->
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fab fa-figma"></i>
+        </div>
+        <h3>UI / UX Design</h3>
+        <p>
+          Clean and user-friendly UI designs created in Figma with a modern and professional look.
+        </p>
+      </div>
+    </div>
+    <a href="Services.html"><button class="btn btn2">Read More Services <i class="fas fa-arrow-right"></i>
+      </button></a>
+  </section>
+  <hr>
+  <!-- Project section -->
+  <section class="projects" id="projects">
+    <h2 class="section-titles">Projects</h2>
+    <p class="section-subtitle">Some of my recent works and designs.</p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-box">
+        <a href=""> <img src="/img/favicon.png" alt="Project 1">
+          <div class="project-overlay">
+            <h3>Project One</h3>
+            <p>Web Development Project</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-box"><a href=""> <img src="/img/favicon.png" alt="Project 2">
+          <div class="project-overlay">
+            <h3>Project Two</h3>
+            <p>WordPress Website</p>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-box">
+        <a href=""> <img src="/img/favicon.png" alt="Project 3">
+          <div class="project-overlay">
+            <h3>Project Three</h3>
+            <p>UI / UX Design</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <a href="Project.html"><button class="btn btn2"> Get more Projects <i class="fas fa-arrow-right"></i></button></a>
+  </section>
+  <hr>
+  <!-- Blog Section -->
+
+<section class="blog-section">
+  <h2>Latest Blogs</h2>
+  <p>Check out my recent posts and updates.</p>
+  <div class="blogs-grid">
+    
+    <!-- Blog 1 -->
+    <div class="blog-post" >
+      <img src="/img/thumb my blog.png" alt="Blog 1">
+      <h3>How I Learned Web Development and Built My Portfolio</h3>
+      <p>Hi! Welcome to my little corner of the web. A few years ago, I had zero coding experience....</p>
+      <a href="My blog.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+
+      <div class="post-date"></div>
+      <div class="blog-actions">
+        <button class="like-btn"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
+        <button class="comment-btn"><i class="fas fa-comment"></i> Comment</button>
+      </div>
+      <div class="comment-section">
+        <div class="comments-list-wrapper">
+          <div class="comments-list"></div>
+        </div>
+        <input type="text" class="comment-name" placeholder="Your Name">
+        <input type="text" class="comment-input" placeholder="Write a comment...">
+        <button class="add-comment-btn">Add Comment</button>
+        <button class="read-more-btn">Read More Comments →</button>
+      </div>
+    </div>
+
+    <!-- Blog 2 -->
+    <div class="blog-post">
+      <img src="/img/HTMLthumb.jpg" alt="Blog 2">
+      <h3>The Story of HTML: <pre></pre> History, Importance & <pre></pre> Uses</h3>
+      <p>HTML, or HyperText Markup Language, is the backbone of the web. But did you know it was first ...</p>
+      <a href="htmlblog.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+
+      <div class="post-date"></div>
+      <div class="blog-actions">
+        <button class="like-btn"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
+        <button class="comment-btn"><i class="fas fa-comment"></i> Comment</button>
+      </div>
+      <div class="comment-section">
+        <div class="comments-list-wrapper">
+          <div class="comments-list"></div>
+        </div>
+        <input type="text" class="comment-name" placeholder="Your Name">
+        <input type="text" class="comment-input" placeholder="Write a comment...">
+        <button class="add-comment-btn">Add Comment</button>
+        <button class="read-more-btn">Read More Comments →</button>
+      </div>
+    </div>
+
+    <!-- Blog 3 -->
+    <div class="blog-post">
+      <img src="/img/CSSTHUMB.webp" alt="Blog 3">
+      <h3>The Story of CSS: <pre></pre> History, Importance & <pre></pre> Uses</h3>
+      <p>CSS, or Cascading Style Sheets, is the language that makes websites look beautiful. It was first proposed by
+      Håkon Wium Lie ...</p>
+      <a href="CSSblog .html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+
+      <div class="post-date"></div>
+      <div class="blog-actions">
+        <button class="like-btn"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
+        <button class="comment-btn"><i class="fas fa-comment"></i> Comment</button>
+      </div>
+      <div class="comment-section">
+        <div class="comments-list-wrapper">
+          <div class="comments-list"></div>
+        </div>
+        <input type="text" class="comment-name" placeholder="Your Name">
+        <input type="text" class="comment-input" placeholder="Write a comment...">
+        <button class="add-comment-btn">Add Comment</button>
+        <button class="read-more-btn">Read More Comments →</button>
+      </div>
+    </div>
+
+  </div>
+  <a href="Blog.html"><button class="btn btn1">Read more Blogs <i class="fas fa-arrow-right"></i></button></a>
+</section>
+<hr>
+<!-- Testimonial section -->
+ 
+ <section class="testimonial-section">
+  <h2>Testimonials</h2>
+  <p>What clients say about my work</p>
+
+  <div class="testimonial-grid">
+
+    <div class="testimonial-box">
+      <i class="fas fa-quote-left"></i>
+      <p>
+        Sharjeel is a very professional developer. He delivered my website on time
+        with perfect design and performance.
+      </p>
+      <h4>Ahmed Khan</h4>
+      <span>Business Owner</span>
+    </div>
+
+    <div class="testimonial-box">
+      <i class="fas fa-quote-left"></i>
+      <p>
+        Amazing experience! Clean code, fast communication and excellent results.
+        Highly recommended.
+      </p>
+      <h4>Sara Malik</h4>
+      <span>Startup Founder</span>
+    </div>
+
+    <div class="testimonial-box">
+      <i class="fas fa-quote-left"></i>
+      <p>
+        He understood my requirements clearly and delivered exactly what I wanted.
+      </p>
+      <h4>Jhon simth</h4>
+      <span>Freelance Client</span>
+    </div>
+
+  </div>
+</section>
+<!-- Contact section -->
+ 
+<section class="contact-cta">
+  <h2>Let’s Work Together</h2>
+  <p>Have a project in mind? Let’s talk.</p>
+
+  <div class="contact-buttons">
+    <a href="mailto:sharjeelmasood1256@gmail.com?subject=Website%20Project%20Inquiry"
+   class="contact-btn primary">
+  <i class="fas fa-envelope"></i> Email Me
+</a>
+    <a href="Contact.html" class="contact-btn">
+        Contact us   
+    </a>
+  </div>
+</section>
+<!-- footer -->
+ <button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="/img/logo.png" alt="Logo" class="footer-logo">
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="Blog.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-legal">
+      <h4>Legal</h4>
+      <a href="terms&condition.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Me</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Sharjeel Masood. All Rights Reserved.
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

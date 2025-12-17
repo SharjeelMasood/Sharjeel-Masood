@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  background: radial-gradient(circle at top, #14163a, #0d0f24);
+  color:#ffffff;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* Main Card */
+.thankyou-box{
+  background: rgba(255,255,255,0.06);
+  border-radius:20px;
+  padding:45px 55px;
+  text-align:center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  max-width:440px;
+  animation: popIn 0.8s ease forwards;
+}
+
+.thankyou-box h1{
+  font-size:2.4rem;
+  margin-bottom:16px;
+}
+
+.thankyou-box p{
+  font-size:1.05rem;
+  line-height:1.7;
+  opacity:0.9;
+}
+
+/* Button */
+.thankyou-box a{
+  display:inline-block;
+  margin-top:28px;
+  padding:13px 34px;
+  border-radius:30px;
+  background: linear-gradient(135deg,#1e90ff,#5f7cff);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.thankyou-box a:hover{
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 28px rgba(30,144,255,0.45);
+}
+
+/* Subtle animation */
+@keyframes popIn{
+  0%{ transform:scale(0.85); opacity:0;}
+  100%{ transform:scale(1); opacity:1;}
+}
+
+/* WhatsApp-style popup */
+.status-popup{
+  position:fixed;
+  bottom:40px;
+  right:40px;
+  background:#1e90ff;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:14px;
+  font-size:0.95rem;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+  animation: slidePop 3.5s ease forwards;
+}
+
+@keyframes slidePop{
+  0%{
+    opacity:0;
+    transform:translateY(25px) scale(0.9);
+  }
+  15%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+  85%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+    transform:translateY(-10px) scale(0.95);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- WhatsApp-style popup -->
+<div class="status-popup">✔ Message Sent Successfully</div>
+
+<!-- Main Content -->
+<div class="thankyou-box">
+  <h1>Thank You</h1>
+  <p>
+    Your message has been received successfully.<br>
+    I will review your request and get back to you shortly.
+  </p>
+
+  <a href="index.html">Back to Home</a>
+</div>
+
+</body>
+</html>

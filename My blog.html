@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Learned Web Development and Built My Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: all 0.5s ease;
+    }
+
+    body.light-mode {
+      background: #fff;
+      color: #333;
+    }
+
+    a {
+      color: #00BFFF;
+      text-decoration: none;
+    }
+
+    body.light-mode a {
+      color: #007bff;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      transition: all 0.5s ease;
+    }
+
+    body.light-mode .top-bar {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .top-bar i {
+      font-size: 28px;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    body.light-mode .top-bar i {
+      color: #333;
+    }
+
+    .top-bar i:hover {
+      transform: scale(1.2);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      transition: all 0.5s ease;
+    }
+
+    body.light-mode .container {
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 25px;
+      color: #00BFFF;
+    }
+
+    body.light-mode h1 {
+      color: #007bff;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 40px;
+      color: #00BFFF;
+    }
+
+    body.light-mode h2 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    img {
+      width: 90%;
+      height: 75vh;
+      border-radius: 12px;
+      margin: 25px 5%;
+      object-fit: cover;
+      object-position: top 50px;
+      /* display: flex;
+      align-items: center; */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    pre {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    body.light-mode pre {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    #scrollTop {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      padding: 10px 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 50%;
+      background: #00BFFF;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    #scrollTop:hover {
+      background: #007bbf;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .skill-item {
+      background: #00BFFF;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .skill-item:hover {
+      transform: scale(1.05);
+    }
+
+    .tips-container {
+      margin: 20px 0;
+    }
+
+    .collapsible {
+      cursor: pointer;
+      padding: 10px;
+      background: #00BFFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin: 10px 0;
+      width: 100%;
+      text-align: left;
+      transition: background 0.3s;
+    }
+
+    .collapsible:hover {
+      background: #007bbf;
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #f1f1f1;
+      color: #00BFFF;
+      padding: 0 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      margin: 10px 0;
+    }
+
+    body.light-mode .content {
+      background: #eee;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .top-bar {
+        gap: 15px;
+        height: 50px;
+      }
+
+      .skills-list {
+        flex-direction: column;
+      }
+
+      img {
+        width: 80%;
+        height: auto;
+        display: flex;
+        align-items: center;
+       
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" title="Go Back" onclick="goBack()"></i>
+    <i class="fas fa-moon" id="themeToggle" title="Toggle Dark/Light"></i>
+  </div>
+
+  <div class="container">
+    <h1>How I Learned Web Development and Built My Portfolio</h1>
+    <p>Hi! Welcome to my little corner of the web. A few years ago, I had zero coding experience. Today, I’m building
+      websites, learning new frameworks, and sharing my journey with you. If you’ve ever wanted to dive into web
+      development, you’re in the right place!</p>
+
+    <img src="/img/myblog0.png" alt="Learning Web Development">
+
+    <h2>1. Why I Chose Web Development</h2>
+    <p>I was always curious about websites, how they are made, and why some look amazing while others don’t. Web
+      development gave me the perfect mix of creativity and logic, allowing me to turn ideas into real interactive
+      experiences.</p>
+
+    <h2>2. My Skills</h2>
+    <p>Over the years, I learned many tools and technologies. Here’s a snapshot:</p>
+    <div class="skills-list">
+      <div class="skill-item" title="Learned HTML for structuring web pages">HTML</div>
+      <div class="skill-item" title="Styled websites with CSS">CSS</div>
+      <div class="skill-item" title="Made websites interactive with JavaScript">JavaScript</div>
+      <div class="skill-item" title="Built components using React">React</div>
+      <div class="skill-item" title="Created back-end apps with Node.js">Node.js</div>
+      <div class="skill-item" title="Customized WordPress websites">WordPress</div>
+      <div class="skill-item" title="Version control with Git & GitHub">Git & GitHub</div>
+      <div class="skill-item" title="Ensured sites work on all devices">Responsive Design</div>
+      <div class="skill-item" title="Designed simple user interfaces">UI/UX Basics</div>
+      <div class="skill-item" title="Connected websites with APIs">API Integration</div>
+    </div>
+
+    <h2>3. Learning Path & Projects</h2>
+    <p>My first project was a simple personal webpage using HTML & CSS. I made mistakes, debugged endlessly, and slowly
+      improved. Then came JavaScript projects — like a small quiz app — that taught me how logic works in code. Finally,
+      I explored React and WordPress, building interactive sites that I could actually share with friends and clients.
+      Each step was a challenge, but that’s where the real learning happened!</p>
+
+    <img src="/img/myblog1.png" alt="HTML CSS Project">
+
+
+    <h2>4. Interactive Tips</h2>
+    <div class="tips-container">
+      <button class="collapsible">Tip: Practice Daily (2 hours)</button>
+      <div class="content">
+        <p>Dedicate at least 2 hours every day to coding. Even small daily practice, like building a button or debugging
+          a bug, adds up. I personally started with 30-minute sessions and gradually increased to 2 hours, which made a
+          huge difference!</p>
+      </div>
+
+      <button class="collapsible">Tip: Build Real Projects</button>
+      <div class="content">
+        <p>Working on real projects helps you understand practical challenges and boosts confidence. I started with
+          small projects like a calculator, then moved to full websites.</p>
+      </div>
+
+      <button class="collapsible">Tip: Learn by Debugging</button>
+      <div class="content">
+        <p>Debugging is crucial. Each error is a lesson that strengthens problem-solving skills. Don’t fear mistakes —
+          they are learning opportunities!</p>
+      </div>
+
+      <button class="collapsible">Tip: Stay Updated</button>
+      <div class="content">
+        <p>Web development evolves fast. Follow blogs, tutorials, and communities to stay current. Even 10 minutes a day
+          reading updates keeps you ahead.</p>
+      </div>
+    </div>
+
+    <h2>5. Lessons Learned</h2>
+    <ul>
+      <li>Consistency is key. Even on busy days, I coded for 20 minutes — small steps matter.</li>
+      <li>Start small. My first “big” project was just a calculator, but it taught me problem-solving.</li>
+      <li>Clean code saves time. I learned this the hard way when revisiting old projects.</li>
+      <li>Front-end and back-end knowledge go hand-in-hand. Understanding both makes you a better developer.</li>
+      <li>Document and share. Blogging about what I learned helped me retain knowledge and inspire others.</li>
+    </ul>
+
+    <p>Web development is not just coding; it’s about creating experiences. <em>"Learning to code is like learning a new
+        language — patience and practice are your best friends."</em></p>
+    <p>If you’re starting your web development journey, start today! Even a small step can lead to amazing progress.</p>
+
+    <pre>
+// Example JavaScript: Simple greeting
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+greet("Sharjeel");
+  </pre>
+
+  </div>
+
+  <button id="scrollTop">↑</button>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      if (document.body.classList.contains('light-mode')) {
+        themeToggle.classList.remove('fa-moon'); themeToggle.classList.add('fa-sun');
+      } else {
+        themeToggle.classList.remove('fa-sun'); themeToggle.classList.add('fa-moon');
+      }
+    });
+
+    function goBack() { window.history.back(); }
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => { scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none'; });
+    scrollTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+    const coll = document.querySelectorAll('.collapsible');
+    coll.forEach(btn => btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const content = btn.nextElementSibling;
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+    }));
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - My Skills</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0c29;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+  padding-top: 60px;
+}
+
+/* ===== TOP ICONS ===== */
+.top-icons {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.top-icons i {
+  font-size: 1.5rem;
+  color: #00BFFF;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.top-icons i:hover {
+  transform: scale(1.2);
+}
+
+/* ===== SKILLS ===== */
+#MySKill {
+  font-size: 50px;
+  text-align: center;
+  color: #00BFFF;
+  margin-bottom: 30px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  padding: 0 20px 50px 20px;
+}
+
+.skill1 {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, .25);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.skill1:hover {
+  border-color: #00BFFF;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 123, 255, 0.45);
+}
+
+.skill1 i {
+  font-size: 2.2rem;
+  color: #00BFFF;
+}
+
+.skill1 h4 {
+  margin: 10px 0 6px;
+}
+
+.skill1 small {
+  color: #00BFFF;
+}
+
+/* ===== LIGHT THEME ===== */
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+ 
+
+body.light-theme .skill1 {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(255, 165, 0, .25);
+}
+
+body.light-theme .skill1 i {
+  color:#00BFFF;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== TOP ICONS ===== -->
+<div class="top-icons">
+  <i class="fas fa-arrow-left" id="backBtn" title="Go Back"></i>
+  <i class="fas fa-moon" id="themeToggle" title="Toggle Theme"></i>
+</div>
+
+<!-- ===== SKILLS ===== -->
+<section>
+  <h2 id="MySKill">My Skills</h2>
+  <div class="skills">
+    <div class="skill1"><i class="fab fa-html5"></i>
+      <h4>HTML5</h4><small>Semantic & SEO structure</small>
+    </div>
+    <div class="skill1"><i class="fab fa-css3-alt"></i>
+      <h4>CSS3</h4><small>Responsive layouts</small>
+    </div>
+    <div class="skill1"><i class="fab fa-js"></i>
+      <h4>JavaScript</h4><small>Dynamic functionality</small>
+    </div>
+    <div class="skill1"><i class="fab fa-wordpress"></i>
+      <h4>WordPress</h4><small>Elementor & WooCommerce</small>
+    </div>
+    <div class="skill1"><i class="fas fa-paint-brush"></i>
+      <h4>Figma</h4><small>Design to code</small>
+    </div>
+    <div class="skill1"><i class="fas fa-cogs"></i>
+      <h4>Optimization</h4><small>Speed & SEO</small>
+    </div>
+    <div class="skill1"><i class="fab fa-html5"></i>
+      <h4>HTML5</h4><small>Semantic & SEO structure</small>
+    </div>
+    <div class="skill1"><i class="fab fa-css3-alt"></i>
+      <h4>CSS3</h4><small>Responsive layouts</small>
+    </div>
+    <div class="skill1"><i class="fab fa-js"></i>
+      <h4>JavaScript</h4><small>Dynamic functionality</small>
+    </div>
+    <div class="skill1"><i class="fab fa-wordpress"></i>
+      <h4>WordPress</h4><small>Elementor & WooCommerce</small>
+    </div>
+    <div class="skill1"><i class="fas fa-paint-brush"></i>
+      <h4>Figma</h4><small>Design to code</small>
+    </div>
+    <div class="skill1"><i class="fas fa-cogs"></i>
+      <h4>Optimization</h4><small>Speed & SEO</small>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// ===== BACK BUTTON =====
+document.getElementById("backBtn").addEventListener("click", () => {
+  window.history.back();
+});
+
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light-theme");
+
+  if(document.body.classList.contains("light-theme")){
+    themeToggle.classList.remove("fa-moon");
+    themeToggle.classList.add("fa-sun");
+  } else {
+    themeToggle.classList.remove("fa-sun");
+    themeToggle.classList.add("fa-moon");
+  }
+});
+</script>
+
+</body>
+</html>
