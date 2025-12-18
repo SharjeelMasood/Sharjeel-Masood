@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is an Algorithm? Explained Simply</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1b1f3b, #0d0f23);
+      color: #eaeaea;
+      transition: 0.4s;
+    }
+
+    body.light-mode {
+      background: #f0f2f5;
+      color: #222;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 25px;
+      background: rgba(20, 20, 40, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+    }
+
+    body.light-mode .top-bar {
+      background: #ffffff;
+    }
+
+    .top-bar i {
+      font-size: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .top-bar i:hover {
+      transform: rotate(-10deg) scale(1.15);
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 100px auto 60px;
+      padding: 45px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    body.light-mode .container {
+      background: #ffffff;
+    }
+
+    h1 {
+      font-size: 44px;
+      text-align: center;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 45px;
+      font-size: 30px;
+      color: #00c6ff;
+    }
+
+    body.light-mode h2 {
+      color: #0072ff;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.9;
+      margin: 18px 0;
+    }
+
+    .highlight {
+      border-left: 4px solid #00c6ff;
+      padding-left: 15px;
+      margin: 30px 0;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    img {
+      width: 92%;
+      margin: 35px 4%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    ul {
+      margin-left: 25px;
+    }
+
+    ul li {
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    .ending {
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, rgba(0, 198, 255, 0.15), rgba(0, 114, 255, 0.15));
+    }
+
+    body.light-mode .ending {
+      background: #eef6ff;
+    }
+
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #0072ff;
+      color: white;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width:768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="window.history.back()" title="Go Back"></i>
+    <i class="fas fa-moon" id="themeToggle" title="Toggle Mode"></i>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>What Is an Algorithm?</h1>
+
+    <p>
+      An algorithm is a step-by-step method used to solve a problem or complete a task.
+      It is not limited to computers — humans use algorithms in daily life without realizing it.
+      From following a recipe to planning a journey, algorithms are everywhere.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159" alt="Algorithm Concept">
+
+    <h2>Why Algorithms Matter</h2>
+    <p>
+      Algorithms bring structure to problem-solving.
+      Instead of guessing, they provide a clear path from start to finish.
+      This makes tasks more efficient, predictable, and easier to improve.
+    </p>
+
+    <div class="highlight">
+      A good algorithm reduces confusion and increases clarity.
+    </div>
+
+    <h2>Algorithms in Daily Life</h2>
+    <p>
+      When you follow steps to cook food, solve a math problem,
+      or organize your day, you are using an algorithm.
+      The same logic applies when technology processes information.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Problem Solving">
+
+    <h2>Characteristics of a Good Algorithm</h2>
+    <ul>
+      <li>Clear and understandable steps</li>
+      <li>Logical sequence</li>
+      <li>Defined start and end</li>
+      <li>Efficient use of time and resources</li>
+      <li>Easy to modify or improve</li>
+    </ul>
+
+    <h2>Thinking in Algorithms</h2>
+    <p>
+      Learning to think algorithmically improves decision-making skills.
+      It teaches how to break complex problems into smaller, manageable parts.
+      This mindset is valuable in every technical and non-technical field.
+    </p>
+
+    <!-- ENDING SECTION -->
+    <div class="ending">
+      <h2>Key Takeaway</h2>
+      <p>
+        Algorithms are not just technical concepts —
+        they are a way of thinking.
+        Understanding them helps you solve problems logically,
+        make better decisions, and approach challenges with confidence.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- SCROLL TOP -->
+  <button id="scrollTop">↑</button>
+
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      toggle.classList.toggle("fa-sun");
+      toggle.classList.toggle("fa-moon");
+    });
+
+    const btn = document.getElementById("scrollTop");
+    window.onscroll = () => {
+      btn.style.display = document.documentElement.scrollTop > 250 ? "block" : "none";
+    };
+
+    btn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+
+</body>
+
+</html>

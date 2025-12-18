@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Programming?</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: 0.5s;
+    }
+
+    body.light-mode {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 25px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+    }
+
+    body.light-mode .top-bar {
+      background: #ffffff;
+    }
+
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .top-bar i:hover {
+      transform: scale(1.2);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    body.light-mode .container {
+      background: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      color: #00bfff;
+      margin-bottom: 25px;
+    }
+
+    body.light-mode h1 {
+      color: #007bff;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #00bfff;
+    }
+
+    body.light-mode h2 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+
+    img {
+      width: 90%;
+      margin: 30px 5%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    body.light-mode .card {
+      background: #f2f2f2;
+    }
+
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width:768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="window.history.back()" title="Go Back"></i>
+    <i class="fas fa-moon" id="themeToggle" title="Toggle Mode"></i>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>What is Programming?</h1>
+
+    <p>
+      Programming is the process of giving instructions to a computer so it can perform specific tasks.
+      Computers are powerful machines, but without instructions, they cannot do anything useful.
+      Programming allows humans to communicate with computers in a structured and logical way.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Programming Concept">
+
+    <h2>Why Programming Exists</h2>
+    <p>
+      Programming exists because computers do not think like humans. They only understand instructions
+      written in a very precise and logical manner. Every application, website, game, or system you use
+      today is built using programming concepts.
+    </p>
+
+    <div class="card">
+      <p>
+        From mobile apps to banking systems, from social media platforms to smart devices,
+        programming is the backbone of modern technology.
+      </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Developer Working">
+
+    <h2>How Programming Works</h2>
+    <p>
+      Programming works by breaking down complex problems into smaller steps.
+      These steps are written as instructions that the computer executes one by one.
+      This process requires logical thinking, patience, and problem-solving skills.
+    </p>
+
+    <p>
+      A programmer does not just write code — they analyze problems, design solutions,
+      test different approaches, and continuously improve their work.
+    </p>
+
+    <h2>Skills Needed for Programming</h2>
+    <p>
+      You do not need to be a genius to learn programming. The most important skills are:
+    </p>
+
+    <ul>
+      <li>Logical thinking</li>
+      <li>Problem-solving ability</li>
+      <li>Consistency and practice</li>
+      <li>Willingness to learn</li>
+      <li>Patience with mistakes</li>
+    </ul>
+
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Tech Workspace">
+
+    <h2>Programming in Real Life</h2>
+    <p>
+      Programming affects our daily lives more than we realize.
+      When you use a smartphone, browse the internet, shop online, or even use a smart TV,
+      programming is working behind the scenes.
+    </p>
+
+    <p>
+      Learning programming opens doors to many opportunities, not only in jobs
+      but also in understanding how technology really works.
+    </p>
+
+    <h2>Final Thoughts</h2>
+    <p>
+      Programming is not just about writing instructions.
+      It is about thinking logically, solving problems, and creating solutions
+      that make life easier and more efficient.
+      Anyone can learn programming with the right mindset and dedication.
+    </p>
+
+  </div>
+
+  <!-- SCROLL TOP -->
+  <button id="scrollTop">↑</button>
+
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      toggle.classList.toggle("fa-sun");
+      toggle.classList.toggle("fa-moon");
+    });
+
+    const btn = document.getElementById("scrollTop");
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    btn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script> 
+
+</body>
+
+</html>

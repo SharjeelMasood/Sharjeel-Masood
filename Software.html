@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Software Is Built – From Idea to Product</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: 0.5s;
+    }
+
+    body.light-mode {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 25px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+    }
+
+    body.light-mode .top-bar {
+      background: #ffffff;
+    }
+
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .top-bar i:hover {
+      transform: scale(1.2);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    body.light-mode .container {
+      background: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      color: #00bfff;
+      margin-bottom: 25px;
+    }
+
+    body.light-mode h1 {
+      color: #007bff;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #00bfff;
+    }
+
+    body.light-mode h2 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+
+    ul {
+      margin: 15px 0 25px 25px;
+    }
+
+    ul li {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    img {
+      width: 90%;
+      margin: 30px 5%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 22px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    body.light-mode .card {
+      background: #f2f2f2;
+    }
+
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width:768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      p,
+      ul li {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="window.history.back()" title="Go Back"></i>
+    <i class="fas fa-moon" id="themeToggle" title="Toggle Mode"></i>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>How Software Is Built</h1>
+
+    <p>
+      Software does not appear magically. Every application, system, or digital tool
+      goes through a structured journey before reaching users.
+      From a simple idea to a fully working product, software development is a step-by-step process.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="Software Planning">
+
+    <h2>Step 1: The Idea</h2>
+    <p>
+      Every software product starts with an idea.
+      The idea usually comes from a problem that needs a solution.
+      It could be improving efficiency, saving time, or creating something completely new.
+    </p>
+
+    <p>
+      At this stage, the focus is not on technology but on understanding
+      what users actually need and what problem the software will solve.
+    </p>
+
+    <h2>Step 2: Planning and Research</h2>
+    <p>
+      Once the idea is clear, planning begins.
+      This phase involves deciding features, understanding the target audience,
+      and researching similar products already in the market.
+    </p>
+
+    <div class="card">
+      <p>
+        Good planning saves time, reduces mistakes,
+        and makes the development process smoother and more organized.
+      </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="Team Planning">
+
+    <h2>Step 3: Design</h2>
+    <p>
+      Design is about how the software will look and feel.
+      This includes layout, colors, user flow, and overall experience.
+      A good design ensures that users can easily understand and use the software.
+    </p>
+
+    <p>
+      Design is not just about beauty — it is about usability and clarity.
+    </p>
+
+    <h2>Step 4: Development</h2>
+    <p>
+      In this phase, the actual building of the software takes place.
+      Developers convert ideas and designs into working systems.
+      This step requires logical thinking, attention to detail, and continuous testing.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051" alt="Software Development">
+
+    <h2>Step 5: Testing</h2>
+    <p>
+      Testing ensures that the software works correctly.
+      Bugs, errors, and unexpected behavior are identified and fixed.
+      This step is crucial to provide a stable and reliable product.
+    </p>
+
+    <h2>Step 6: Launch and Maintenance</h2>
+    <p>
+      After testing, the software is released for users.
+      However, the journey does not end here.
+      Regular updates, improvements, and maintenance are required
+      to keep the software secure and useful.
+    </p>
+
+    <p>
+      Successful software is always evolving based on user feedback and new requirements.
+    </p>
+
+    <h2>Final Thoughts</h2>
+    <p>
+      Building software is a long but rewarding process.
+      It combines creativity, logic, teamwork, and patience.
+      Understanding this journey helps us appreciate the technology
+      we use every day.
+    </p>
+
+  </div>
+
+  <!-- SCROLL TOP -->
+  <button id="scrollTop">↑</button>
+
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      toggle.classList.toggle("fa-sun");
+      toggle.classList.toggle("fa-moon");
+    });
+
+    const btn = document.getElementById("scrollTop");
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    btn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+
+</body>
+
+</html>
