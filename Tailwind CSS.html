@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tailwind CSS: A Utility-First Revolution in Web Design</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root{
+  --dark:#030712;
+  --panel:#0f172a;
+  --accent:#38bdf8;
+  --text:#e5e7eb;
+}
+
+body{
+  margin:0;
+  font-family:system-ui, sans-serif;
+  background:linear-gradient(180deg,#020617,var(--dark));
+  color:var(--text);
+  transition:.4s;
+}
+
+body.light{
+  background:#f8fafc;
+  color:#111827;
+}
+
+/* TOP BAR */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 28px;
+  background:rgba(2,6,23,.9);
+  backdrop-filter:blur(10px);
+  z-index:999;
+}
+
+body.light header{
+  background:#ffffff;
+}
+
+header i{
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* MAIN */
+main{
+  max-width:1200px;
+  margin:110px auto 90px;
+  padding:50px;
+}
+
+h1{
+  font-size:46px;
+  text-align:center;
+  margin-bottom:45px;
+  color:var(--accent);
+}
+
+.section{
+  margin-bottom:45px;
+  padding:40px;
+  background:linear-gradient(145deg,#020617,#0b122f);
+  border-radius:18px;
+  border-left:4px solid var(--accent);
+}
+
+body.light .section{
+  background:#ffffff;
+}
+
+.section h2{
+  font-size:30px;
+  margin-bottom:15px;
+  color:var(--accent);
+}
+
+.section p{
+  font-size:18px;
+  line-height:1.95;
+  margin-bottom:18px;
+}
+
+/* IMAGES */
+.blog-image{
+  margin:35px 0;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.blog-image img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  display:block;
+}
+
+/* TOP BUTTON */
+#topBtn{
+  position:fixed;
+  right:30px;
+  bottom:30px;
+  background:var(--accent);
+  color:#000;
+  border:none;
+  padding:15px 19px;
+  border-radius:50%;
+  display:none;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  h1{font-size:34px;}
+  main{padding:25px;}
+  .section{padding:28px;}
+  .blog-image img{height:230px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+  <i class="fa-solid fa-moon" id="mode"></i>
+</header>
+
+<main>
+
+<h1>Tailwind CSS: A Utility-First Revolution in Web Design</h1>
+
+<div class="section">
+<p>
+Tailwind CSS has changed the way developers think about styling websites.
+Instead of writing large custom CSS files,
+Tailwind provides small utility classes
+that allow you to build designs directly in your markup.
+</p>
+<p>
+This approach gives developers full control over design
+while keeping styles consistent and scalable.
+</p>
+</div>
+
+<div class="blog-image">
+  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713" alt="Frontend Development">
+</div>
+
+<div class="section">
+<h2>What Is Tailwind CSS?</h2>
+<p>
+Tailwind CSS is a utility-first CSS framework.
+It provides low-level classes for spacing, typography,
+colors, layout, and responsiveness.
+</p>
+<p>
+Instead of pre-designed components,
+Tailwind lets developers create custom designs
+without leaving their HTML.
+</p>
+</div>
+
+<div class="section">
+<h2>Why Tailwind CSS Was Created</h2>
+<p>
+Traditional CSS frameworks often limit creativity
+by enforcing predefined components.
+</p>
+<p>
+Tailwind was created to solve this problem
+by offering building blocks instead of finished designs,
+giving developers complete freedom.
+</p>
+</div>
+
+<div class="blog-image">
+  <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="Code Editor">
+</div>
+
+<div class="section">
+<h2>Utility-First Approach Explained</h2>
+<p>
+In Tailwind, styles are applied using small utility classes
+like margin, padding, color, and font size.
+</p>
+<p>
+This removes the need to invent class names
+and drastically reduces context switching
+between HTML and CSS files.
+</p>
+</div>
+
+<div class="section">
+<h2>Speed and Productivity</h2>
+<p>
+Tailwind dramatically speeds up development.
+Designs can be built and adjusted in real time
+without writing custom CSS.
+</p>
+<p>
+This makes it especially popular
+among startups and rapid-prototyping teams.
+</p>
+</div>
+
+<div class="blog-image">
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Team Collaboration">
+</div>
+
+<div class="section">
+<h2>Responsive Design Made Simple</h2>
+<p>
+Tailwind includes responsive utilities
+that make it easy to build layouts
+for different screen sizes.
+</p>
+<p>
+Developers can control responsiveness directly in markup,
+making layouts predictable and consistent.
+</p>
+</div>
+
+<div class="section">
+<h2>Customization and Configuration</h2>
+<p>
+Tailwind is highly customizable through its configuration file.
+Colors, fonts, spacing, and breakpoints
+can all be tailored to match a brand.
+</p>
+<p>
+This allows teams to maintain
+a strong design system across projects.
+</p>
+</div>
+
+<div class="blog-image">
+  <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="UI Design">
+</div>
+
+<div class="section">
+<h2>Where Tailwind CSS Is Commonly Used</h2>
+<p>
+Tailwind is widely used in modern web applications,
+SaaS platforms,
+dashboards,
+landing pages,
+and design systems.
+</p>
+<p>
+Its flexibility makes it suitable
+for both small and large-scale projects.
+</p>
+</div>
+
+<div class="section">
+<h2>Conclusion</h2>
+<p>
+Tailwind CSS represents a shift toward more flexible
+and developer-friendly styling.
+It encourages consistency
+without sacrificing creative freedom.
+</p>
+<p>
+For developers who value speed,
+control,
+and scalability,
+Tailwind CSS has become a powerful and reliable choice.
+</p>
+</div>
+
+</main>
+
+<button id="topBtn">↑</button>
+
+<script>
+const mode = document.getElementById("mode");
+mode.onclick = () => {
+  document.body.classList.toggle("light");
+  mode.className = document.body.classList.contains("light")
+    ? "fa-solid fa-sun"
+    : "fa-solid fa-moon";
+};
+
+const btn = document.getElementById("topBtn");
+window.onscroll = () => {
+  btn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+btn.onclick = () => window.scrollTo({top:0,behavior:"smooth"});
+</script>
+
+</body>
+</html>
