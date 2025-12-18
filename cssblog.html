@@ -7,6 +7,7 @@
   <title>The Story of CSS: History, Importance & Uses</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
+    /* ===== Global Styles ===== */
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
@@ -30,6 +31,7 @@
       color: #007bff;
     }
 
+    /* ===== Top Bar ===== */
     .top-bar {
       position: fixed;
       top: 0;
@@ -43,6 +45,7 @@
       background: rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(8px);
       z-index: 999;
+      transition: all 0.5s ease;
     }
 
     body.light-mode .top-bar {
@@ -59,6 +62,7 @@
       transform: scale(1.2);
     }
 
+    /* ===== Container ===== */
     .container {
       max-width: 1000px;
       margin: 100px auto 50px;
@@ -66,6 +70,7 @@
       background: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: all 0.5s ease;
     }
 
     body.light-mode .container {
@@ -73,6 +78,7 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
+    /* ===== Headings ===== */
     h1 {
       font-size: 44px;
       color: #00BFFF;
@@ -105,36 +111,44 @@
       color: #007bff;
     }
 
+    /* ===== Paragraphs & Lists ===== */
     p {
       font-size: 18px;
       line-height: 1.8;
       margin: 15px 0;
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 15px 0 25px 30px;
     }
 
-    ul li, ol li {
+    ul li,
+    ol li {
       margin: 10px 0;
       font-size: 17px;
     }
 
+    /* ===== Images ===== */
     img {
       width: 90%;
       height: 100vh;
       margin: 25px 5%;
       border-radius: 12px;
       object-fit: cover;
+      object-position: top center;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
 
+    /* ===== Cards ===== */
     .card {
       background: rgba(255, 255, 255, 0.1);
       padding: 20px;
       border-radius: 12px;
       margin: 20px 0;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
     }
 
     body.light-mode .card {
@@ -142,20 +156,48 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    @media(max-width:768px) {
-      h1 { font-size: 32px; }
-      h2 { font-size: 24px; }
-      h3 { font-size: 20px; }
-      p, ul li, ol li { font-size: 16px; }
-      img { height: auto; width: 80%; }
-      .container { padding: 25px; }
+    .card:hover {
+      transform: translateY(-5px);
     }
 
+    /* ===== Responsive ===== */
+    @media(max-width:768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p,
+      ul li,
+      ol li {
+        font-size: 16px;
+      }
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+
+      .container {
+        padding: 25px;
+        margin: 80px auto 30px;
+      }
+    }
+
+    /* CSS */
     #scrollTop {
       position: fixed;
       bottom: 30px;
       right: 30px;
       background-color: #007BFF;
+      /* button color */
       color: white;
       border: none;
       padding: 12px 16px;
@@ -163,6 +205,14 @@
       font-size: 20px;
       cursor: pointer;
       display: none;
+      /* initially hidden */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #scrollTop:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -170,63 +220,105 @@
 <body>
 
   <div class="top-bar">
-    <!-- ✅ FIXED BACK BUTTON -->
-    <i class="fas fa-arrow-left" onclick="window.location.href='index.html'" title="Go Back"></i>
-
+    <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
     <i class="fas fa-moon" id="themeToggle" title="Toggle Dark/Light"></i>
   </div>
 
   <div class="container">
     <h1>The Story of CSS: History, Importance & Uses</h1>
-
-    <p>
-      CSS, or Cascading Style Sheets, is the language that makes websites look beautiful.
+    <p>CSS, or Cascading Style Sheets, is the language that makes websites look beautiful. It was first proposed by
+      Håkon Wium Lie in 1994 and allows developers to style HTML content with colors, fonts, layouts, and animations.
     </p>
+    <div class="csscreater"> 
+      <img src="img/CSS creater.avif" alt="CSS Example">
+    </div>
 
-    <img src="https://picsum.photos/id/180/1600/900" alt="CSS Example">
 
     <h2>Why CSS Was Created</h2>
-    <p>
-      CSS introduced separation of content and style, making websites easier to maintain.
-    </p>
-
+    <p>Before CSS, styling was limited and inconsistent across browsers. CSS introduced separation of content and style,
+      making websites easier to maintain and more visually appealing.</p>
     <div class="card">
       <h3>Key Benefits of CSS</h3>
       <ul>
         <li>Separation of content and design</li>
         <li>Consistent styling across pages</li>
-        <li>Responsive layouts</li>
-        <li>Animations & transitions</li>
-        <li>Easy maintenance</li>
+        <li>Responsive layouts for all devices</li>
+        <li>Ability to create animations & transitions</li>
+        <li>Better maintainability and scalability</li>
       </ul>
     </div>
+    <img src="img/CSSTHUMB.webp" alt="CSS Layout Example">
 
-    <img src="https://picsum.photos/id/0/1600/900" alt="CSS Layout">
+    <h2>Applications of CSS</h2>
+    <p>CSS is used for:</p>
+    <ul>
+      <li>Styling websites and web applications</li>
+      <li>Creating animations & transitions</li>
+      <li>Designing layouts: grids, flexbox, etc.</li>
+      <li>Responsive design for mobile and desktop</li>
+      <li>Customizing typography and colors</li>
+    </ul>
+    <img src="img/CSS code.jpg" alt="CSS Styling Example">
 
-    <h2>Advanced CSS</h2>
-    <img src="https://picsum.photos/id/1/1600/900" alt="CSS Code">
+    <h2>Why You Should Learn CSS</h2>
+    <div class="card">
+      <p>CSS is essential for anyone wanting to create visually appealing web pages. It allows you to control layout,
+        fonts, colors, and animations, making your websites professional and user-friendly.</p>
+    </div>
+
+    <h2>CSS Tips & Best Practices</h2>
+    <ol>
+      <li>Use external stylesheets for cleaner HTML.</li>
+      <li>Use semantic class names for better readability.</li>
+      <li>Leverage CSS variables for theme management.</li>
+      <li>Test your design across devices and browsers.</li>
+      <li>Combine with JavaScript for dynamic effects.</li>
+    </ol>
+
+    <h2>Advanced CSS Features</h2>
+    <p>Modern CSS allows:</p>
+    <ul>
+      <li>Grid and Flexbox layouts</li>
+      <li>Transitions and animations</li>
+      <li>Custom properties (variables)</li>
+      <li>Media queries for responsive design</li>
+      <li>CSS pseudo-classes and pseudo-elements for interactivity</li>
+    </ul>
+
+    <p>Mastering CSS is a crucial step in web development. It lets you bring life to HTML content and create
+      professional, modern, and responsive websites.</p>
   </div>
-
   <button id="scrollTop">↑</button>
-
   <script>
     const themeToggle = document.getElementById('themeToggle');
-    themeToggle.onclick = () => {
+    themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
-      themeToggle.classList.toggle('fa-sun');
-      themeToggle.classList.toggle('fa-moon');
-    };
-
+      if (document.body.classList.contains('light-mode')) {
+        themeToggle.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        themeToggle.classList.replace('fa-sun', 'fa-moon');
+      }
+    });
     const scrollTopBtn = document.getElementById('scrollTop');
-    window.onscroll = () => {
-      scrollTopBtn.style.display =
-        document.documentElement.scrollTop > 200 ? "block" : "none";
+
+    // Show button after scrolling 200px
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
     };
 
-    scrollTopBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    // Scroll to top on click
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
 
 </body>
+
 </html>
