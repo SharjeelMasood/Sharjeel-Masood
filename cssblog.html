@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Story of CSS: History, Importance & Uses</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: all 0.5s ease;
+    }
+
+    body.light-mode {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    a {
+      color: #00BFFF;
+      text-decoration: none;
+    }
+
+    body.light-mode a {
+      color: #007bff;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 25px;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+    }
+
+    body.light-mode .top-bar {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .top-bar i {
+      font-size: 28px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .top-bar i:hover {
+      transform: scale(1.2);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    body.light-mode .container {
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 44px;
+      color: #00BFFF;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    body.light-mode h1 {
+      color: #007bff;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #00BFFF;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    body.light-mode h2 {
+      color: #007bff;
+    }
+
+    h3 {
+      font-size: 26px;
+      color: #00BFFF;
+      margin: 25px 0 10px;
+    }
+
+    body.light-mode h3 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+
+    ul, ol {
+      margin: 15px 0 25px 30px;
+    }
+
+    ul li, ol li {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    img {
+      width: 90%;
+      height: 100vh;
+      margin: 25px 5%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    body.light-mode .card {
+      background: #f5f5f5;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media(max-width:768px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 24px; }
+      h3 { font-size: 20px; }
+      p, ul li, ol li { font-size: 16px; }
+      img { height: auto; width: 80%; }
+      .container { padding: 25px; }
+    }
+
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <!-- ✅ FIXED BACK BUTTON -->
+    <i class="fas fa-arrow-left" onclick="window.location.href='index.html'" title="Go Back"></i>
+
+    <i class="fas fa-moon" id="themeToggle" title="Toggle Dark/Light"></i>
+  </div>
+
+  <div class="container">
+    <h1>The Story of CSS: History, Importance & Uses</h1>
+
+    <p>
+      CSS, or Cascading Style Sheets, is the language that makes websites look beautiful.
+    </p>
+
+    <img src="https://picsum.photos/id/180/1600/900" alt="CSS Example">
+
+    <h2>Why CSS Was Created</h2>
+    <p>
+      CSS introduced separation of content and style, making websites easier to maintain.
+    </p>
+
+    <div class="card">
+      <h3>Key Benefits of CSS</h3>
+      <ul>
+        <li>Separation of content and design</li>
+        <li>Consistent styling across pages</li>
+        <li>Responsive layouts</li>
+        <li>Animations & transitions</li>
+        <li>Easy maintenance</li>
+      </ul>
+    </div>
+
+    <img src="https://picsum.photos/id/0/1600/900" alt="CSS Layout">
+
+    <h2>Advanced CSS</h2>
+    <img src="https://picsum.photos/id/1/1600/900" alt="CSS Code">
+  </div>
+
+  <button id="scrollTop">↑</button>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.onclick = () => {
+      document.body.classList.toggle('light-mode');
+      themeToggle.classList.toggle('fa-sun');
+      themeToggle.classList.toggle('fa-moon');
+    };
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.onscroll = () => {
+      scrollTopBtn.style.display =
+        document.documentElement.scrollTop > 200 ? "block" : "none";
+    };
+
+    scrollTopBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Power of JavaScript | Complete Guide</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: 0.5s;
+    }
+
+    body.light {
+      background: #f5f7fb;
+      color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 25px;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+    }
+
+    body.light .top-bar {
+      background: #fff;
+    }
+
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      color: #00BFFF;
+    }
+
+    body.light .hero h1 {
+      color: #007bff;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    body.light .container {
+      background: #fff;
+    }
+
+    h2 {
+      color: #00BFFF;
+      margin-top: 40px;
+      font-size: 32px;
+    }
+
+    body.light h2 {
+      color: #007bff;
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 100%;
+      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    body.light .card {
+      background: #f2f2f2;
+    }
+
+    .card h3 {
+      color: #00BFFF;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 12px 16px;
+      border-radius: 50%;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      p, li {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()"></i>
+    <i class="fas fa-moon" id="theme"></i>
+  </div>
+
+  <section class="hero">
+    <div>
+      <h1>The Power of JavaScript</h1>
+      <p>
+        JavaScript is the programming language that brings life to websites
+        by making them interactive and dynamic.
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <h2>What is JavaScript?</h2>
+    <p>
+      JavaScript is a high-level scripting language used to create dynamic
+      and interactive web applications.
+    </p>
+
+    <!-- IMAGE 1 -->
+    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159" alt="JavaScript Code">
+
+    <h2>Why JavaScript is Important</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Interactivity</h3>
+        <p>JavaScript allows real-time interaction without page reload.</p>
+      </div>
+      <div class="card">
+        <h3>Dynamic Content</h3>
+        <p>Content updates instantly based on user actions.</p>
+      </div>
+      <div class="card">
+        <h3>Modern Frameworks</h3>
+        <p>React, Vue, and Angular are powered by JavaScript.</p>
+      </div>
+    </div>
+
+    <!-- IMAGE 2 -->
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="JavaScript Programming">
+
+    <h2>Uses of JavaScript</h2>
+    <ul>
+      <li>Form validation</li>
+      <li>Animations & sliders</li>
+      <li>Web & mobile apps</li>
+      <li>Games and interactive UI</li>
+      <li>API & server communication</li>
+    </ul>
+
+    <!-- IMAGE 3 -->
+    <img src="https://picsum.photos/id/1/1600/900" alt="Developer Workspace">
+
+
+    <h2>Why Learn JavaScript?</h2>
+    <p>
+      JavaScript is one of the most demanded skills in the tech industry.
+      It opens doors to frontend, backend, and full-stack development.
+    </p>
+
+  </div>
+
+  <button id="topBtn">↑</button>
+
+  <script>
+    const theme = document.getElementById("theme");
+    theme.onclick = () => {
+      document.body.classList.toggle("light");
+      theme.classList.toggle("fa-sun");
+      theme.classList.toggle("fa-moon");
+    };
+
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display =
+        document.documentElement.scrollTop > 200 ? "block" : "none";
+    };
+
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+
+</body>
+</html>
