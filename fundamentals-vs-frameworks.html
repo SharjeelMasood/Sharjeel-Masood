@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Learning Fundamentals Matters More Than Frameworks</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#fff;transition:.4s}
+body.light-mode{background:#fff;color:#333}
+.top-bar{position:fixed;top:0;width:100%;height:60px;background:rgba(0,0,0,.35);display:flex;gap:20px;align-items:center;padding:0 20px;z-index:999}
+.container{max-width:1000px;margin:100px auto 80px;padding:30px;background:rgba(255,255,255,.05);border-radius:15px}
+h1,h2{color:#00BFFF}
+p{font-size:18px;line-height:1.9}
+img{width:100%;border-radius:15px;margin:35px 0}
+#topBtn{position:fixed;bottom:30px;right:30px;background:#00BFFF;color:#fff;border:none;padding:14px;border-radius:50%;display:none}
+</style>
+</head>
+
+<body>
+<div class="top-bar">
+<i class="fas fa-arrow-left" onclick="history.back()"></i>
+<i class="fas fa-moon" id="themeToggle"></i>
+</div>
+
+<div class="container">
+<h1>Why Learning Fundamentals Matters More Than Frameworks</h1>
+
+<p>
+Frameworks change every few years,
+but fundamentals stay forever.
+This is the difference between short-term success
+and a long-lasting career.
+</p>
+
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="coding fundamentals">
+
+<h2>The Framework Trap</h2>
+<p>
+Many developers chase trending frameworks
+without understanding basics.
+This leads to shallow knowledge and frustration.
+</p>
+
+<h2>What Are Fundamentals?</h2>
+<p>
+Fundamentals include HTML structure,
+CSS layout principles,
+JavaScript logic,
+browser behavior,
+and problem-solving skills.
+</p>
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="web basics">
+
+<h2>Why Companies Prefer Fundamentals</h2>
+<p>
+Companies want developers who can adapt.
+A developer with strong fundamentals
+can learn any framework quickly.
+</p>
+
+<h2>Long-Term Career Growth</h2>
+<p>
+Frameworks help you get interviews.
+Fundamentals help you get promotions,
+stability, and confidence.
+</p>
+
+<h2>Final Advice</h2>
+<p>
+Learn the basics deeply.
+Frameworks will follow naturally.
+This mindset separates professionals from beginners.
+</p>
+</div>
+
+<button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+const tg=document.getElementById("themeToggle");
+tg.onclick=()=>{document.body.classList.toggle("light-mode");tg.classList.toggle("fa-sun");tg.classList.toggle("fa-moon");};
+const tp=document.getElementById("topBtn");
+window.onscroll=()=>tp.style.display=document.documentElement.scrollTop>300?"block":"none";
+tp.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+</script>
+</body>
+</html>

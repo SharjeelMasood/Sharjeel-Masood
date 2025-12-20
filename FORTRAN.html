@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORTRAN – First Programming Language</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Segoe UI, Arial;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            transition: .4s
+        }
+
+        body.light {
+            background: #fff;
+            color: #1e1e1e
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 0 22px;
+            background: rgba(0, 0, 0, .35);
+            z-index: 1000
+        }
+
+        body.light .top-bar {
+            background: #f4f4f4
+        }
+
+        .top-bar i {
+            font-size: 26px;
+            cursor: pointer
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 100px;
+            padding: 45px;
+            background: rgba(255, 255, 255, .06);
+            border-radius: 18px
+        }
+
+        body.light .container {
+            background: #fff
+        }
+
+        h1 {
+            color: #00BFFF;
+            font-size: 44px
+        }
+
+        h2 {
+            margin-top: 50px;
+            color: #00BFFF
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 2.1;
+            margin-top: 18px
+        }
+
+        img {
+            width: 90%;
+            margin: 45px auto;
+            display: block;
+            border-radius: 22px
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 14px 18px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: none;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <i class="fas fa-arrow-left" onclick="history.back()"></i>
+        <i class="fas fa-moon" id="toggle"></i>
+    </div>
+
+    <div class="container">
+        <h1>FORTRAN: The First Practical Programming Language That Changed Computing</h1>
+
+        <p>
+            Before FORTRAN, programming was extremely difficult. Developers had to write instructions directly in
+            machine or assembly language. FORTRAN transformed computing by introducing human-readable programming.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
+        <h2>Origins of FORTRAN</h2>
+        <p>
+            FORTRAN was created in 1957 by John Backus and his team at IBM. The goal was to allow scientists and
+            engineers to write programs more easily and efficiently.
+        </p>
+
+        <h2>The Need for a High-Level Language</h2>
+        <p>
+            Early computers were powerful but difficult to program. FORTRAN allowed developers to focus on
+            problem-solving instead of hardware details.
+        </p>
+
+        <h2>Key Features Introduced by FORTRAN</h2>
+        <p>
+            FORTRAN introduced variables, loops, conditional statements, mathematical expressions, and reusable
+            subroutines — features that are fundamental in modern programming languages.
+        </p>
+
+        <h2>Performance and Efficiency</h2>
+        <p>
+            One of the biggest achievements of FORTRAN was its compiler, which produced highly optimized machine code.
+            This made FORTRAN programs fast and reliable.
+        </p>
+
+        <h2>Scientific and Industrial Impact</h2>
+        <p>
+            FORTRAN became the backbone of scientific computing, aerospace research, weather prediction, nuclear
+            simulations, and engineering calculations.
+        </p>
+
+        <h2>FORTRAN in Modern Times</h2>
+        <p>
+            Even today, FORTRAN is used in supercomputers and high-performance systems. Many legacy systems still rely
+            on it due to its efficiency.
+        </p>
+
+        <h2>Legacy in Modern Languages</h2>
+        <p>
+            Languages such as C, C++, Java, and Python borrowed core ideas from FORTRAN. Without FORTRAN, modern
+            programming might look very different.
+        </p>
+
+        <h2>Why Developers Should Learn This History</h2>
+        <p>
+            Understanding FORTRAN helps developers appreciate abstraction, performance optimization, and the evolution
+            of programming concepts.
+        </p>
+
+        <p>
+            FORTRAN proved that programming could be powerful, efficient, and accessible. It set the standard for all
+            future programming languages.
+        </p>
+    </div>
+
+    <button id="topBtn">↑</button>
+
+    <script>
+        const t = document.getElementById("toggle");
+        t.onclick = () => { document.body.classList.toggle("light"); t.classList.toggle("fa-moon"); t.classList.toggle("fa-sun"); };
+        const b = document.getElementById("topBtn");
+        window.onscroll = () => b.style.display = window.scrollY > 300 ? "block" : "none";
+        b.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    </script>
+</body>
+
+</html>

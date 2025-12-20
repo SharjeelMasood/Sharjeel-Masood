@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Minimalism for Developers</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Segoe UI, Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            transition: .4s;
+        }
+
+        body.light {
+            background: #ffffff;
+            color: #1e1e1e;
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 22px;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 1000;
+        }
+
+        body.light .top-bar {
+            background: #f4f4f4;
+        }
+
+        .top-bar i {
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 100px auto 100px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 18px;
+        }
+
+        body.light .container {
+            background: #ffffff;
+        }
+
+        h1 {
+            color: #00BFFF;
+            font-size: 42px;
+        }
+
+        h2 {
+            margin-top: 45px;
+            color: #00BFFF;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 2;
+            margin-top: 16px;
+        }
+
+        img {
+            width: 90%;
+            display: block;
+            margin: 40px auto;
+            border-radius: 22px;
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 14px 18px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <i class="fas fa-arrow-left" onclick="history.back()"></i>
+        <i class="fas fa-moon" id="themeToggle"></i>
+    </div>
+
+    <div class="container">
+
+        <h1>Digital Minimalism for Developers: How to Stay Focused in an Overloaded Tech World</h1>
+
+        <p>
+            Modern developers are surrounded by notifications, tools, frameworks, tutorials, and constant updates. While
+            technology is meant to improve productivity, it often does the opposite. Digital minimalism is an approach
+            that helps developers focus on what truly matters.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+
+        <h2>What Is Digital Minimalism?</h2>
+        <p>
+            Digital minimalism is the practice of intentionally choosing tools and technologies that add real value,
+            while eliminating distractions. It is not about quitting technology, but about using it with purpose.
+        </p>
+
+        <h2>Why Developers Are Burning Out</h2>
+        <p>
+            Too many platforms, endless learning pressure, social media comparison, and constant notifications create
+            mental overload. This reduces creativity, slows learning, and leads to burnout.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+        <h2>The Cost of Context Switching</h2>
+        <p>
+            Every time a developer switches between tasks, it takes time for the brain to refocus. Frequent context
+            switching reduces deep work and lowers code quality.
+        </p>
+
+        <h2>Minimal Tool Stack</h2>
+        <p>
+            Successful developers often use fewer tools but master them deeply. A clean editor setup, limited browser
+            extensions, and focused workflows lead to better results.
+        </p>
+
+        <h2>Learning Without Overconsumption</h2>
+        <p>
+            Instead of following every new framework, focus on fundamentals. Depth always beats breadth in the long run.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+
+        <h2>Practical Digital Minimalism Habits</h2>
+        <p>
+            Turn off non-essential notifications, schedule deep work sessions, limit social media usage, and review
+            tools regularly to remove what you no longer need.
+        </p>
+
+        <h2>Why This Matters for Your Career</h2>
+        <p>
+            Focused developers learn faster, write better code, and build meaningful projects. Digital minimalism helps
+            you stand out in a noisy tech industry.
+        </p>
+
+        <p>
+            In a world full of distractions, the ability to focus has become a superpower. Developers who master digital
+            minimalism will build better software and healthier careers.
+        </p>
+
+    </div>
+
+    <button id="topBtn">↑</button>
+
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        toggle.onclick = () => {
+            document.body.classList.toggle("light");
+            toggle.classList.toggle("fa-moon");
+            toggle.classList.toggle("fa-sun");
+        };
+
+        const topBtn = document.getElementById("topBtn");
+        window.onscroll = () => {
+            topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        };
+        topBtn.onclick = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+
+</body>
+
+</html>

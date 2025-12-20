@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Hard Times to Easier Days</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+  color:#fff;
+  transition:0.4s;
+}
+body.light{
+  background:#fff;
+  color:#222;
+}
+
+.top-bar{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:60px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:0 20px;
+  background:rgba(0,0,0,0.4);
+  z-index:999;
+}
+body.light .top-bar{background:#f1f5f9}
+
+.top-bar i{
+  font-size:26px;
+  cursor:pointer;
+}
+
+.container{
+  max-width:1150px;
+  margin:100px auto 80px;
+  padding:35px;
+  background:rgba(255,255,255,0.05);
+  border-radius:16px;
+}
+body.light .container{background:#fff}
+
+h1{font-size:42px;margin-bottom:25px}
+h2{margin-top:50px;font-size:30px}
+h3{margin-top:30px}
+
+p{
+  font-size:18px;
+  line-height:2;
+  margin-top:15px;
+}
+
+ul{
+  margin-left:28px;
+  margin-top:15px;
+}
+
+img{
+  width:92%;
+  max-width:700px;
+  display:block;
+  margin:30px auto;
+  border-radius:14px;
+  border:1px solid #38bdf8;
+}
+
+#topBtn{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  background:#38bdf8;
+  border:none;
+  padding:12px 16px;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
+  <i class="fas fa-moon" id="themeToggle" title="Toggle Theme"></i>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<h1>How to Move from Hard Times to Easier Days</h1>
+
+<p>
+Life is full of ups and downs. No one stays in easy times forever, and hard times are never permanent. Challenges appear in everyone's life — the difference lies in how a person reacts: some break, while others learn and grow stronger.
+</p>
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Overcoming Hard Times">
+
+<h2>Understanding Hard Times</h2>
+<p>
+Hard times are not only about money. They can be emotional, professional, or personal:
+</p>
+
+<ul>
+<li>Career setbacks or failures</li>
+<li>Loss of relationships or support</li>
+<li>Efforts that seem to yield no results</li>
+<li>Moments of self-doubt or low self-worth</li>
+</ul>
+
+<p>
+These moments test our patience, resilience, and determination.
+</p>
+
+<h2>How to Behave During Tough Times</h2>
+<p>
+Hard times are not punishments; they are **tests of character**. During these periods, one must focus on:
+</p>
+
+<ul>
+<li>Patience and perseverance</li>
+<li>Belief in oneself</li>
+<li>Less complaining, more reflection</li>
+<li>Learning from mistakes</li>
+</ul>
+
+<img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe" alt="Patience and Hope">
+
+<h2>Strength in Silence</h2>
+<p>
+Not every thought needs to be expressed. Sometimes, **silence is the strongest response**. Hard times are the moments to:
+</p>
+
+<ul>
+<li>Reevaluate your goals</li>
+<li>Analyze your mistakes calmly</li>
+<li>Learn new skills</li>
+<li>Transform your mindset</li>
+</ul>
+
+<h2>Keep Working Even When Results Are Invisible</h2>
+<p>
+The hardest time is when you are putting in effort, yet results are not visible. Remember:
+</p>
+
+<p>
+<strong>The seed grows underground before the flower blooms.</strong>
+</p>
+
+<img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d" alt="Hard Work">
+
+<h2>How Easier Days Arrive</h2>
+<p>
+Easier days do not appear suddenly. They are built gradually when you:
+</p>
+
+<ul>
+<li>Wake up daily without giving up</li>
+<li>Keep improving your skills and knowledge</li>
+<li>Maintain a positive mindset</li>
+<li>Trust the process and have faith</li>
+</ul>
+
+<p>
+People who improve themselves during tough times naturally attract better days. Time rewards consistency and perseverance.
+</p>
+
+<h2>Hard Times Are Not to Break You, But to Build You</h2>
+<p>
+The most beautiful truth of life is that:
+</p>
+
+<p>
+<strong>What challenges you today will strengthen you tomorrow.</strong>
+</p>
+
+<p>
+If you are struggling today, it does not mean you have failed. It means **your story is still being written**.
+</p>
+
+<h2>Final Words</h2>
+<p>
+During hard times, respect yourself, value your own worth, and trust that:
+</p>
+
+<p>
+<strong>After every long night, a bright morning awaits — patience is key.</strong>
+</p>
+
+</div>
+
+<!-- TO TOP -->
+<button id="topBtn">↑</button>
+
+<script>
+// theme toggle
+const toggle=document.getElementById("themeToggle");
+toggle.onclick=()=>{
+ document.body.classList.toggle("light");
+ toggle.classList.toggle("fa-moon");
+ toggle.classList.toggle("fa-sun");
+}
+
+// to top
+const topBtn=document.getElementById("topBtn");
+window.onscroll=()=>{
+ topBtn.style.display=window.scrollY>300?"block":"none";
+}
+topBtn.onclick=()=>{
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ada Lovelace – The First Programmer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body{margin:0;font-family:Segoe UI,Arial;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#fff;transition:.4s}
+body.light{background:#fff;color:#1e1e1e}
+.top-bar{position:fixed;top:0;width:100%;height:60px;display:flex;gap:20px;align-items:center;padding:0 22px;background:rgba(0,0,0,.35);z-index:1000}
+body.light .top-bar{background:#f4f4f4}
+.top-bar i{font-size:26px;cursor:pointer}
+.container{max-width:1200px;margin:100px auto 100px;padding:45px;background:rgba(255,255,255,.06);border-radius:18px}
+body.light .container{background:#fff}
+h1{color:#00BFFF;font-size:44px}
+h2{margin-top:50px;color:#00BFFF}
+p{font-size:18px;line-height:2.1;margin-top:18px}
+img{width:90%;margin:45px auto;display:block;border-radius:22px}
+#topBtn{position:fixed;bottom:30px;right:30px;background:#007BFF;color:#fff;border:none;padding:14px 18px;border-radius:50%;font-size:20px;display:none;cursor:pointer}
+</style>
+</head>
+
+<body>
+<div class="top-bar">
+<i class="fas fa-arrow-left" onclick="history.back()"></i>
+<i class="fas fa-moon" id="toggle"></i>
+</div>
+
+<div class="container">
+<h1>Ada Lovelace: The First Programmer and the Birth of Programming Thinking</h1>
+
+<p>
+When people talk about programming, they often imagine modern computers, screens, and code editors. However, the true origin of programming goes back to the 19th century — long before electronic computers existed. At the center of this story is Ada Lovelace, a visionary mathematician who laid the foundation of programming logic.
+</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg">
+
+<h2>Early Life and Intellectual Background</h2>
+<p>
+Ada Lovelace was born in 1815 in England. She was the daughter of the famous poet Lord Byron, but her mother encouraged her to study mathematics and logic instead of literature. This decision shaped her future and allowed her to develop analytical thinking at a time when women were rarely involved in science.
+</p>
+
+<h2>The Analytical Engine</h2>
+<p>
+Ada collaborated with Charles Babbage, who designed the Analytical Engine — a mechanical machine considered the first general-purpose computer concept. Although the machine was never fully built, its design included components similar to modern computers, such as memory, processing units, and input/output mechanisms.
+</p>
+
+<h2>The First Algorithm</h2>
+<p>
+In 1843, Ada translated an Italian paper about the Analytical Engine and added her own extensive notes. Within these notes, she described a detailed step-by-step algorithm for calculating Bernoulli numbers. This algorithm is recognized as the first computer program ever written.
+</p>
+
+<h2>Programming Without a Computer</h2>
+<p>
+What makes Ada Lovelace extraordinary is that she wrote a program for a machine that did not physically exist. This demonstrates her ability to think abstractly about computation — a skill that defines modern programming.
+</p>
+
+<h2>Vision Beyond Calculation</h2>
+<p>
+Ada believed that machines could manipulate symbols, not just numbers. She even predicted that computers could one day compose music and create art, a concept that strongly aligns with modern artificial intelligence.
+</p>
+
+<h2>Impact on Modern Programming</h2>
+<p>
+Core programming ideas such as loops, instructions, and logical flow can be traced back to Ada’s thinking. Her work influenced future generations of computer scientists and programmers.
+</p>
+
+<h2>Why Ada Lovelace Still Matters Today</h2>
+<p>
+Ada Lovelace represents creativity, logic, and vision. Her legacy reminds developers that programming is not only about syntax, but about thinking deeply and solving problems creatively.
+</p>
+
+<p>
+Today, programming languages, frameworks, and systems exist because someone first imagined how instructions could guide a machine. That person was Ada Lovelace.
+</p>
+</div>
+
+<button id="topBtn">↑</button>
+
+<script>
+const t=document.getElementById("toggle");
+t.onclick=()=>{document.body.classList.toggle("light");t.classList.toggle("fa-moon");t.classList.toggle("fa-sun");};
+const b=document.getElementById("topBtn");
+window.onscroll=()=>b.style.display=window.scrollY>300?"block":"none";
+b.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+</script>
+</body>
+</html>

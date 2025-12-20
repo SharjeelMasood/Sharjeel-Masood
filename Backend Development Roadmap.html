@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Development Roadmap: Beginner to Advanced</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            transition: 0.4s;
+        }
+
+        body.light {
+            background: #fff;
+            color: #222;
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+        }
+
+        body.light .top-bar {
+            background: #f1f5f9
+        }
+
+        .top-bar i {
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 100px auto 70px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+        }
+
+        body.light .container {
+            background: #fff
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px
+        }
+
+        h2 {
+            margin-top: 45px;
+            font-size: 30px
+        }
+
+        h3 {
+            margin-top: 25px
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-top: 15px;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+
+        img {
+            width: 90%;
+            max-width: 650px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 12px;
+            border: 1px solid #38bdf8;
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #38bdf8;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
+        <i class="fas fa-moon" id="themeToggle" title="Toggle Theme"></i>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+
+        <h1>Backend Development Roadmap: Beginner to Advanced</h1>
+
+        <p>
+            Backend development is the engine behind every modern application. While users interact with buttons and
+            layouts on the frontend, the backend handles logic, data, authentication, and performance. A strong backend
+            developer understands how servers, databases, and APIs work together to power applications.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Backend Development">
+
+        <h2>Stage 1: Understanding Backend Basics</h2>
+        <p>
+            At the beginner level, your goal is to understand what the backend actually does. Backend systems receive
+            requests from the frontend, process business logic, interact with databases, and return responses.
+        </p>
+
+        <ul>
+            <li>How client-server architecture works</li>
+            <li>What APIs are and why they are important</li>
+            <li>Understanding HTTP requests and responses</li>
+            <li>Basic knowledge of JSON</li>
+        </ul>
+
+        <h2>Stage 2: Choosing a Backend Language</h2>
+        <p>
+            Backend development is not tied to a single language. You can choose one based on your goals and ecosystem.
+            The most important thing is to master one language deeply.
+        </p>
+
+        <ul>
+            <li>JavaScript (Node.js)</li>
+            <li>Python (Django / Flask)</li>
+            <li>PHP (Laravel)</li>
+            <li>Java (Spring Boot)</li>
+            <li>C# (.NET)</li>
+        </ul>
+
+        <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3" alt="Backend Languages">
+
+        <h2>Stage 3: Working with Databases</h2>
+        <p>
+            Databases are the backbone of backend systems. As a backend developer, you must know how to store, retrieve,
+            update, and secure data efficiently.
+        </p>
+
+        <ul>
+            <li>SQL databases (MySQL, PostgreSQL)</li>
+            <li>NoSQL databases (MongoDB, Firebase)</li>
+            <li>Database relationships</li>
+            <li>Indexes and performance optimization</li>
+        </ul>
+
+        <h2>Stage 4: APIs & Authentication</h2>
+        <p>
+            Modern applications rely heavily on APIs. Backend developers design APIs that are secure, scalable, and easy
+            to consume by frontend or mobile apps.
+        </p>
+
+        <ul>
+            <li>RESTful APIs</li>
+            <li>JWT authentication</li>
+            <li>Sessions and cookies</li>
+            <li>OAuth (Google / GitHub login)</li>
+        </ul>
+
+        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479" alt="API Development">
+
+        <h2>Stage 5: Security & Performance</h2>
+        <p>
+            A professional backend developer must think about security and speed. Poorly secured backends can lead to
+            data leaks and system crashes.
+        </p>
+
+        <ul>
+            <li>Data validation</li>
+            <li>Password hashing</li>
+            <li>Rate limiting</li>
+            <li>Caching strategies</li>
+        </ul>
+
+        <h2>Stage 6: Deployment & DevOps Basics</h2>
+        <p>
+            Once your backend is ready, you need to deploy it so users can access it. This involves servers, cloud
+            platforms, and monitoring tools.
+        </p>
+
+        <ul>
+            <li>Linux server basics</li>
+            <li>Cloud hosting (AWS, DigitalOcean)</li>
+            <li>Environment variables</li>
+            <li>CI/CD concepts</li>
+        </ul>
+
+        <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb" alt="Cloud Deployment">
+
+        <h2>Stage 7: Becoming Advanced</h2>
+        <p>
+            At the advanced level, backend developers design systems that can handle millions of users. You start
+            thinking in terms of architecture rather than just code.
+        </p>
+
+        <ul>
+            <li>Microservices architecture</li>
+            <li>Message queues</li>
+            <li>Scalability strategies</li>
+            <li>System design principles</li>
+        </ul>
+
+        <h2>Career Growth as a Backend Developer</h2>
+        <p>
+            Backend developers are in high demand across startups and enterprises. With strong backend skills, you can
+            work as a software engineer, API specialist, cloud engineer, or even a system architect.
+        </p>
+
+    </div>
+
+    <!-- TO TOP -->
+    <button id="topBtn">↑</button>
+
+    <script>
+        // theme toggle
+        const toggle = document.getElementById("themeToggle");
+        toggle.onclick = () => {
+            document.body.classList.toggle("light");
+            toggle.classList.toggle("fa-moon");
+            toggle.classList.toggle("fa-sun");
+        }
+
+        // top button
+        const topBtn = document.getElementById("topBtn");
+        window.onscroll = () => {
+            topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        }
+        topBtn.onclick = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+
+</body>
+
+</html>

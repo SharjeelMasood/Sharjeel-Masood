@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless Architecture: How Applications Scale Without Servers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Segoe UI, Arial;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            transition: .4s
+        }
+
+        body.light {
+            background: #fff;
+            color: #1e1e1e
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 22px;
+            background: rgba(0, 0, 0, .35);
+            z-index: 1000
+        }
+
+        body.light .top-bar {
+            background: #f4f4f4
+        }
+
+        .top-bar i {
+            font-size: 26px;
+            cursor: pointer
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 100px auto 90px;
+            padding: 40px;
+            background: rgba(255, 255, 255, .06);
+            border-radius: 18px
+        }
+
+        body.light .container {
+            background: #fff
+        }
+
+        h1 {
+            font-size: 44px;
+            color: #00BFFF
+        }
+
+        h2 {
+            margin-top: 55px;
+            color: #00BFFF
+        }
+
+        p {
+            font-size: 18.5px;
+            line-height: 2;
+            margin-top: 18px
+        }
+
+        img {
+            width: 90%;
+            display: block;
+            margin: 45px auto;
+            border-radius: 22px
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 14px 18px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none
+        }
+
+        #topBtn:hover {
+            background: #0056b3
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <i class="fas fa-arrow-left" onclick="history.back()"></i>
+        <i class="fas fa-moon" id="theme"></i>
+    </div>
+
+    <div class="container">
+        <h1>Serverless Architecture: How Applications Scale Without Servers</h1>
+
+        <p>
+            Despite its name, serverless does not mean there are no servers. It means developers no longer manage them.
+            Infrastructure scaling, maintenance, and availability are handled by cloud providers.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+
+        <h2>What Serverless Really Means</h2>
+        <p>
+            Serverless architecture allows developers to write functions that execute on demand. The cloud automatically
+            allocates resources only when needed.
+        </p>
+
+        <h2>How Serverless Scales Automatically</h2>
+        <p>
+            Each request triggers an isolated execution environment. When traffic spikes, the platform scales instantly
+            without manual intervention.
+        </p>
+
+        <h2>Cost Efficiency</h2>
+        <p>
+            You pay only for execution time. No idle servers, no wasted resources.
+        </p>
+
+        <h2>Popular Serverless Platforms</h2>
+        <p>
+            AWS Lambda, Vercel Functions, Netlify Functions, and Cloudflare Workers dominate modern serverless
+            deployments.
+        </p>
+
+        <h2>When Serverless Is Not Ideal</h2>
+        <p>
+            Long-running tasks, heavy memory usage, or strict latency requirements may require traditional servers.
+        </p>
+
+        <h2>Why Developers Love Serverless</h2>
+        <p>
+            Faster deployment, lower operational burden, and built-in scalability make serverless attractive for modern
+            apps.
+        </p>
+
+        <h2>The Future of Backend Development</h2>
+        <p>
+            Serverless enables rapid innovation by removing infrastructure barriers. It is a major shift in how
+            applications are built.
+        </p>
+    </div>
+
+    <button id="topBtn">↑</button>
+
+    <script>
+        const theme = document.getElementById("theme");
+        theme.onclick = () => {
+            document.body.classList.toggle("light");
+            theme.classList.toggle("fa-moon");
+            theme.classList.toggle("fa-sun");
+        };
+        const topBtn = document.getElementById("topBtn");
+        window.onscroll = () => topBtn.style.display = window.scrollY > 260 ? "block" : "none";
+        topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    </script>
+
+</body>
+
+</html>
