@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sharjeel Masood</title>
-  <link rel="icon" href="img/sharjeel masood.png" type="image/png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <!-- Font Awesome CDN for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -237,13 +237,13 @@
             <a href="#" target="_blank">View Project</a>
           </div>
         </div>
-        </div>
-         
-        <!-- Add more projects as needed -->
       </div>
+
+      <!-- Add more projects as needed -->
+    </div>
     </div>
   </section>
-    <!-- Contact section -->
+  <!-- Contact section -->
 
   <section class="contact-cta">
     <h2>Let’s Work Together</h2>
@@ -298,7 +298,7 @@
 
 
   <script>
-    
+
     //Services js
     // ================== Mobile Menu Toggle ==================
     const navbarMenu = document.getElementById("navbarMenu");
@@ -377,35 +377,35 @@
           }
         });
       });
-    }); 
-    window.addEventListener("load",()=>{
-  document.querySelector(".contact-cta").classList.add("visible");
-});
+    });
+    window.addEventListener("load", () => {
+      document.querySelector(".contact-cta").classList.add("visible");
+    });
 
 
-// Auto year
-document.getElementById("year").textContent = new Date().getFullYear();
+    // Auto year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-// Reveal animation
-window.addEventListener("load",()=>{
-  document.querySelector(".footer-top").classList.add("visible");
-});
-const scrollTopBtn = document.getElementById('scrollTop');
+    // Reveal animation
+    window.addEventListener("load", () => {
+      document.querySelector(".footer-top").classList.add("visible");
+    });
+    const scrollTopBtn = document.getElementById('scrollTop');
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollTopBtn.style.display = "block";
-  } else {
-    scrollTopBtn.style.display = "none";
-  }
-};
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
 
   </script>
 </body>

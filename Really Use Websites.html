@@ -1,206 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How Mobile Users Really Use Websites</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Mobile Users Really Use Websites</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: 0.4s;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#fff;
-  transition:0.4s;
-}
+    body.light {
+      background: #ffffff;
+      color: #222;
+    }
 
-body.light{
-  background:#ffffff;
-  color:#222;
-}
+    a {
+      color: #00bfff;
+    }
 
-a{color:#00bfff;}
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
 
-.top-bar{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:60px;
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:0 20px;
-  background:rgba(0,0,0,0.3);
-  z-index:1000;
-}
+    body.light .top-bar {
+      background: #f5f5f5;
+    }
 
-body.light .top-bar{
-  background:#f5f5f5;
-}
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-.top-bar i{
-  font-size:26px;
-  cursor:pointer;
-}
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 60px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+    }
 
-.container{
-  max-width:1000px;
-  margin:100px auto 60px;
-  padding:30px;
-  background:rgba(255,255,255,0.06);
-  border-radius:14px;
-}
+    body.light .container {
+      background: #ffffff;
+    }
 
-body.light .container{
-  background:#ffffff;
-}
+    h1 {
+      font-size: 40px;
+      color: #00bfff;
+    }
 
-h1{
-  font-size:40px;
-  color:#00bfff;
-}
+    h2 {
+      margin-top: 40px;
+      color: #00bfff;
+    }
 
-h2{
-  margin-top:40px;
-  color:#00bfff;
-}
+    p {
+      font-size: 18px;
+      line-height: 1.9;
+    }
 
-p{
-  font-size:18px;
-  line-height:1.9;
-}
+    img {
+      width: 90%;
+      margin: 30px 5%;
+      border-radius: 18px;
+    }
 
-img{
-  width:90%;
-  margin:30px 5%;
-  border-radius:18px;
-}
+    /* SCROLL TO TOP */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
 
-/* SCROLL TO TOP */
-#topBtn{
-  position:fixed;
-  bottom:30px;
-  right:30px;
-  background:#007BFF;
-  color:#fff;
-  border:none;
-  padding:14px 18px;
-  border-radius:50%;
-  font-size:20px;
-  cursor:pointer;
-  display:none;
-  box-shadow:0 4px 6px rgba(0,0,0,0.3);
-}
-
-#topBtn:hover{
-  background:#0056b3;
-}
-</style>
+    #topBtn:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <i class="fas fa-arrow-left" onclick="history.back()"></i>
-  <i class="fas fa-moon" id="theme"></i>
-</div>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()"></i>
+    <i class="fas fa-moon" id="theme"></i>
+  </div>
 
-<!-- BLOG CONTENT -->
-<div class="container">
+  <!-- BLOG CONTENT -->
+  <div class="container">
 
-<h1>How Mobile Users Really Use Websites</h1>
+    <h1>How Mobile Users Really Use Websites</h1>
 
-<p>
-Mobile users do not browse websites the same way desktop users do. They scroll faster, decide quicker, and leave sooner if something feels confusing. Understanding real mobile behavior is no longer optional — it is essential.
-</p>
+    <p>
+      Mobile users do not browse websites the same way desktop users do. They scroll faster, decide quicker, and leave
+      sooner if something feels confusing. Understanding real mobile behavior is no longer optional — it is essential.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
 
-<h2>Mobile Users Are Always in a Hurry</h2>
-<p>
-Most mobile visits happen during short moments — while waiting, commuting, or multitasking. Users want answers immediately. Long introductions, heavy visuals, or slow loading pages push them away instantly.
-</p>
+    <h2>Mobile Users Are Always in a Hurry</h2>
+    <p>
+      Most mobile visits happen during short moments — while waiting, commuting, or multitasking. Users want answers
+      immediately. Long introductions, heavy visuals, or slow loading pages push them away instantly.
+    </p>
 
-<h2>The Thumb Zone Matters</h2>
-<p>
-Mobile users interact mostly with their thumbs. Buttons placed too high or too close together cause frustration. Smart mobile design respects natural hand movement and makes actions effortless.
-</p>
+    <h2>The Thumb Zone Matters</h2>
+    <p>
+      Mobile users interact mostly with their thumbs. Buttons placed too high or too close together cause frustration.
+      Smart mobile design respects natural hand movement and makes actions effortless.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70">
+    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70">
 
-<h2>Scrolling Is Natural, Tapping Is a Decision</h2>
-<p>
-Users scroll without thinking, but tapping requires intent. Important content should appear early. Calls-to-action should feel obvious, not hidden or forced.
-</p>
+    <h2>Scrolling Is Natural, Tapping Is a Decision</h2>
+    <p>
+      Users scroll without thinking, but tapping requires intent. Important content should appear early. Calls-to-action
+      should feel obvious, not hidden or forced.
+    </p>
 
-<h2>Text Is Skimmed, Not Read</h2>
-<p>
-Mobile users scan content instead of reading every word. Short paragraphs, clear headings, and visual breaks help users understand quickly without effort.
-</p>
+    <h2>Text Is Skimmed, Not Read</h2>
+    <p>
+      Mobile users scan content instead of reading every word. Short paragraphs, clear headings, and visual breaks help
+      users understand quickly without effort.
+    </p>
 
-<h2>Forms Are the Biggest Pain Point</h2>
-<p>
-Long forms kill conversions on mobile. Each extra field feels heavier on a small screen. Smart websites reduce friction by asking only what truly matters.
-</p>
+    <h2>Forms Are the Biggest Pain Point</h2>
+    <p>
+      Long forms kill conversions on mobile. Each extra field feels heavier on a small screen. Smart websites reduce
+      friction by asking only what truly matters.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1506765515384-028b60a970df">
+    <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df">
 
-<h2>Speed Shapes Trust</h2>
-<p>
-Mobile users associate speed with reliability. If a page loads slowly, users assume the site is outdated or unsafe. Performance directly affects credibility.
-</p>
+    <h2>Speed Shapes Trust</h2>
+    <p>
+      Mobile users associate speed with reliability. If a page loads slowly, users assume the site is outdated or
+      unsafe. Performance directly affects credibility.
+    </p>
 
-<h2>Popups Feel More Aggressive on Mobile</h2>
-<p>
-What feels acceptable on desktop often feels intrusive on mobile. Full-screen popups interrupt flow and increase bounce rates. Subtle guidance works better than force.
-</p>
+    <h2>Popups Feel More Aggressive on Mobile</h2>
+    <p>
+      What feels acceptable on desktop often feels intrusive on mobile. Full-screen popups interrupt flow and increase
+      bounce rates. Subtle guidance works better than force.
+    </p>
 
-<h2>One-Handed Usage Is the Norm</h2>
-<p>
-Designing for one hand improves accessibility and comfort. Simple navigation, large tap targets, and predictable layouts create smoother experiences.
-</p>
+    <h2>One-Handed Usage Is the Norm</h2>
+    <p>
+      Designing for one hand improves accessibility and comfort. Simple navigation, large tap targets, and predictable
+      layouts create smoother experiences.
+    </p>
 
-<h2>Mobile Users Expect Simplicity</h2>
-<p>
-Complex menus, hidden actions, or excessive animations confuse users. Mobile success comes from clarity, not creativity overload.
-</p>
+    <h2>Mobile Users Expect Simplicity</h2>
+    <p>
+      Complex menus, hidden actions, or excessive animations confuse users. Mobile success comes from clarity, not
+      creativity overload.
+    </p>
 
-<h2>Understanding Behavior Beats Guessing</h2>
-<p>
-Designing for mobile is not about shrinking a desktop site. It is about understanding human behavior in real-life situations. The better you understand users, the better your website performs.
-</p>
+    <h2>Understanding Behavior Beats Guessing</h2>
+    <p>
+      Designing for mobile is not about shrinking a desktop site. It is about understanding human behavior in real-life
+      situations. The better you understand users, the better your website performs.
+    </p>
 
-</div>
+  </div>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-/* THEME TOGGLE – FIXED */
-const theme = document.getElementById("theme");
-theme.onclick = () => {
-  document.body.classList.toggle("light");
+  <script>
+    /* THEME TOGGLE – FIXED */
+    const theme = document.getElementById("theme");
+    theme.onclick = () => {
+      document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("light")) {
-    theme.classList.remove("fa-moon");
-    theme.classList.add("fa-sun");
-  } else {
-    theme.classList.remove("fa-sun");
-    theme.classList.add("fa-moon");
-  }
-};
+      if (document.body.classList.contains("light")) {
+        theme.classList.remove("fa-moon");
+        theme.classList.add("fa-sun");
+      } else {
+        theme.classList.remove("fa-sun");
+        theme.classList.add("fa-moon");
+      }
+    };
 
-/* SCROLL TO TOP */
-const topBtn = document.getElementById("topBtn");
-window.onscroll = () => {
-  topBtn.style.display = window.scrollY > 200 ? "block" : "none";
-};
-topBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-</script>
+    /* SCROLL TO TOP */
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
 
 </body>
+
 </html>

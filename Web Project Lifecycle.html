@@ -1,255 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>From Idea to Live Website: Complete Web Project Lifecycle</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Idea to Live Website: Complete Web Project Lifecycle</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: 0.4s;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#fff;
-  transition:0.4s;
-}
-body.light{
-  background:#fff;
-  color:#222;
-}
+    body.light {
+      background: #fff;
+      color: #222;
+    }
 
-.top-bar{
-  position:fixed;
-  top:0;left:0;
-  width:100%;
-  height:60px;
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:0 20px;
-  background:rgba(0,0,0,0.4);
-  z-index:999;
-}
-body.light .top-bar{background:#f1f5f9}
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
 
-.top-bar i{
-  font-size:26px;
-  cursor:pointer;
-}
+    body.light .top-bar {
+      background: #f1f5f9
+    }
 
-.container{
-  max-width:1150px;
-  margin:100px auto 80px;
-  padding:35px;
-  background:rgba(255,255,255,0.05);
-  border-radius:16px;
-}
-body.light .container{background:#fff}
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-h1{font-size:44px;margin-bottom:25px}
-h2{margin-top:55px;font-size:32px}
-h3{margin-top:30px}
+    .container {
+      max-width: 1150px;
+      margin: 100px auto 80px;
+      padding: 35px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+    }
 
-p{
-  font-size:18px;
-  line-height:2;
-  margin-top:15px;
-}
+    body.light .container {
+      background: #fff
+    }
 
-ul{
-  margin-left:28px;
-  margin-top:15px;
-}
+    h1 {
+      font-size: 44px;
+      margin-bottom: 25px
+    }
 
-img{
-  width:92%;
-  max-width:700px;
-  display:block;
-  margin:30px auto;
-  border-radius:14px;
-  border:1px solid #38bdf8;
-}
+    h2 {
+      margin-top: 55px;
+      font-size: 32px
+    }
 
-#topBtn{
-  position:fixed;
-  bottom:30px;
-  right:30px;
-  background:#38bdf8;
-  border:none;
-  padding:12px 16px;
-  border-radius:50%;
-  font-size:20px;
-  cursor:pointer;
-  display:none;
-}
-</style>
+    h3 {
+      margin-top: 30px
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 2;
+      margin-top: 15px;
+    }
+
+    ul {
+      margin-left: 28px;
+      margin-top: 15px;
+    }
+
+    img {
+      width: 92%;
+      max-width: 700px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 14px;
+      border: 1px solid #38bdf8;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #38bdf8;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
-  <i class="fas fa-moon" id="themeToggle" title="Toggle Theme"></i>
-</div>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
+    <i class="fas fa-moon" id="themeToggle" title="Toggle Theme"></i>
+  </div>
 
-<!-- CONTENT -->
-<div class="container">
+  <!-- CONTENT -->
+  <div class="container">
 
-<h1>From Idea to Live Website: Complete Web Project Lifecycle</h1>
+    <h1>From Idea to Live Website: Complete Web Project Lifecycle</h1>
 
-<p>
-Every successful website starts with a simple idea. However, turning that idea into a fully functional live website requires planning, technical skills, creativity, and discipline. Understanding the complete web project lifecycle helps developers avoid mistakes, save time, and build scalable digital products.
-</p>
+    <p>
+      Every successful website starts with a simple idea. However, turning that idea into a fully functional live
+      website requires planning, technical skills, creativity, and discipline. Understanding the complete web project
+      lifecycle helps developers avoid mistakes, save time, and build scalable digital products.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Project Planning">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Project Planning">
 
-<h2>Phase 1: Idea & Problem Identification</h2>
-<p>
-The first step is understanding the problem you want to solve. A website should always serve a clear purpose, whether it is selling products, sharing information, or providing services. This phase focuses on defining goals, audience, and value.
-</p>
+    <h2>Phase 1: Idea & Problem Identification</h2>
+    <p>
+      The first step is understanding the problem you want to solve. A website should always serve a clear purpose,
+      whether it is selling products, sharing information, or providing services. This phase focuses on defining goals,
+      audience, and value.
+    </p>
 
-<ul>
-<li>What problem does the website solve?</li>
-<li>Who is the target audience?</li>
-<li>What makes the website unique?</li>
-<li>Is it informational, business, or application-based?</li>
-</ul>
+    <ul>
+      <li>What problem does the website solve?</li>
+      <li>Who is the target audience?</li>
+      <li>What makes the website unique?</li>
+      <li>Is it informational, business, or application-based?</li>
+    </ul>
 
-<h2>Phase 2: Research & Market Analysis</h2>
-<p>
-Research helps validate your idea. By analyzing competitors, user expectations, and industry trends, you can design a website that stands out instead of copying others blindly.
-</p>
+    <h2>Phase 2: Research & Market Analysis</h2>
+    <p>
+      Research helps validate your idea. By analyzing competitors, user expectations, and industry trends, you can
+      design a website that stands out instead of copying others blindly.
+    </p>
 
-<ul>
-<li>Competitor analysis</li>
-<li>User behavior research</li>
-<li>Content strategy planning</li>
-<li>Technology stack research</li>
-</ul>
+    <ul>
+      <li>Competitor analysis</li>
+      <li>User behavior research</li>
+      <li>Content strategy planning</li>
+      <li>Technology stack research</li>
+    </ul>
 
-<img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0" alt="Market Research">
+    <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0" alt="Market Research">
 
-<h2>Phase 3: Wireframing & UI/UX Design</h2>
-<p>
-Wireframes are basic sketches of your website layout. UI/UX design focuses on usability, accessibility, and visual appeal. Good design ensures users understand the website without confusion.
-</p>
+    <h2>Phase 3: Wireframing & UI/UX Design</h2>
+    <p>
+      Wireframes are basic sketches of your website layout. UI/UX design focuses on usability, accessibility, and visual
+      appeal. Good design ensures users understand the website without confusion.
+    </p>
 
-<ul>
-<li>Page layout planning</li>
-<li>User journey mapping</li>
-<li>Color schemes & typography</li>
-<li>Responsive design strategy</li>
-</ul>
+    <ul>
+      <li>Page layout planning</li>
+      <li>User journey mapping</li>
+      <li>Color schemes & typography</li>
+      <li>Responsive design strategy</li>
+    </ul>
 
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="UI UX Design">
+    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="UI UX Design">
 
-<h2>Phase 4: Frontend Development</h2>
-<p>
-Frontend development turns designs into interactive interfaces. This phase involves HTML for structure, CSS for styling, and JavaScript for interactivity. Performance and responsiveness are key concerns here.
-</p>
+    <h2>Phase 4: Frontend Development</h2>
+    <p>
+      Frontend development turns designs into interactive interfaces. This phase involves HTML for structure, CSS for
+      styling, and JavaScript for interactivity. Performance and responsiveness are key concerns here.
+    </p>
 
-<ul>
-<li>Semantic HTML structure</li>
-<li>Responsive layouts using CSS</li>
-<li>JavaScript interactions</li>
-<li>Accessibility best practices</li>
-</ul>
+    <ul>
+      <li>Semantic HTML structure</li>
+      <li>Responsive layouts using CSS</li>
+      <li>JavaScript interactions</li>
+      <li>Accessibility best practices</li>
+    </ul>
 
-<h2>Phase 5: Backend Development</h2>
-<p>
-The backend handles logic, data, and security. It connects the frontend with databases and external services. This phase ensures the website can handle users, data, and authentication securely.
-</p>
+    <h2>Phase 5: Backend Development</h2>
+    <p>
+      The backend handles logic, data, and security. It connects the frontend with databases and external services. This
+      phase ensures the website can handle users, data, and authentication securely.
+    </p>
 
-<ul>
-<li>Server-side logic</li>
-<li>Database integration</li>
-<li>User authentication</li>
-<li>API development</li>
-</ul>
+    <ul>
+      <li>Server-side logic</li>
+      <li>Database integration</li>
+      <li>User authentication</li>
+      <li>API development</li>
+    </ul>
 
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Backend Development">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Backend Development">
 
-<h2>Phase 6: Testing & Quality Assurance</h2>
-<p>
-Testing ensures that the website works correctly across devices and browsers. Bugs discovered early prevent future failures and user frustration.
-</p>
+    <h2>Phase 6: Testing & Quality Assurance</h2>
+    <p>
+      Testing ensures that the website works correctly across devices and browsers. Bugs discovered early prevent future
+      failures and user frustration.
+    </p>
 
-<ul>
-<li>Functionality testing</li>
-<li>Responsive testing</li>
-<li>Security checks</li>
-<li>Performance optimization</li>
-</ul>
+    <ul>
+      <li>Functionality testing</li>
+      <li>Responsive testing</li>
+      <li>Security checks</li>
+      <li>Performance optimization</li>
+    </ul>
 
-<h2>Phase 7: Deployment & Hosting</h2>
-<p>
-Deployment makes the website accessible to the public. Choosing reliable hosting and proper deployment strategies ensures uptime and performance.
-</p>
+    <h2>Phase 7: Deployment & Hosting</h2>
+    <p>
+      Deployment makes the website accessible to the public. Choosing reliable hosting and proper deployment strategies
+      ensures uptime and performance.
+    </p>
 
-<ul>
-<li>Domain & hosting setup</li>
-<li>Server configuration</li>
-<li>SSL security</li>
-<li>Continuous deployment</li>
-</ul>
+    <ul>
+      <li>Domain & hosting setup</li>
+      <li>Server configuration</li>
+      <li>SSL security</li>
+      <li>Continuous deployment</li>
+    </ul>
 
-<img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb" alt="Web Hosting">
+    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb" alt="Web Hosting">
 
-<h2>Phase 8: Monitoring & Maintenance</h2>
-<p>
-Launching a website is not the end. Continuous monitoring, updates, and improvements are necessary to keep the website secure and relevant.
-</p>
+    <h2>Phase 8: Monitoring & Maintenance</h2>
+    <p>
+      Launching a website is not the end. Continuous monitoring, updates, and improvements are necessary to keep the
+      website secure and relevant.
+    </p>
 
-<ul>
-<li>Bug fixing</li>
-<li>Performance monitoring</li>
-<li>Security updates</li>
-<li>Content updates</li>
-</ul>
+    <ul>
+      <li>Bug fixing</li>
+      <li>Performance monitoring</li>
+      <li>Security updates</li>
+      <li>Content updates</li>
+    </ul>
 
-<h2>Phase 9: Scaling & Growth</h2>
-<p>
-As traffic grows, websites must scale. This includes optimizing databases, improving infrastructure, and enhancing user experience based on analytics.
-</p>
+    <h2>Phase 9: Scaling & Growth</h2>
+    <p>
+      As traffic grows, websites must scale. This includes optimizing databases, improving infrastructure, and enhancing
+      user experience based on analytics.
+    </p>
 
-<ul>
-<li>Load balancing</li>
-<li>Database optimization</li>
-<li>Feature expansion</li>
-<li>User feedback integration</li>
-</ul>
+    <ul>
+      <li>Load balancing</li>
+      <li>Database optimization</li>
+      <li>Feature expansion</li>
+      <li>User feedback integration</li>
+    </ul>
 
-<h2>Professional Takeaway</h2>
-<p>
-Understanding the complete web project lifecycle allows developers to build professional, scalable, and user-focused websites. It transforms developers from coders into solution creators and prepares them for real-world challenges.
-</p>
+    <h2>Professional Takeaway</h2>
+    <p>
+      Understanding the complete web project lifecycle allows developers to build professional, scalable, and
+      user-focused websites. It transforms developers from coders into solution creators and prepares them for
+      real-world challenges.
+    </p>
 
-</div>
+  </div>
 
-<!-- TO TOP -->
-<button id="topBtn">↑</button>
+  <!-- TO TOP -->
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-// theme toggle
-const toggle=document.getElementById("themeToggle");
-toggle.onclick=()=>{
- document.body.classList.toggle("light");
- toggle.classList.toggle("fa-moon");
- toggle.classList.toggle("fa-sun");
-}
+  <script>
+    // theme toggle
+    const toggle = document.getElementById("themeToggle");
+    toggle.onclick = () => {
+      document.body.classList.toggle("light");
+      toggle.classList.toggle("fa-moon");
+      toggle.classList.toggle("fa-sun");
+    }
 
-// to top
-const topBtn=document.getElementById("topBtn");
-window.onscroll=()=>{
- topBtn.style.display=window.scrollY>300?"block":"none";
-}
-topBtn.onclick=()=>{
- window.scrollTo({top:0,behavior:"smooth"});
-}
-</script>
+    // to top
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    }
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
 
 </body>
+
 </html>

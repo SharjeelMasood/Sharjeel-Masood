@@ -1,277 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-commerce Complete Guide 2026 – SEO, Sales & Growth</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Complete Guide 2026 – SEO, Sales & Growth</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box
+    }
 
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#fff;
-  transition:.4s;
-}
-body.light-mode{
-  background:#fff;
-  color:#333;
-}
-a{color:#00bfff}
-body.light-mode a{color:#007bff}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: .4s;
+    }
 
-/* TOP BAR */
-.top-bar{
-  position:fixed;
-  top:0;left:0;
-  width:100%;
-  height:60px;
-  background:rgba(0,0,0,.35);
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:0 20px;
-  z-index:1000;
-}
-body.light-mode .top-bar{background:#fff}
+    body.light-mode {
+      background: #fff;
+      color: #333;
+    }
 
-.top-bar i{
-  font-size:26px;
-  cursor:pointer;
-  transition:.3s;
-}
-.top-bar i:hover{transform:scale(1.2)}
+    a {
+      color: #00bfff
+    }
 
-/* CONTENT */
-.container{
-  max-width:1100px;
-  margin:100px auto 60px;
-  padding:30px;
-  background:rgba(255,255,255,.05);
-  border-radius:14px;
-}
-body.light-mode .container{
-  background:#f9f9f9;
-}
+    body.light-mode a {
+      color: #007bff
+    }
 
-h1{color:#00bfff;font-size:42px}
-body.light-mode h1{color:#007bff}
+    /* TOP BAR */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: rgba(0, 0, 0, .35);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      z-index: 1000;
+    }
 
-h2{color:#00bfff;margin-top:50px;font-size:32px}
-body.light-mode h2{color:#007bff}
+    body.light-mode .top-bar {
+      background: #fff
+    }
 
-h3{margin-top:25px;color:#ffd700}
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+      transition: .3s;
+    }
 
-p{
-  font-size:18px;
-  line-height:1.8;
-  margin:15px 0;
-}
+    .top-bar i:hover {
+      transform: scale(1.2)
+    }
 
-ul li{
-  font-size:17px;
-  margin:10px 0;
-}
+    /* CONTENT */
+    .container {
+      max-width: 1100px;
+      margin: 100px auto 60px;
+      padding: 30px;
+      background: rgba(255, 255, 255, .05);
+      border-radius: 14px;
+    }
 
-img{
-  width:100%;
-  border-radius:14px;
-  margin:25px 0;
-  box-shadow:0 5px 15px rgba(0,0,0,.4);
-}
+    body.light-mode .container {
+      background: #f9f9f9;
+    }
 
-/* SCROLL TOP */
-#scrollTop{
-  position:fixed;
-  bottom:30px;
-  right:30px;
-  background:#007bff;
-  color:#fff;
-  border:none;
-  padding:14px 18px;
-  border-radius:50%;
-  font-size:20px;
-  display:none;
-  cursor:pointer;
-}
-#scrollTop:hover{transform:scale(1.1)}
+    h1 {
+      color: #00bfff;
+      font-size: 42px
+    }
 
-@media(max-width:768px){
-  h1{font-size:30px}
-  h2{font-size:24px}
-  p,ul li{font-size:16px}
-}
-</style>
+    body.light-mode h1 {
+      color: #007bff
+    }
+
+    h2 {
+      color: #00bfff;
+      margin-top: 50px;
+      font-size: 32px
+    }
+
+    body.light-mode h2 {
+      color: #007bff
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #ffd700
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+
+    ul li {
+      font-size: 17px;
+      margin: 10px 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 25px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .4);
+    }
+
+    /* SCROLL TOP */
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: none;
+      cursor: pointer;
+    }
+
+    #scrollTop:hover {
+      transform: scale(1.1)
+    }
+
+    @media(max-width:768px) {
+      h1 {
+        font-size: 30px
+      }
+
+      h2 {
+        font-size: 24px
+      }
+
+      p,
+      ul li {
+        font-size: 16px
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-  <i class="fas fa-arrow-left" onclick="history.back()"></i>
-  <i class="fas fa-moon" id="themeToggle"></i>
-</div>
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()"></i>
+    <i class="fas fa-moon" id="themeToggle"></i>
+  </div>
 
-<div class="container">
+  <div class="container">
 
-<h1>E-commerce Complete Guide 2026: Build, Optimize & Scale Online Stores</h1>
+    <h1>E-commerce Complete Guide 2026: Build, Optimize & Scale Online Stores</h1>
 
-<p>
-E-commerce in 2026 is no longer just about selling products online.
-It is about <strong>experience, trust, speed, and visibility</strong>.
-This guide covers the most important E-commerce topics every developer,
-store owner, and marketer must understand to succeed.
-</p>
+    <p>
+      E-commerce in 2026 is no longer just about selling products online.
+      It is about <strong>experience, trust, speed, and visibility</strong>.
+      This guide covers the most important E-commerce topics every developer,
+      store owner, and marketer must understand to succeed.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1515169067865-5387ec356754" alt="Ecommerce Store">
+    <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754" alt="Ecommerce Store">
 
-<!-- 1 -->
-<h2>1. E-commerce in 2026: Trends Every Store Owner Must Know</h2>
+    <!-- 1 -->
+    <h2>1. E-commerce in 2026: Trends Every Store Owner Must Know</h2>
 
-<p>
-Online shopping behavior has changed rapidly.
-Customers expect fast websites, personalized experiences,
-and seamless checkout flows.
-</p>
+    <p>
+      Online shopping behavior has changed rapidly.
+      Customers expect fast websites, personalized experiences,
+      and seamless checkout flows.
+    </p>
 
-<ul>
-  <li>AI-powered product recommendations</li>
-  <li>Voice & visual search</li>
-  <li>Mobile-first shopping</li>
-  <li>Trust-based branding</li>
-</ul>
+    <ul>
+      <li>AI-powered product recommendations</li>
+      <li>Voice & visual search</li>
+      <li>Mobile-first shopping</li>
+      <li>Trust-based branding</li>
+    </ul>
 
-<p>
-Stores that adapt to these trends grow faster and survive longer.
-</p>
+    <p>
+      Stores that adapt to these trends grow faster and survive longer.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="Ecommerce Trends">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="Ecommerce Trends">
 
-<!-- 2 -->
-<h2>2. How SEO Drives Sales in E-commerce</h2>
+    <!-- 2 -->
+    <h2>2. How SEO Drives Sales in E-commerce</h2>
 
-<p>
-SEO is one of the highest ROI marketing channels for e-commerce.
-Unlike ads, organic traffic keeps generating sales long-term.
-</p>
+    <p>
+      SEO is one of the highest ROI marketing channels for e-commerce.
+      Unlike ads, organic traffic keeps generating sales long-term.
+    </p>
 
-<ul>
-  <li>Product page SEO</li>
-  <li>Category page optimization</li>
-  <li>Search intent targeting</li>
-  <li>Internal linking</li>
-</ul>
+    <ul>
+      <li>Product page SEO</li>
+      <li>Category page optimization</li>
+      <li>Search intent targeting</li>
+      <li>Internal linking</li>
+    </ul>
 
-<p>
-Good SEO brings buyers, not just visitors.
-</p>
+    <p>
+      Good SEO brings buyers, not just visitors.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6" alt="Ecommerce SEO">
+    <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6" alt="Ecommerce SEO">
 
-<!-- 3 -->
-<h2>3. Product Page Optimization That Converts</h2>
+    <!-- 3 -->
+    <h2>3. Product Page Optimization That Converts</h2>
 
-<p>
-Most e-commerce stores lose sales due to weak product pages.
-A great product page builds confidence and removes doubt.
-</p>
+    <p>
+      Most e-commerce stores lose sales due to weak product pages.
+      A great product page builds confidence and removes doubt.
+    </p>
 
-<h3>Key Elements</h3>
-<ul>
-  <li>Clear product titles</li>
-  <li>High-quality images</li>
-  <li>Detailed descriptions</li>
-  <li>Customer reviews</li>
-</ul>
+    <h3>Key Elements</h3>
+    <ul>
+      <li>Clear product titles</li>
+      <li>High-quality images</li>
+      <li>Detailed descriptions</li>
+      <li>Customer reviews</li>
+    </ul>
 
-<p>
-Conversion optimization increases revenue without increasing traffic.
-</p>
+    <p>
+      Conversion optimization increases revenue without increasing traffic.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Product Page">
+    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Product Page">
 
-<!-- 4 -->
-<h2>4. E-commerce Website Speed & Performance</h2>
+    <!-- 4 -->
+    <h2>4. E-commerce Website Speed & Performance</h2>
 
-<p>
-Speed directly impacts sales.
-Even a 1-second delay can reduce conversions significantly.
-</p>
+    <p>
+      Speed directly impacts sales.
+      Even a 1-second delay can reduce conversions significantly.
+    </p>
 
-<ul>
-  <li>Image optimization</li>
-  <li>Lazy loading</li>
-  <li>Fast hosting</li>
-  <li>Optimized checkout</li>
-</ul>
+    <ul>
+      <li>Image optimization</li>
+      <li>Lazy loading</li>
+      <li>Fast hosting</li>
+      <li>Optimized checkout</li>
+    </ul>
 
-<p>
-Fast stores feel professional and trustworthy.
-</p>
+    <p>
+      Fast stores feel professional and trustworthy.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4" alt="Website Speed">
+    <img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4" alt="Website Speed">
 
-<!-- 5 -->
-<h2>5. Common E-commerce SEO Mistakes</h2>
+    <!-- 5 -->
+    <h2>5. Common E-commerce SEO Mistakes</h2>
 
-<p>
-Many online stores fail not because of lack of products,
-but because of SEO mistakes.
-</p>
+    <p>
+      Many online stores fail not because of lack of products,
+      but because of SEO mistakes.
+    </p>
 
-<ul>
-  <li>Duplicate product pages</li>
-  <li>Thin descriptions</li>
-  <li>Poor site structure</li>
-  <li>Ignoring mobile users</li>
-</ul>
+    <ul>
+      <li>Duplicate product pages</li>
+      <li>Thin descriptions</li>
+      <li>Poor site structure</li>
+      <li>Ignoring mobile users</li>
+    </ul>
 
-<p>
-Fixing these mistakes can dramatically improve rankings and sales.
-</p>
+    <p>
+      Fixing these mistakes can dramatically improve rankings and sales.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="SEO Mistakes">
+    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="SEO Mistakes">
 
-<!-- 6 -->
-<h2>6. Dropshipping vs Brand Stores in 2026</h2>
+    <!-- 6 -->
+    <h2>6. Dropshipping vs Brand Stores in 2026</h2>
 
-<p>
-Dropshipping is easy to start but hard to sustain.
-Brand stores focus on long-term trust and loyalty.
-</p>
+    <p>
+      Dropshipping is easy to start but hard to sustain.
+      Brand stores focus on long-term trust and loyalty.
+    </p>
 
-<ul>
-  <li>Dropshipping: low entry, high competition</li>
-  <li>Brand stores: higher trust & repeat sales</li>
-  <li>SEO favors branded stores</li>
-</ul>
+    <ul>
+      <li>Dropshipping: low entry, high competition</li>
+      <li>Brand stores: higher trust & repeat sales</li>
+      <li>SEO favors branded stores</li>
+    </ul>
 
-<p>
-In 2026, branding wins over shortcuts.
-</p>
+    <p>
+      In 2026, branding wins over shortcuts.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Brand Ecommerce">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Brand Ecommerce">
 
-</div>
+  </div>
 
-<button id="scrollTop">↑</button>
+  <button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const toggle=document.getElementById("themeToggle");
-toggle.addEventListener("click",()=>{
-  document.body.classList.toggle("light-mode");
-  toggle.classList.toggle("fa-sun");
-  toggle.classList.toggle("fa-moon");
-});
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      toggle.classList.toggle("fa-sun");
+      toggle.classList.toggle("fa-moon");
+    });
 
-const btn=document.getElementById("scrollTop");
-window.onscroll=()=>{
-  btn.style.display=(document.documentElement.scrollTop>200)?"block":"none";
-};
-btn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
-</script>
+    const btn = document.getElementById("scrollTop");
+    window.onscroll = () => {
+      btn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
 
 </body>
+
 </html>

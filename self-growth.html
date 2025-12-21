@@ -1,326 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Grow in Life: Practical Tips for Personal Growth</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Grow in Life: Practical Tips for Personal Growth</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --dark: #020617;
+      --panel: #0f172a;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+    }
 
-<style>
-:root{
-  --dark:#020617;
-  --panel:#0f172a;
-  --accent:#38bdf8;
-  --text:#e5e7eb;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(180deg, #020617, #030712);
+      color: var(--text);
+      transition: .4s;
+    }
 
-body{
-  margin:0;
-  font-family:system-ui, sans-serif;
-  background:linear-gradient(180deg,#020617,#030712);
-  color:var(--text);
-  transition:.4s;
-}
+    body.light {
+      background: #f8fafc;
+      color: #111827;
+    }
 
-body.light{
-  background:#f8fafc;
-  color:#111827;
-}
+    /* TOP BAR */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      background: rgba(2, 6, 23, .92);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+    }
 
-/* TOP BAR */
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 28px;
-  background:rgba(2,6,23,.92);
-  backdrop-filter:blur(10px);
-  z-index:999;
-}
+    body.light header {
+      background: #ffffff;
+    }
 
-body.light header{
-  background:#ffffff;
-}
+    header i {
+      font-size: 22px;
+      cursor: pointer;
+    }
 
-header i{
-  font-size:22px;
-  cursor:pointer;
-}
+    /* MAIN */
+    main {
+      max-width: 1200px;
+      margin: 110px auto 90px;
+      padding: 50px;
+    }
 
-/* MAIN */
-main{
-  max-width:1200px;
-  margin:110px auto 90px;
-  padding:50px;
-}
+    h1 {
+      font-size: 46px;
+      text-align: center;
+      margin-bottom: 45px;
+      color: var(--accent);
+    }
 
-h1{
-  font-size:46px;
-  text-align:center;
-  margin-bottom:45px;
-  color:var(--accent);
-}
+    .section {
+      margin-bottom: 45px;
+      padding: 40px;
+      background: linear-gradient(145deg, #020617, #0b122f);
+      border-radius: 18px;
+      border-left: 4px solid var(--accent);
+    }
 
-.section{
-  margin-bottom:45px;
-  padding:40px;
-  background:linear-gradient(145deg,#020617,#0b122f);
-  border-radius:18px;
-  border-left:4px solid var(--accent);
-}
+    body.light .section {
+      background: #ffffff;
+    }
 
-body.light .section{
-  background:#ffffff;
-}
+    .section h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
 
-.section h2{
-  font-size:30px;
-  margin-bottom:18px;
-  color:var(--accent);
-}
+    .section p {
+      font-size: 18px;
+      line-height: 1.95;
+      margin-bottom: 18px;
+    }
 
-.section p{
-  font-size:18px;
-  line-height:1.95;
-  margin-bottom:18px;
-}
+    /* IMAGES */
+    .blog-image {
+      margin: 35px 0;
+      border-radius: 18px;
+      overflow: hidden;
+    }
 
-/* IMAGES */
-.blog-image{
-  margin:35px 0;
-  border-radius:18px;
-  overflow:hidden;
-}
+    .blog-image img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
 
-.blog-image img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  display:block;
-}
+    /* LIST */
+    ul {
+      margin-left: 20px;
+      font-size: 18px;
+      line-height: 1.9;
+    }
 
-/* LIST */
-ul{
-  margin-left:20px;
-  font-size:18px;
-  line-height:1.9;
-}
+    li {
+      margin-bottom: 10px;
+    }
 
-li{
-  margin-bottom:10px;
-}
+    /* TOP BUTTON */
+    #topBtn {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 15px 19px;
+      border-radius: 50%;
+      display: none;
+      cursor: pointer;
+    }
 
-/* TOP BUTTON */
-#topBtn{
-  position:fixed;
-  right:30px;
-  bottom:30px;
-  background:var(--accent);
-  color:#000;
-  border:none;
-  padding:15px 19px;
-  border-radius:50%;
-  display:none;
-  cursor:pointer;
-}
+    @media(max-width:768px) {
+      h1 {
+        font-size: 34px;
+      }
 
-@media(max-width:768px){
-  h1{font-size:34px;}
-  main{padding:25px;}
-  .section{padding:28px;}
-  .blog-image img{height:230px;}
-}
-</style>
+      main {
+        padding: 25px;
+      }
+
+      .section {
+        padding: 28px;
+      }
+
+      .blog-image img {
+        height: 230px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
-  <i class="fa-solid fa-moon" id="mode"></i>
-</header>
+  <header>
+    <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+    <i class="fa-solid fa-moon" id="mode"></i>
+  </header>
 
-<main>
+  <main>
 
-<h1>How to Grow in Life: A Practical Guide to Personal Development</h1>
+    <h1>How to Grow in Life: A Practical Guide to Personal Development</h1>
 
-<div class="section">
-<p>
-Growing in life does not happen overnight.
-It is a gradual process that requires discipline,
-self-awareness,
-and continuous learning.
-Personal growth means improving your mindset,
-skills,
-habits,
-and decision-making over time.
-</p>
-<p>
-True growth is not only about success or money,
-but about becoming a better version of yourself every day.
-</p>
-</div>
+    <div class="section">
+      <p>
+        Growing in life does not happen overnight.
+        It is a gradual process that requires discipline,
+        self-awareness,
+        and continuous learning.
+        Personal growth means improving your mindset,
+        skills,
+        habits,
+        and decision-making over time.
+      </p>
+      <p>
+        True growth is not only about success or money,
+        but about becoming a better version of yourself every day.
+      </p>
+    </div>
 
-<div class="blog-image">
-  <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe" alt="Personal Growth">
-</div>
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe" alt="Personal Growth">
+    </div>
 
-<div class="section">
-<h2>Understand Yourself First</h2>
-<p>
-Personal growth begins with self-awareness.
-You must understand your strengths,
-weaknesses,
-values,
-and goals.
-</p>
-<p>
-When you know who you are,
-you can make better decisions
-and avoid wasting energy on things
-that do not align with your purpose.
-</p>
-</div>
+    <div class="section">
+      <h2>Understand Yourself First</h2>
+      <p>
+        Personal growth begins with self-awareness.
+        You must understand your strengths,
+        weaknesses,
+        values,
+        and goals.
+      </p>
+      <p>
+        When you know who you are,
+        you can make better decisions
+        and avoid wasting energy on things
+        that do not align with your purpose.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Set Clear and Realistic Goals</h2>
-<p>
-Without goals,
-life feels directionless.
-Goals give your efforts meaning
-and help you track progress.
-</p>
-<ul>
-  <li>Set short-term and long-term goals</li>
-  <li>Write your goals down</li>
-  <li>Break big goals into small steps</li>
-  <li>Review your goals regularly</li>
-</ul>
-</div>
+    <div class="section">
+      <h2>Set Clear and Realistic Goals</h2>
+      <p>
+        Without goals,
+        life feels directionless.
+        Goals give your efforts meaning
+        and help you track progress.
+      </p>
+      <ul>
+        <li>Set short-term and long-term goals</li>
+        <li>Write your goals down</li>
+        <li>Break big goals into small steps</li>
+        <li>Review your goals regularly</li>
+      </ul>
+    </div>
 
-<div class="blog-image">
-  <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Goal Setting">
-</div>
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Goal Setting">
+    </div>
 
-<div class="section">
-<h2>Develop a Growth Mindset</h2>
-<p>
-A growth mindset means believing
-that skills and intelligence
-can be improved with effort.
-</p>
-<p>
-People with a growth mindset
-see failure as feedback,
-not as defeat.
-They learn from mistakes
-instead of giving up.
-</p>
-</div>
+    <div class="section">
+      <h2>Develop a Growth Mindset</h2>
+      <p>
+        A growth mindset means believing
+        that skills and intelligence
+        can be improved with effort.
+      </p>
+      <p>
+        People with a growth mindset
+        see failure as feedback,
+        not as defeat.
+        They learn from mistakes
+        instead of giving up.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Daily Habits That Help You Grow</h2>
-<p>
-Small daily habits
-create big changes over time.
-Consistency matters more than motivation.
-</p>
-<ul>
-  <li>Read at least 10–20 minutes daily</li>
-  <li>Learn a new skill regularly</li>
-  <li>Exercise to keep your body and mind healthy</li>
-  <li>Reflect on your day before sleeping</li>
-</ul>
-</div>
+    <div class="section">
+      <h2>Daily Habits That Help You Grow</h2>
+      <p>
+        Small daily habits
+        create big changes over time.
+        Consistency matters more than motivation.
+      </p>
+      <ul>
+        <li>Read at least 10–20 minutes daily</li>
+        <li>Learn a new skill regularly</li>
+        <li>Exercise to keep your body and mind healthy</li>
+        <li>Reflect on your day before sleeping</li>
+      </ul>
+    </div>
 
-<div class="blog-image">
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Healthy Habits">
-</div>
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Healthy Habits">
+    </div>
 
-<div class="section">
-<h2>Learn How to Manage Time</h2>
-<p>
-Time management is a powerful life skill.
-Successful people value their time
-and protect it from distractions.
-</p>
-<p>
-Plan your day,
-prioritize important tasks,
-and avoid procrastination
-by starting with small actions.
-</p>
-</div>
+    <div class="section">
+      <h2>Learn How to Manage Time</h2>
+      <p>
+        Time management is a powerful life skill.
+        Successful people value their time
+        and protect it from distractions.
+      </p>
+      <p>
+        Plan your day,
+        prioritize important tasks,
+        and avoid procrastination
+        by starting with small actions.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Tips and Tricks for Continuous Growth</h2>
-<ul>
-  <li>Surround yourself with positive and ambitious people</li>
-  <li>Limit social media and digital distractions</li>
-  <li>Learn from books, podcasts, and mentors</li>
-  <li>Track your progress weekly</li>
-  <li>Focus on improvement, not perfection</li>
-</ul>
-</div>
+    <div class="section">
+      <h2>Tips and Tricks for Continuous Growth</h2>
+      <ul>
+        <li>Surround yourself with positive and ambitious people</li>
+        <li>Limit social media and digital distractions</li>
+        <li>Learn from books, podcasts, and mentors</li>
+        <li>Track your progress weekly</li>
+        <li>Focus on improvement, not perfection</li>
+      </ul>
+    </div>
 
-<div class="blog-image">
-  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Learning and Growth">
-</div>
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Learning and Growth">
+    </div>
 
-<div class="section">
-<h2>Take Responsibility for Your Life</h2>
-<p>
-Growth accelerates when you take full responsibility
-for your actions and results.
-Blaming others slows you down,
-while accountability helps you move forward.
-</p>
-<p>
-Every choice you make today
-shapes your future.
-</p>
-</div>
+    <div class="section">
+      <h2>Take Responsibility for Your Life</h2>
+      <p>
+        Growth accelerates when you take full responsibility
+        for your actions and results.
+        Blaming others slows you down,
+        while accountability helps you move forward.
+      </p>
+      <p>
+        Every choice you make today
+        shapes your future.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Final Thoughts</h2>
-<p>
-Personal growth is a lifelong journey.
-There is no final destination,
-only continuous improvement.
-</p>
-<p>
-If you stay consistent,
-stay patient,
-and keep learning,
-you will grow not only professionally
-but also mentally and emotionally.
-</p>
-</div>
+    <div class="section">
+      <h2>Final Thoughts</h2>
+      <p>
+        Personal growth is a lifelong journey.
+        There is no final destination,
+        only continuous improvement.
+      </p>
+      <p>
+        If you stay consistent,
+        stay patient,
+        and keep learning,
+        you will grow not only professionally
+        but also mentally and emotionally.
+      </p>
+    </div>
 
-</main>
+  </main>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const mode = document.getElementById("mode");
-mode.onclick = () => {
-  document.body.classList.toggle("light");
-  mode.className = document.body.classList.contains("light")
-    ? "fa-solid fa-sun"
-    : "fa-solid fa-moon";
-};
+  <script>
+    const mode = document.getElementById("mode");
+    mode.onclick = () => {
+      document.body.classList.toggle("light");
+      mode.className = document.body.classList.contains("light")
+        ? "fa-solid fa-sun"
+        : "fa-solid fa-moon";
+    };
 
-const btn = document.getElementById("topBtn");
-window.onscroll = () => {
-  btn.style.display = window.scrollY > 300 ? "block" : "none";
-};
-btn.onclick = () => window.scrollTo({top:0,behavior:"smooth"});
-</script>
+    const btn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
 
 </body>
+
 </html>

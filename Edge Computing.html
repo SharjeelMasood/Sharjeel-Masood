@@ -1,248 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edge Computing: Why Data Is Moving Closer to Users</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge Computing: Why Data Is Moving Closer to Users</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Segoe UI, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
+      transition: 0.4s;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:Segoe UI, Arial, sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#ffffff;
-  transition:0.4s;
-}
+    body.light {
+      background: #ffffff;
+      color: #1f1f1f;
+    }
 
-body.light{
-  background:#ffffff;
-  color:#1f1f1f;
-}
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 22px;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1000;
+    }
 
-.top-bar{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:60px;
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:0 22px;
-  background:rgba(0,0,0,0.35);
-  z-index:1000;
-}
+    body.light .top-bar {
+      background: #f4f4f4;
+    }
 
-body.light .top-bar{
-  background:#f4f4f4;
-}
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-.top-bar i{
-  font-size:26px;
-  cursor:pointer;
-}
+    .container {
+      max-width: 1100px;
+      margin: 100px auto 90px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+    }
 
-.container{
-  max-width:1100px;
-  margin:100px auto 90px;
-  padding:40px;
-  background:rgba(255,255,255,0.06);
-  border-radius:18px;
-}
+    body.light .container {
+      background: #ffffff;
+    }
 
-body.light .container{
-  background:#ffffff;
-}
+    h1 {
+      font-size: 44px;
+      color: #00BFFF;
+      margin-bottom: 26px;
+    }
 
-h1{
-  font-size:44px;
-  color:#00BFFF;
-  margin-bottom:26px;
-}
+    h2 {
+      margin-top: 55px;
+      color: #00BFFF;
+    }
 
-h2{
-  margin-top:55px;
-  color:#00BFFF;
-}
+    p {
+      font-size: 18.5px;
+      line-height: 2;
+      margin-top: 18px;
+    }
 
-p{
-  font-size:18.5px;
-  line-height:2;
-  margin-top:18px;
-}
+    img {
+      width: 90%;
+      display: block;
+      margin: 45px auto;
+      border-radius: 22px;
+    }
 
-img{
-  width:90%;
-  display:block;
-  margin:45px auto;
-  border-radius:22px;
-}
+    /* TO TOP */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
+    }
 
-/* TO TOP */
-#topBtn{
-  position:fixed;
-  bottom:30px;
-  right:30px;
-  background:#007BFF;
-  color:#fff;
-  border:none;
-  padding:14px 18px;
-  border-radius:50%;
-  font-size:20px;
-  cursor:pointer;
-  display:none;
-  box-shadow:0 6px 10px rgba(0,0,0,0.35);
-}
-#topBtn:hover{background:#0056b3;}
-</style>
+    #topBtn:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-  <i class="fas fa-arrow-left" onclick="history.back()"></i>
-  <i class="fas fa-moon" id="theme"></i>
-</div>
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()"></i>
+    <i class="fas fa-moon" id="theme"></i>
+  </div>
 
-<div class="container">
+  <div class="container">
 
-<h1>Edge Computing: Why Data Is Moving Closer to Users</h1>
+    <h1>Edge Computing: Why Data Is Moving Closer to Users</h1>
 
-<p>
-For years, cloud computing dominated the tech world. Data was sent to far-away servers, processed, and returned to users. But as applications became faster, smarter, and more real-time, a new limitation appeared — distance.
-</p>
+    <p>
+      For years, cloud computing dominated the tech world. Data was sent to far-away servers, processed, and returned to
+      users. But as applications became faster, smarter, and more real-time, a new limitation appeared — distance.
+    </p>
 
-<p>
-Edge computing solves this problem by moving data processing closer to the user. Instead of relying only on centralized cloud servers, computation happens near the source of data.
-</p>
+    <p>
+      Edge computing solves this problem by moving data processing closer to the user. Instead of relying only on
+      centralized cloud servers, computation happens near the source of data.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 
-<h2>What Exactly Is Edge Computing?</h2>
-<p>
-Edge computing is an architecture where data is processed near the device or location where it is generated. This could be a mobile phone, IoT device, local server, or even a smart router.
-</p>
+    <h2>What Exactly Is Edge Computing?</h2>
+    <p>
+      Edge computing is an architecture where data is processed near the device or location where it is generated. This
+      could be a mobile phone, IoT device, local server, or even a smart router.
+    </p>
 
-<p>
-Rather than sending every request to a distant cloud, edge systems handle tasks locally and send only necessary data back to central servers.
-</p>
+    <p>
+      Rather than sending every request to a distant cloud, edge systems handle tasks locally and send only necessary
+      data back to central servers.
+    </p>
 
-<h2>Why the Traditional Cloud Model Is No Longer Enough</h2>
-<p>
-Cloud computing works well for many tasks, but it struggles with real-time demands. Latency, bandwidth costs, and network reliability become serious issues when applications require instant responses.
-</p>
+    <h2>Why the Traditional Cloud Model Is No Longer Enough</h2>
+    <p>
+      Cloud computing works well for many tasks, but it struggles with real-time demands. Latency, bandwidth costs, and
+      network reliability become serious issues when applications require instant responses.
+    </p>
 
-<p>
-Edge computing reduces dependence on constant internet connectivity and minimizes delays.
-</p>
+    <p>
+      Edge computing reduces dependence on constant internet connectivity and minimizes delays.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
 
-<h2>Latency: The Biggest Problem Edge Solves</h2>
-<p>
-Latency is the delay between an action and its response. In applications like autonomous vehicles, online gaming, video streaming, and healthcare monitoring, even milliseconds matter.
-</p>
+    <h2>Latency: The Biggest Problem Edge Solves</h2>
+    <p>
+      Latency is the delay between an action and its response. In applications like autonomous vehicles, online gaming,
+      video streaming, and healthcare monitoring, even milliseconds matter.
+    </p>
 
-<p>
-By processing data at the edge, response times become significantly faster.
-</p>
+    <p>
+      By processing data at the edge, response times become significantly faster.
+    </p>
 
-<h2>Real-World Applications of Edge Computing</h2>
-<p>
-Edge computing is already being used in smart cities, industrial automation, live video analytics, wearable devices, and content delivery networks.
-</p>
+    <h2>Real-World Applications of Edge Computing</h2>
+    <p>
+      Edge computing is already being used in smart cities, industrial automation, live video analytics, wearable
+      devices, and content delivery networks.
+    </p>
 
-<p>
-Platforms like Netflix, YouTube, and Cloudflare use edge nodes to deliver content faster to users around the world.
-</p>
+    <p>
+      Platforms like Netflix, YouTube, and Cloudflare use edge nodes to deliver content faster to users around the
+      world.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
 
-<h2>Edge Computing and IoT</h2>
-<p>
-Internet of Things devices generate massive amounts of data. Sending all of it to the cloud is inefficient and expensive.
-</p>
+    <h2>Edge Computing and IoT</h2>
+    <p>
+      Internet of Things devices generate massive amounts of data. Sending all of it to the cloud is inefficient and
+      expensive.
+    </p>
 
-<p>
-Edge computing allows IoT devices to filter, analyze, and act on data locally, reducing network load and improving reliability.
-</p>
+    <p>
+      Edge computing allows IoT devices to filter, analyze, and act on data locally, reducing network load and improving
+      reliability.
+    </p>
 
-<h2>Security Benefits of Edge Computing</h2>
-<p>
-Processing data locally reduces exposure. Sensitive information does not always need to travel across networks, lowering the risk of interception and breaches.
-</p>
+    <h2>Security Benefits of Edge Computing</h2>
+    <p>
+      Processing data locally reduces exposure. Sensitive information does not always need to travel across networks,
+      lowering the risk of interception and breaches.
+    </p>
 
-<p>
-Edge architectures also allow faster threat detection and localized security responses.
-</p>
+    <p>
+      Edge architectures also allow faster threat detection and localized security responses.
+    </p>
 
-<h2>Challenges of Edge Computing</h2>
-<p>
-While powerful, edge computing introduces complexity. Managing multiple distributed nodes, ensuring consistent updates, and maintaining security across locations requires careful planning.
-</p>
+    <h2>Challenges of Edge Computing</h2>
+    <p>
+      While powerful, edge computing introduces complexity. Managing multiple distributed nodes, ensuring consistent
+      updates, and maintaining security across locations requires careful planning.
+    </p>
 
-<p>
-It is not a replacement for cloud computing — it works best as a complement.
-</p>
+    <p>
+      It is not a replacement for cloud computing — it works best as a complement.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769">
+    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769">
 
-<h2>Edge + Cloud: A Hybrid Future</h2>
-<p>
-The future is hybrid. Edge handles real-time processing, while the cloud manages storage, analytics, and long-term intelligence.
-</p>
+    <h2>Edge + Cloud: A Hybrid Future</h2>
+    <p>
+      The future is hybrid. Edge handles real-time processing, while the cloud manages storage, analytics, and long-term
+      intelligence.
+    </p>
 
-<p>
-This combination offers speed, scalability, and efficiency together.
-</p>
+    <p>
+      This combination offers speed, scalability, and efficiency together.
+    </p>
 
-<h2>Why Developers Should Care About Edge Computing</h2>
-<p>
-Modern web and app developers must design systems that consider latency, data locality, and performance.
-</p>
+    <h2>Why Developers Should Care About Edge Computing</h2>
+    <p>
+      Modern web and app developers must design systems that consider latency, data locality, and performance.
+    </p>
 
-<p>
-Edge computing changes how APIs are designed, how data flows, and how applications scale globally.
-</p>
+    <p>
+      Edge computing changes how APIs are designed, how data flows, and how applications scale globally.
+    </p>
 
-<h2>Edge Computing Is Not a Trend — It’s a Shift</h2>
-<p>
-As users demand faster, smarter, and more reliable experiences, computing must move closer to them.
-</p>
+    <h2>Edge Computing Is Not a Trend — It’s a Shift</h2>
+    <p>
+      As users demand faster, smarter, and more reliable experiences, computing must move closer to them.
+    </p>
 
-<p>
-Edge computing represents a fundamental shift in how digital systems are built and delivered.
-</p>
+    <p>
+      Edge computing represents a fundamental shift in how digital systems are built and delivered.
+    </p>
 
-</div>
+  </div>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-/* THEME TOGGLE */
-const theme = document.getElementById("theme");
-theme.onclick = () => {
-  document.body.classList.toggle("light");
+  <script>
+    /* THEME TOGGLE */
+    const theme = document.getElementById("theme");
+    theme.onclick = () => {
+      document.body.classList.toggle("light");
 
-  if(document.body.classList.contains("light")){
-    theme.classList.remove("fa-moon");
-    theme.classList.add("fa-sun");
-  } else {
-    theme.classList.remove("fa-sun");
-    theme.classList.add("fa-moon");
-  }
-};
+      if (document.body.classList.contains("light")) {
+        theme.classList.remove("fa-moon");
+        theme.classList.add("fa-sun");
+      } else {
+        theme.classList.remove("fa-sun");
+        theme.classList.add("fa-moon");
+      }
+    };
 
-/* TO TOP */
-const topBtn = document.getElementById("topBtn");
-window.onscroll = () => {
-  topBtn.style.display = window.scrollY > 260 ? "block" : "none";
-};
-topBtn.onclick = () => {
-  window.scrollTo({top:0,behavior:"smooth"});
-};
-</script>
+    /* TO TOP */
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = window.scrollY > 260 ? "block" : "none";
+    };
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
 
 </body>
+
 </html>

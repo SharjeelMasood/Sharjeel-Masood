@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sharjeel Masood</title>
-  <link rel="icon" href="img/sharjeel masood.png" type="image/png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <!-- Font Awesome CDN for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -97,39 +97,39 @@
     <button>Let's Connect</button>
   </section>
 
- <!-- CUSTOM TESTIMONIAL CARDS (6 SAME) -->
-<section class="custom-testimonial-grid">
-  <div class="custom-testimonial-card big">
-    <p>"Delivered my website on time with amazing design and performance."</p>
-    <h4>Oliver Brown</h4>
-    <span>Business Owner</span>
-  </div>
-  <div class="custom-testimonial-card big">
-    <p>"Clean code, fast communication, and excellent results."</p>
-    <h4>Emma Wilson</h4>
-    <span>Startup Founder</span>
-  </div>
-  <div class="custom-testimonial-card">
-    <p>"Understood requirements clearly and delivered exactly."</p>
-    <h4>Lucas Johnson</h4>
-    <span>Client</span>
-  </div>
-  <div class="custom-testimonial-card">
-    <p>"Outstanding experience! Website looks fantastic."</p>
-    <h4>Chloe Martin</h4>
-    <span>Entrepreneur</span>
-  </div>
-  <div class="custom-testimonial-card">
-    <p>"Professional, creative, and reliable."</p>
-    <h4>Henry Lee</h4>
-    <span>Business Owner</span>
-  </div>
-  <div class="custom-testimonial-card">
-    <p>"Timely delivery with exceptional quality."</p>
-    <h4>Sophia Davis</h4>
-    <span>Startup Founder</span>
-  </div>
-</section>
+  <!-- CUSTOM TESTIMONIAL CARDS (6 SAME) -->
+  <section class="custom-testimonial-grid">
+    <div class="custom-testimonial-card big">
+      <p>"Delivered my website on time with amazing design and performance."</p>
+      <h4>Oliver Brown</h4>
+      <span>Business Owner</span>
+    </div>
+    <div class="custom-testimonial-card big">
+      <p>"Clean code, fast communication, and excellent results."</p>
+      <h4>Emma Wilson</h4>
+      <span>Startup Founder</span>
+    </div>
+    <div class="custom-testimonial-card">
+      <p>"Understood requirements clearly and delivered exactly."</p>
+      <h4>Lucas Johnson</h4>
+      <span>Client</span>
+    </div>
+    <div class="custom-testimonial-card">
+      <p>"Outstanding experience! Website looks fantastic."</p>
+      <h4>Chloe Martin</h4>
+      <span>Entrepreneur</span>
+    </div>
+    <div class="custom-testimonial-card">
+      <p>"Professional, creative, and reliable."</p>
+      <h4>Henry Lee</h4>
+      <span>Business Owner</span>
+    </div>
+    <div class="custom-testimonial-card">
+      <p>"Timely delivery with exceptional quality."</p>
+      <h4>Sophia Davis</h4>
+      <span>Startup Founder</span>
+    </div>
+  </section>
 
   <!-- CLIENT FEEDBACK -->
   <section class="client-feedback" id="feedbackSection">
@@ -154,7 +154,7 @@
     </label>
     <button id="submitFeedback">Submit Feedback</button>
   </div>
- <!-- Contact section -->
+  <!-- Contact section -->
 
   <section class="contact-cta">
     <h2>Let’s Work Together</h2>
@@ -209,17 +209,17 @@
 
   <script>const customTestimonials = document.querySelectorAll('.custom-testimonial-card');
 
-function showCustomTestimonials() {
-  const triggerPoint = window.innerHeight * 0.85;
-  customTestimonials.forEach(card => {
-    if (card.getBoundingClientRect().top < triggerPoint) {
-      card.classList.add('visible');
+    function showCustomTestimonials() {
+      const triggerPoint = window.innerHeight * 0.85;
+      customTestimonials.forEach(card => {
+        if (card.getBoundingClientRect().top < triggerPoint) {
+          card.classList.add('visible');
+        }
+      });
     }
-  });
-}
 
-window.addEventListener('scroll', showCustomTestimonials);
-window.addEventListener('load', showCustomTestimonials);
+    window.addEventListener('scroll', showCustomTestimonials);
+    window.addEventListener('load', showCustomTestimonials);
 
     // FEEDBACK SYSTEM (NO REPLY)
     const feedbackSection = document.getElementById('feedbackSection');
@@ -279,50 +279,51 @@ window.addEventListener('load', showCustomTestimonials);
 
     renderComments();
     // Contact Section
-window.addEventListener("load",()=>{
-  document.querySelector(".contact-cta").classList.add("visible");
-});
-// footer
+    window.addEventListener("load", () => {
+      document.querySelector(".contact-cta").classList.add("visible");
+    });
+    // footer
 
-// Auto year
-document.getElementById("year").textContent = new Date().getFullYear();
+    // Auto year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-// Reveal animation
-window.addEventListener("load",()=>{
-  document.querySelector(".footer-top").classList.add("visible");
-});
-const scrollTopBtn = document.getElementById('scrollTop');
+    // Reveal animation
+    window.addEventListener("load", () => {
+      document.querySelector(".footer-top").classList.add("visible");
+    });
+    const scrollTopBtn = document.getElementById('scrollTop');
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollTopBtn.style.display = "block";
-  } else {
-    scrollTopBtn.style.display = "none";
-  }
-};
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-// Mobile menu toggle
-function toggleMenu() {
-  document.getElementById("navbarMenu").classList.toggle("show");
-}
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById("navbarMenu").classList.toggle("show");
+    }
 
-// Active menu (perfect fix)
-const currentPage =
-  window.location.pathname.split("/").pop() || "index.html";
+    // Active menu (perfect fix)
+    const currentPage =
+      window.location.pathname.split("/").pop() || "index.html";
 
-document.querySelectorAll(".navbar li a").forEach(link => {
-  if (link.getAttribute("href") === currentPage) {
-    link.parentElement.classList.add("active");
-  }
-});
+    document.querySelectorAll(".navbar li a").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.parentElement.classList.add("active");
+      }
+    });
   </script>
 
 
 </body>
+
 </html>

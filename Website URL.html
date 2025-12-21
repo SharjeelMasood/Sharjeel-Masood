@@ -1,240 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What Happens When You Type a Website URL and Press Enter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Happens When You Type a Website URL and Press Enter</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --dark: #030712;
+      --panel: #0f172a;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+    }
 
-<style>
-:root{
-  --dark:#030712;
-  --panel:#0f172a;
-  --accent:#38bdf8;
-  --text:#e5e7eb;
-}
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: linear-gradient(180deg, var(--dark), #020617);
+      color: var(--text);
+      transition: .4s;
+    }
 
-body{
-  margin:0;
-  font-family:Inter, system-ui, sans-serif;
-  background:linear-gradient(180deg,var(--dark),#020617);
-  color:var(--text);
-  transition:.4s;
-}
+    body.light {
+      background: #f9fafb;
+      color: #111827;
+    }
 
-body.light{
-  background:#f9fafb;
-  color:#111827;
-}
+    /* ===== TOP BAR ===== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      background: rgba(3, 7, 18, .95);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+    }
 
-/* ===== TOP BAR ===== */
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 30px;
-  background:rgba(3,7,18,.95);
-  backdrop-filter:blur(10px);
-  z-index:999;
-}
+    body.light header {
+      background: #ffffff;
+    }
 
-body.light header{
-  background:#ffffff;
-}
+    header i {
+      font-size: 22px;
+      cursor: pointer;
+      color: #e5e7eb;
+    }
 
-header i{
-  font-size:22px;
-  cursor:pointer;
-  color:#e5e7eb;
-}
+    body.light header i {
+      color: #111827;
+    }
 
-body.light header i{
-  color:#111827;
-}
+    /* ===== MAIN ===== */
+    main {
+      max-width: 1200px;
+      margin: 110px auto 90px;
+      padding: 50px;
+    }
 
-/* ===== MAIN ===== */
-main{
-  max-width:1200px;
-  margin:110px auto 90px;
-  padding:50px;
-}
+    h1 {
+      font-size: 46px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--accent);
+    }
 
-h1{
-  font-size:46px;
-  text-align:center;
-  margin-bottom:40px;
-  color:var(--accent);
-}
+    .section {
+      padding: 40px;
+      margin-bottom: 45px;
+      border-left: 4px solid var(--accent);
+      background: linear-gradient(145deg, #020617, #0b122f);
+      border-radius: 18px;
+    }
 
-.section{
-  padding:40px;
-  margin-bottom:45px;
-  border-left:4px solid var(--accent);
-  background:linear-gradient(145deg,#020617,#0b122f);
-  border-radius:18px;
-}
+    body.light .section {
+      background: #ffffff;
+    }
 
-body.light .section{
-  background:#ffffff;
-}
+    .section h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
 
-.section h2{
-  font-size:30px;
-  margin-bottom:15px;
-  color:var(--accent);
-}
+    .section p {
+      font-size: 18px;
+      line-height: 1.95;
+      margin-bottom: 18px;
+    }
 
-.section p{
-  font-size:18px;
-  line-height:1.95;
-  margin-bottom:18px;
-}
+    .blog-image {
+      margin: 35px 0;
+      border-radius: 18px;
+      overflow: hidden;
+    }
 
-.blog-image{
-  margin:35px 0;
-  border-radius:18px;
-  overflow:hidden;
-}
+    .blog-image img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
 
-.blog-image img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  display:block;
-}
+    /* ===== TOP BUTTON ===== */
+    #topBtn {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 15px 19px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+    }
 
-/* ===== TOP BUTTON ===== */
-#topBtn{
-  position:fixed;
-  right:30px;
-  bottom:30px;
-  background:var(--accent);
-  color:#000;
-  border:none;
-  padding:15px 19px;
-  border-radius:50%;
-  cursor:pointer;
-  display:none;
-}
+    @media(max-width:768px) {
+      h1 {
+        font-size: 34px;
+      }
 
-@media(max-width:768px){
-  h1{font-size:34px;}
-  main{padding:25px;}
-  .blog-image img{height:240px;}
-}
-</style>
+      main {
+        padding: 25px;
+      }
+
+      .blog-image img {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
-  <i class="fa-solid fa-moon" id="mode"></i>
-</header>
+  <header>
+    <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+    <i class="fa-solid fa-moon" id="mode"></i>
+  </header>
 
-<main>
+  <main>
 
-<h1>What Happens When You Type a Website URL and Press Enter</h1>
+    <h1>What Happens When You Type a Website URL and Press Enter</h1>
 
-<div class="section">
-<p>
-Typing a website address into your browser and pressing Enter feels instant,
-but behind this action a complex global system starts working.
-</p>
-<p>
-Multiple technologies collaborate to locate the website, establish secure
-communication, and deliver the page to your screen.
-</p>
-</div>
+    <div class="section">
+      <p>
+        Typing a website address into your browser and pressing Enter feels instant,
+        but behind this action a complex global system starts working.
+      </p>
+      <p>
+        Multiple technologies collaborate to locate the website, establish secure
+        communication, and deliver the page to your screen.
+      </p>
+    </div>
 
-<div class="blog-image">
-  <img src="Conceptual illustration of a user typing a URL with data flowing through the internet cloud">
-</div>
+    <div class="blog-image">
+      <img src="Conceptual illustration of a user typing a URL with data flowing through the internet cloud">
+    </div>
 
-<div class="section">
-<h2>Step 1: Understanding the URL</h2>
-<p>
-The browser first analyzes the URL and separates the protocol, domain name,
-and path. HTTPS indicates encrypted communication.
-</p>
-</div>
+    <div class="section">
+      <h2>Step 1: Understanding the URL</h2>
+      <p>
+        The browser first analyzes the URL and separates the protocol, domain name,
+        and path. HTTPS indicates encrypted communication.
+      </p>
+    </div>
 
-<div class="blog-image">
-  <img src="Diagram explaining URL structure including protocol, domain, and path">
-</div>
+    <div class="blog-image">
+      <img src="Diagram explaining URL structure including protocol, domain, and path">
+    </div>
 
-<div class="section">
-<h2>Step 2: DNS Lookup</h2>
-<p>
-DNS servers translate the domain name into an IP address so computers can
-communicate with each other.
-</p>
-</div>
+    <div class="section">
+      <h2>Step 2: DNS Lookup</h2>
+      <p>
+        DNS servers translate the domain name into an IP address so computers can
+        communicate with each other.
+      </p>
+    </div>
 
-<div class="blog-image">
-  <img src="Visual explanation of DNS resolution using multiple servers">
-</div>
+    <div class="blog-image">
+      <img src="Visual explanation of DNS resolution using multiple servers">
+    </div>
 
-<div class="section">
-<h2>Step 3: Secure Connection</h2>
-<p>
-A TLS handshake encrypts data and ensures privacy between browser and server.
-</p>
-</div>
+    <div class="section">
+      <h2>Step 3: Secure Connection</h2>
+      <p>
+        A TLS handshake encrypts data and ensures privacy between browser and server.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Step 4: HTTP Request</h2>
-<p>
-The browser sends a request asking the server for the webpage content.
-</p>
-</div>
+    <div class="section">
+      <h2>Step 4: HTTP Request</h2>
+      <p>
+        The browser sends a request asking the server for the webpage content.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Step 5: Server Processing</h2>
-<p>
-The server processes the request, runs backend logic, and prepares files.
-</p>
-</div>
+    <div class="section">
+      <h2>Step 5: Server Processing</h2>
+      <p>
+        The server processes the request, runs backend logic, and prepares files.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Step 6: Browser Rendering</h2>
-<p>
-The browser builds the page structure, applies styles, executes scripts,
-and displays the final page.
-</p>
-</div>
+    <div class="section">
+      <h2>Step 6: Browser Rendering</h2>
+      <p>
+        The browser builds the page structure, applies styles, executes scripts,
+        and displays the final page.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Why This Matters</h2>
-<p>
-Understanding this flow helps developers build faster and more secure websites.
-</p>
-</div>
+    <div class="section">
+      <h2>Why This Matters</h2>
+      <p>
+        Understanding this flow helps developers build faster and more secure websites.
+      </p>
+    </div>
 
-</main>
+  </main>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const mode = document.getElementById("mode");
-mode.onclick = () => {
-  document.body.classList.toggle("light");
-  mode.className = document.body.classList.contains("light")
-    ? "fa-solid fa-sun"
-    : "fa-solid fa-moon";
-};
+  <script>
+    const mode = document.getElementById("mode");
+    mode.onclick = () => {
+      document.body.classList.toggle("light");
+      mode.className = document.body.classList.contains("light")
+        ? "fa-solid fa-sun"
+        : "fa-solid fa-moon";
+    };
 
-const btn = document.getElementById("topBtn");
-window.onscroll = () => {
-  btn.style.display = window.scrollY > 300 ? "block" : "none";
-};
-btn.onclick = () => window.scrollTo({top:0,behavior:"smooth"});
-</script>
+    const btn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
 
 </body>
+
 </html>

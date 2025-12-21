@@ -1,232 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What Developers Should Learn in 2026</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-body{
-margin:0;font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-color:#fff;transition:.4s}
-body.light-mode{background:#fff;color:#333}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Developers Should Learn in 2026</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            transition: .4s
+        }
 
-.top-bar{
-position:fixed;top:0;left:0;width:100%;height:60px;
-display:flex;align-items:center;gap:20px;
-padding:0 20px;background:rgba(0,0,0,.35);
-z-index:999}
-body.light-mode .top-bar{background:#fff}
-.top-bar i{font-size:26px;cursor:pointer}
+        body.light-mode {
+            background: #fff;
+            color: #333
+        }
 
-.container{
-max-width:1000px;
-margin:100px auto 80px;
-padding:35px;
-background:rgba(255,255,255,.06);
-border-radius:16px}
-body.light-mode .container{background:#f8f8f8}
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+            background: rgba(0, 0, 0, .35);
+            z-index: 999
+        }
 
-h1{color:#00BFFF;font-size:42px}
-h2{color:#00BFFF;margin-top:70px}
-p{font-size:18px;line-height:1.9}
+        body.light-mode .top-bar {
+            background: #fff
+        }
 
-img{
-width:100%;
-border-radius:16px;
-margin:30px 0;
-box-shadow:0 10px 30px rgba(0,0,0,.4)
-}
+        .top-bar i {
+            font-size: 26px;
+            cursor: pointer
+        }
 
-#topBtn{
-position:fixed;bottom:30px;right:30px;
-background:#00BFFF;color:#fff;
-border:none;padding:14px 16px;
-border-radius:50%;font-size:18px;
-display:none;cursor:pointer;z-index:1000
-}
-</style>
+        .container {
+            max-width: 1000px;
+            margin: 100px auto 80px;
+            padding: 35px;
+            background: rgba(255, 255, 255, .06);
+            border-radius: 16px
+        }
+
+        body.light-mode .container {
+            background: #f8f8f8
+        }
+
+        h1 {
+            color: #00BFFF;
+            font-size: 42px
+        }
+
+        h2 {
+            color: #00BFFF;
+            margin-top: 70px
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.9
+        }
+
+        img {
+            width: 100%;
+            border-radius: 16px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .4)
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #00BFFF;
+            color: #fff;
+            border: none;
+            padding: 14px 16px;
+            border-radius: 50%;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+            z-index: 1000
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-<i class="fas fa-arrow-left" onclick="history.back()"></i>
-<i class="fas fa-moon" id="themeToggle"></i>
-</div>
+    <div class="top-bar">
+        <i class="fas fa-arrow-left" onclick="history.back()"></i>
+        <i class="fas fa-moon" id="themeToggle"></i>
+    </div>
 
-<div class="container">
-<h1>What Developers Should Learn in 2026</h1>
+    <div class="container">
+        <h1>What Developers Should Learn in 2026</h1>
 
-<p>
-Technology is evolving faster than ever.
-By 2026, developers who focus only on tools
-will struggle — but those who build strong skills,
-thinking ability, and adaptability will dominate.
-This blog explains the **10 most important areas**
-every developer should focus on in 2026.
-</p>
+        <p>
+            Technology is evolving faster than ever.
+            By 2026, developers who focus only on tools
+            will struggle — but those who build strong skills,
+            thinking ability, and adaptability will dominate.
+            This blog explains the **10 most important areas**
+            every developer should focus on in 2026.
+        </p>
 
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="future tech">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="future tech">
 
-<!-- 1 -->
-<h2>1. AI-First Development</h2>
-<p>
-In 2026, AI will not replace developers,
-but developers who use AI will replace those who don’t.
-AI tools help you write code faster,
-debug smarter, and understand complex systems.
-</p>
-<p>
-Developers must learn how to work WITH AI —
-using it as an assistant, not a crutch.
-Understanding prompts, AI APIs,
-and automation workflows will be essential.
-</p>
+        <!-- 1 -->
+        <h2>1. AI-First Development</h2>
+        <p>
+            In 2026, AI will not replace developers,
+            but developers who use AI will replace those who don’t.
+            AI tools help you write code faster,
+            debug smarter, and understand complex systems.
+        </p>
+        <p>
+            Developers must learn how to work WITH AI —
+            using it as an assistant, not a crutch.
+            Understanding prompts, AI APIs,
+            and automation workflows will be essential.
+        </p>
 
-<!-- 2 -->
-<h2>2. Strong Fundamentals (Still King)</h2>
-<p>
-HTML, CSS, and JavaScript fundamentals
-will remain the most valuable skills.
-Frameworks change, but core concepts do not.
-</p>
-<p>
-In 2026, companies will still prefer developers
-who understand browser behavior,
-performance, and logic over those
-who only know framework syntax.
-</p>
+        <!-- 2 -->
+        <h2>2. Strong Fundamentals (Still King)</h2>
+        <p>
+            HTML, CSS, and JavaScript fundamentals
+            will remain the most valuable skills.
+            Frameworks change, but core concepts do not.
+        </p>
+        <p>
+            In 2026, companies will still prefer developers
+            who understand browser behavior,
+            performance, and logic over those
+            who only know framework syntax.
+        </p>
 
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="fundamentals">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="fundamentals">
 
-<!-- 3 -->
-<h2>3. Full-Stack Thinking</h2>
-<p>
-Even if you are a frontend developer,
-you must understand backend basics.
-APIs, authentication, databases,
-and server logic will help you
-build complete solutions.
-</p>
-<p>
-Developers who understand the full picture
-communicate better and solve problems faster.
-</p>
+        <!-- 3 -->
+        <h2>3. Full-Stack Thinking</h2>
+        <p>
+            Even if you are a frontend developer,
+            you must understand backend basics.
+            APIs, authentication, databases,
+            and server logic will help you
+            build complete solutions.
+        </p>
+        <p>
+            Developers who understand the full picture
+            communicate better and solve problems faster.
+        </p>
 
-<!-- 4 -->
-<h2>4. Web Performance & Optimization</h2>
-<p>
-Speed equals success.
-In 2026, slow websites will fail.
-Understanding performance optimization,
-lazy loading, image optimization,
-and Core Web Vitals will set you apart.
-</p>
+        <!-- 4 -->
+        <h2>4. Web Performance & Optimization</h2>
+        <p>
+            Speed equals success.
+            In 2026, slow websites will fail.
+            Understanding performance optimization,
+            lazy loading, image optimization,
+            and Core Web Vitals will set you apart.
+        </p>
 
-<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="performance">
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="performance">
 
-<!-- 5 -->
-<h2>5. System & Architectural Thinking</h2>
-<p>
-Good developers write code.
-Great developers design systems.
-</p>
-<p>
-Learning component architecture,
-state management concepts,
-and scalable thinking
-will help you handle large applications confidently.
-</p>
+        <!-- 5 -->
+        <h2>5. System & Architectural Thinking</h2>
+        <p>
+            Good developers write code.
+            Great developers design systems.
+        </p>
+        <p>
+            Learning component architecture,
+            state management concepts,
+            and scalable thinking
+            will help you handle large applications confidently.
+        </p>
 
-<!-- 6 -->
-<h2>6. Security Awareness</h2>
-<p>
-Security will be non-negotiable in 2026.
-Every developer must understand
-basic security threats like XSS,
-CSRF, and data leaks.
-</p>
-<p>
-Secure coding practices
-will protect users and your career.
-</p>
+        <!-- 6 -->
+        <h2>6. Security Awareness</h2>
+        <p>
+            Security will be non-negotiable in 2026.
+            Every developer must understand
+            basic security threats like XSS,
+            CSRF, and data leaks.
+        </p>
+        <p>
+            Secure coding practices
+            will protect users and your career.
+        </p>
 
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="security">
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="security">
 
-<!-- 7 -->
-<h2>7. DevOps & Deployment Knowledge</h2>
-<p>
-Developers who can deploy their own projects
-are far more valuable.
-Basic knowledge of hosting,
-CI/CD, and cloud platforms
-will be expected in 2026.
-</p>
+        <!-- 7 -->
+        <h2>7. DevOps & Deployment Knowledge</h2>
+        <p>
+            Developers who can deploy their own projects
+            are far more valuable.
+            Basic knowledge of hosting,
+            CI/CD, and cloud platforms
+            will be expected in 2026.
+        </p>
 
-<!-- 8 -->
-<h2>8. Communication & Soft Skills</h2>
-<p>
-The best developers are also good communicators.
-Explaining ideas, writing documentation,
-and discussing solutions clearly
-will boost your career more than any framework.
-</p>
+        <!-- 8 -->
+        <h2>8. Communication & Soft Skills</h2>
+        <p>
+            The best developers are also good communicators.
+            Explaining ideas, writing documentation,
+            and discussing solutions clearly
+            will boost your career more than any framework.
+        </p>
 
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="communication">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="communication">
 
-<!-- 9 -->
-<h2>9. Personal Brand & Visibility</h2>
-<p>
-In 2026, invisible developers get ignored.
-Building a personal brand through
-blogs, GitHub, and LinkedIn
-will attract opportunities automatically.
-</p>
+        <!-- 9 -->
+        <h2>9. Personal Brand & Visibility</h2>
+        <p>
+            In 2026, invisible developers get ignored.
+            Building a personal brand through
+            blogs, GitHub, and LinkedIn
+            will attract opportunities automatically.
+        </p>
 
-<!-- 10 -->
-<h2>10. Learning How to Learn</h2>
-<p>
-The most important skill of all.
-Technology will keep changing —
-your ability to learn fast
-will define your success.
-</p>
-<p>
-Developers who read documentation,
-experiment, and build consistently
-will always stay ahead.
-</p>
+        <!-- 10 -->
+        <h2>10. Learning How to Learn</h2>
+        <p>
+            The most important skill of all.
+            Technology will keep changing —
+            your ability to learn fast
+            will define your success.
+        </p>
+        <p>
+            Developers who read documentation,
+            experiment, and build consistently
+            will always stay ahead.
+        </p>
 
-<h2>Final Thoughts</h2>
-<p>
-2026 will reward developers
-who focus on fundamentals,
-adaptability, and mindset —
-not just tools.
-If you start preparing today,
-you will be ahead of the curve tomorrow.
-</p>
+        <h2>Final Thoughts</h2>
+        <p>
+            2026 will reward developers
+            who focus on fundamentals,
+            adaptability, and mindset —
+            not just tools.
+            If you start preparing today,
+            you will be ahead of the curve tomorrow.
+        </p>
 
-</div>
+    </div>
 
-<button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+    <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const toggle=document.getElementById("themeToggle");
-toggle.onclick=()=>{
-document.body.classList.toggle("light-mode");
-toggle.classList.toggle("fa-sun");
-toggle.classList.toggle("fa-moon");
-};
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        toggle.onclick = () => {
+            document.body.classList.toggle("light-mode");
+            toggle.classList.toggle("fa-sun");
+            toggle.classList.toggle("fa-moon");
+        };
 
-const topBtn=document.getElementById("topBtn");
-window.onscroll=()=>{
-topBtn.style.display=document.documentElement.scrollTop>300?"block":"none";
-};
-topBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
-</script>
+        const topBtn = document.getElementById("topBtn");
+        window.onscroll = () => {
+            topBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+        };
+        topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    </script>
 
 </body>
+
 </html>

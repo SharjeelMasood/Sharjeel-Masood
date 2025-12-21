@@ -1,133 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frontend Developer Roadmap (Without Overlearning)</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-body{
-margin:0;font-family:Arial,Helvetica,sans-serif;
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-color:#fff;transition:.4s}
-body.light-mode{background:#fff;color:#333}
-.top-bar{
-position:fixed;top:0;left:0;width:100%;height:60px;
-display:flex;align-items:center;gap:20px;
-padding:0 20px;background:rgba(0,0,0,.35);z-index:999}
-body.light-mode .top-bar{background:#fff}
-.top-bar i{font-size:26px;cursor:pointer}
-.container{
-max-width:1000px;margin:100px auto 80px;
-padding:30px;background:rgba(255,255,255,.05);
-border-radius:15px}
-body.light-mode .container{background:#f9f9f9}
-h1,h2{color:#00BFFF}
-p{font-size:18px;line-height:1.9}
-img{width:100%;border-radius:15px;margin:35px 0}
-#topBtn{
-position:fixed;bottom:30px;right:30px;
-background:#00BFFF;color:#fff;border:none;
-padding:14px 16px;border-radius:50%;
-font-size:18px;display:none;cursor:pointer}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Roadmap (Without Overlearning)</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            transition: .4s
+        }
+
+        body.light-mode {
+            background: #fff;
+            color: #333
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+            background: rgba(0, 0, 0, .35);
+            z-index: 999
+        }
+
+        body.light-mode .top-bar {
+            background: #fff
+        }
+
+        .top-bar i {
+            font-size: 26px;
+            cursor: pointer
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 100px auto 80px;
+            padding: 30px;
+            background: rgba(255, 255, 255, .05);
+            border-radius: 15px
+        }
+
+        body.light-mode .container {
+            background: #f9f9f9
+        }
+
+        h1,
+        h2 {
+            color: #00BFFF
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.9
+        }
+
+        img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 35px 0
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #00BFFF;
+            color: #fff;
+            border: none;
+            padding: 14px 16px;
+            border-radius: 50%;
+            font-size: 18px;
+            display: none;
+            cursor: pointer
+        }
+    </style>
 </head>
 
 <body>
-<div class="top-bar">
-<i class="fas fa-arrow-left" onclick="history.back()"></i>
-<i class="fas fa-moon" id="themeToggle"></i>
-</div>
+    <div class="top-bar">
+        <i class="fas fa-arrow-left" onclick="history.back()"></i>
+        <i class="fas fa-moon" id="themeToggle"></i>
+    </div>
 
-<div class="container">
-<h1>Frontend Developer Roadmap (Without Overlearning)</h1>
+    <div class="container">
+        <h1>Frontend Developer Roadmap (Without Overlearning)</h1>
 
-<p>
-Many beginners fail in frontend development not because the field is hard,
-but because they try to learn everything at once.
-This roadmap is designed to give you clarity, direction,
-and confidence without burnout.
-</p>
+        <p>
+            Many beginners fail in frontend development not because the field is hard,
+            but because they try to learn everything at once.
+            This roadmap is designed to give you clarity, direction,
+            and confidence without burnout.
+        </p>
 
-<img src="https://images.unsplash.com/photo-1517430816045-df4b7de1cd0b" alt="frontend roadmap">
+        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de1cd0b" alt="frontend roadmap">
 
-<h2>Phase 1: Understanding HTML & CSS Deeply</h2>
-<p>
-HTML and CSS are the backbone of frontend development.
-HTML provides structure, meaning, and accessibility,
-while CSS controls layout, responsiveness, and visual identity.
-Without mastering these, no framework can save you.
-</p>
+        <h2>Phase 1: Understanding HTML & CSS Deeply</h2>
+        <p>
+            HTML and CSS are the backbone of frontend development.
+            HTML provides structure, meaning, and accessibility,
+            while CSS controls layout, responsiveness, and visual identity.
+            Without mastering these, no framework can save you.
+        </p>
 
-<p>
-You should understand semantic HTML, Flexbox, Grid,
-mobile-first design, and basic accessibility.
-These skills make your websites professional and usable.
-</p>
+        <p>
+            You should understand semantic HTML, Flexbox, Grid,
+            mobile-first design, and basic accessibility.
+            These skills make your websites professional and usable.
+        </p>
 
-<h2>Phase 2: JavaScript Fundamentals (The Brain)</h2>
-<p>
-JavaScript is not about memorizing syntax.
-It is about learning logic and problem-solving.
-You must understand variables, functions, conditions,
-loops, DOM manipulation, and events.
-</p>
+        <h2>Phase 2: JavaScript Fundamentals (The Brain)</h2>
+        <p>
+            JavaScript is not about memorizing syntax.
+            It is about learning logic and problem-solving.
+            You must understand variables, functions, conditions,
+            loops, DOM manipulation, and events.
+        </p>
 
-<img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479" alt="javascript learning">
+        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479" alt="javascript learning">
 
-<p>
-If your JavaScript fundamentals are weak,
-frameworks will confuse you even more.
-Strong JS makes everything easier later.
-</p>
+        <p>
+            If your JavaScript fundamentals are weak,
+            frameworks will confuse you even more.
+            Strong JS makes everything easier later.
+        </p>
 
-<h2>Phase 3: Git, GitHub & Developer Workflow</h2>
-<p>
-Version control is mandatory in the real world.
-Git helps you track changes,
-while GitHub shows your work to employers and clients.
-A clean GitHub profile is more powerful than a CV.
-</p>
+        <h2>Phase 3: Git, GitHub & Developer Workflow</h2>
+        <p>
+            Version control is mandatory in the real world.
+            Git helps you track changes,
+            while GitHub shows your work to employers and clients.
+            A clean GitHub profile is more powerful than a CV.
+        </p>
 
-<h2>Phase 4: One Framework – Not Many</h2>
-<p>
-Choose one framework (React is popular),
-learn it properly, and build projects.
-Do not jump between tools.
-Frameworks change, fundamentals stay.
-</p>
+        <h2>Phase 4: One Framework – Not Many</h2>
+        <p>
+            Choose one framework (React is popular),
+            learn it properly, and build projects.
+            Do not jump between tools.
+            Frameworks change, fundamentals stay.
+        </p>
 
-<h2>How Long Does This Roadmap Take?</h2>
-<p>
-If followed consistently,
-this roadmap can be completed in 6–8 months.
-Daily practice matters more than speed.
-</p>
+        <h2>How Long Does This Roadmap Take?</h2>
+        <p>
+            If followed consistently,
+            this roadmap can be completed in 6–8 months.
+            Daily practice matters more than speed.
+        </p>
 
-<h2>Final Thoughts</h2>
-<p>
-Avoid the tutorial trap.
-Build small projects.
-Break things.
-Fix them.
-This is how real frontend developers are made.
-</p>
-</div>
+        <h2>Final Thoughts</h2>
+        <p>
+            Avoid the tutorial trap.
+            Build small projects.
+            Break things.
+            Fix them.
+            This is how real frontend developers are made.
+        </p>
+    </div>
 
-<button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+    <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const toggle=document.getElementById("themeToggle");
-toggle.onclick=()=>{
-document.body.classList.toggle("light-mode");
-toggle.classList.toggle("fa-sun");
-toggle.classList.toggle("fa-moon");
-};
-const topBtn=document.getElementById("topBtn");
-window.onscroll=()=>{
-topBtn.style.display=document.documentElement.scrollTop>300?"block":"none";
-};
-topBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
-</script>
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        toggle.onclick = () => {
+            document.body.classList.toggle("light-mode");
+            toggle.classList.toggle("fa-sun");
+            toggle.classList.toggle("fa-moon");
+        };
+        const topBtn = document.getElementById("topBtn");
+        window.onscroll = () => {
+            topBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+        };
+        topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    </script>
 </body>
+
 </html>

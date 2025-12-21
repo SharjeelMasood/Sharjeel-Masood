@@ -1,139 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MySQL Indexing: Why Some Queries Are Fast and Others Are Slow</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySQL Indexing: Why Some Queries Are Fast and Others Are Slow</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Segoe UI, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: .4s;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:Segoe UI, Arial, sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#fff;
-  transition:.4s;
-}
-body.light{background:#fff;color:#1f1f1f;}
+    body.light {
+      background: #fff;
+      color: #1f1f1f;
+    }
 
-.top-bar{
-  position:fixed;top:0;width:100%;height:60px;
-  display:flex;align-items:center;gap:20px;
-  padding:0 22px;background:rgba(0,0,0,.35);z-index:1000;
-}
-body.light .top-bar{background:#f4f4f4;}
-.top-bar i{font-size:26px;cursor:pointer;}
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 22px;
+      background: rgba(0, 0, 0, .35);
+      z-index: 1000;
+    }
 
-.container{
-  max-width:1100px;margin:100px auto 90px;padding:40px;
-  background:rgba(255,255,255,.06);border-radius:18px;
-}
-body.light .container{background:#fff;}
+    body.light .top-bar {
+      background: #f4f4f4;
+    }
 
-h1{font-size:44px;color:#00BFFF;}
-h2{margin-top:55px;color:#00BFFF;}
-p{font-size:18.5px;line-height:2;margin-top:18px;}
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-img{
-  width:90%;display:block;margin:45px auto;border-radius:22px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 100px auto 90px;
+      padding: 40px;
+      background: rgba(255, 255, 255, .06);
+      border-radius: 18px;
+    }
 
-#topBtn{
-  position:fixed;bottom:30px;right:30px;
-  background:#007BFF;color:#fff;border:none;
-  padding:14px 18px;border-radius:50%;
-  font-size:20px;cursor:pointer;display:none;
-}
-#topBtn:hover{background:#0056b3;}
-</style>
+    body.light .container {
+      background: #fff;
+    }
+
+    h1 {
+      font-size: 44px;
+      color: #00BFFF;
+    }
+
+    h2 {
+      margin-top: 55px;
+      color: #00BFFF;
+    }
+
+    p {
+      font-size: 18.5px;
+      line-height: 2;
+      margin-top: 18px;
+    }
+
+    img {
+      width: 90%;
+      display: block;
+      margin: 45px auto;
+      border-radius: 22px;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #topBtn:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-  <i class="fas fa-arrow-left" onclick="history.back()"></i>
-  <i class="fas fa-moon" id="theme"></i>
-</div>
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()"></i>
+    <i class="fas fa-moon" id="theme"></i>
+  </div>
 
-<div class="container">
+  <div class="container">
 
-<h1>MySQL Indexing: Why Some Queries Are Fast and Others Are Slow</h1>
+    <h1>MySQL Indexing: Why Some Queries Are Fast and Others Are Slow</h1>
 
-<p>
-Many developers blame MySQL when applications become slow. In reality, performance issues are often caused by poor indexing strategies rather than the database itself.
-</p>
+    <p>
+      Many developers blame MySQL when applications become slow. In reality, performance issues are often caused by poor
+      indexing strategies rather than the database itself.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4">
+    <img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4">
 
-<h2>What Is an Index in MySQL?</h2>
-<p>
-An index is a data structure that allows MySQL to find rows quickly without scanning the entire table. Think of it like a book index — it helps locate information efficiently.
-</p>
+    <h2>What Is an Index in MySQL?</h2>
+    <p>
+      An index is a data structure that allows MySQL to find rows quickly without scanning the entire table. Think of it
+      like a book index — it helps locate information efficiently.
+    </p>
 
-<h2>How Queries Work Without Indexes</h2>
-<p>
-Without an index, MySQL performs a full table scan. As data grows, query time increases linearly, causing serious performance degradation.
-</p>
+    <h2>How Queries Work Without Indexes</h2>
+    <p>
+      Without an index, MySQL performs a full table scan. As data grows, query time increases linearly, causing serious
+      performance degradation.
+    </p>
 
-<h2>B-Tree Indexes Explained</h2>
-<p>
-MySQL primarily uses B-Tree indexes. These structures keep data sorted and allow fast searching, inserting, and deleting.
-</p>
+    <h2>B-Tree Indexes Explained</h2>
+    <p>
+      MySQL primarily uses B-Tree indexes. These structures keep data sorted and allow fast searching, inserting, and
+      deleting.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1526378722443-4fefc4c6b8c1">
+    <img src="https://images.unsplash.com/photo-1526378722443-4fefc4c6b8c1">
 
-<h2>When Indexes Make Queries Faster</h2>
-<p>
-Indexes dramatically improve SELECT queries, JOIN operations, WHERE conditions, and ORDER BY clauses when designed correctly.
-</p>
+    <h2>When Indexes Make Queries Faster</h2>
+    <p>
+      Indexes dramatically improve SELECT queries, JOIN operations, WHERE conditions, and ORDER BY clauses when designed
+      correctly.
+    </p>
 
-<h2>When Indexes Hurt Performance</h2>
-<p>
-Too many indexes slow down INSERT, UPDATE, and DELETE operations. Indexes must be updated whenever data changes.
-</p>
+    <h2>When Indexes Hurt Performance</h2>
+    <p>
+      Too many indexes slow down INSERT, UPDATE, and DELETE operations. Indexes must be updated whenever data changes.
+    </p>
 
-<h2>Composite Indexes</h2>
-<p>
-Composite indexes cover multiple columns. Order matters — improper ordering can make indexes useless.
-</p>
+    <h2>Composite Indexes</h2>
+    <p>
+      Composite indexes cover multiple columns. Order matters — improper ordering can make indexes useless.
+    </p>
 
-<h2>Indexing and Real-World Databases</h2>
-<p>
-Large applications rely heavily on indexing to maintain performance at scale. Without proper indexing, scaling becomes impossible.
-</p>
+    <h2>Indexing and Real-World Databases</h2>
+    <p>
+      Large applications rely heavily on indexing to maintain performance at scale. Without proper indexing, scaling
+      becomes impossible.
+    </p>
 
-<h2>Understanding EXPLAIN</h2>
-<p>
-The EXPLAIN command shows how MySQL executes queries. Learning to read EXPLAIN output is essential for performance tuning.
-</p>
+    <h2>Understanding EXPLAIN</h2>
+    <p>
+      The EXPLAIN command shows how MySQL executes queries. Learning to read EXPLAIN output is essential for performance
+      tuning.
+    </p>
 
-<h2>Indexes Are a Strategy, Not Magic</h2>
-<p>
-Indexing requires understanding data access patterns. Blindly adding indexes often creates more problems than solutions.
-</p>
+    <h2>Indexes Are a Strategy, Not Magic</h2>
+    <p>
+      Indexing requires understanding data access patterns. Blindly adding indexes often creates more problems than
+      solutions.
+    </p>
 
-<h2>Why Every Developer Should Learn Indexing</h2>
-<p>
-Databases outlive frameworks. Mastering indexing ensures long-term performance, scalability, and professional growth.
-</p>
+    <h2>Why Every Developer Should Learn Indexing</h2>
+    <p>
+      Databases outlive frameworks. Mastering indexing ensures long-term performance, scalability, and professional
+      growth.
+    </p>
 
-</div>
+  </div>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const theme=document.getElementById("theme");
-theme.onclick=()=>{
-  document.body.classList.toggle("light");
-  theme.classList.toggle("fa-moon");
-  theme.classList.toggle("fa-sun");
-};
+  <script>
+    const theme = document.getElementById("theme");
+    theme.onclick = () => {
+      document.body.classList.toggle("light");
+      theme.classList.toggle("fa-moon");
+      theme.classList.toggle("fa-sun");
+    };
 
-const topBtn=document.getElementById("topBtn");
-window.onscroll=()=>topBtn.style.display=window.scrollY>260?"block":"none";
-topBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
-</script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => topBtn.style.display = window.scrollY > 260 ? "block" : "none";
+    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
 
 </body>
+
 </html>

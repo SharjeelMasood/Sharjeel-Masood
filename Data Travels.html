@@ -1,229 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How the Internet Actually Works Behind the Scenes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How the Internet Actually Works Behind the Scenes</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-dark: #020617;
+      --card: #0f172a;
+      --accent: #22d3ee;
+      --text: #e5e7eb;
+    }
 
-<style>
-:root{
-  --bg-dark:#020617;
-  --card:#0f172a;
-  --accent:#22d3ee;
-  --text:#e5e7eb;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at top, var(--card), var(--bg-dark));
+      color: var(--text);
+      transition: .4s;
+    }
 
-body{
-  margin:0;
-  font-family:system-ui, sans-serif;
-  background:radial-gradient(circle at top,var(--card),var(--bg-dark));
-  color:var(--text);
-  transition:.4s;
-}
+    body.light {
+      background: #f8fafc;
+      color: #111827;
+    }
 
-body.light{
-  background:#f8fafc;
-  color:#111827;
-}
+    .topbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      background: rgba(2, 6, 23, .9);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+    }
 
-.topbar{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 28px;
-  background:rgba(2,6,23,.9);
-  backdrop-filter:blur(10px);
-  z-index:999;
-}
+    body.light .topbar {
+      background: #ffffff;
+    }
 
-body.light .topbar{
-  background:#ffffff;
-}
+    .topbar i {
+      font-size: 22px;
+      cursor: pointer;
+    }
 
-.topbar i{
-  font-size:22px;
-  cursor:pointer;
-}
+    .wrapper {
+      max-width: 1150px;
+      margin: 110px auto 80px;
+      padding: 50px;
+    }
 
-.wrapper{
-  max-width:1150px;
-  margin:110px auto 80px;
-  padding:50px;
-}
+    h1 {
+      font-size: 44px;
+      text-align: center;
+      margin-bottom: 35px;
+    }
 
-h1{
-  font-size:44px;
-  text-align:center;
-  margin-bottom:35px;
-}
+    .section {
+      background: linear-gradient(145deg, #020617, #0b122f);
+      padding: 35px;
+      border-radius: 22px;
+      margin-bottom: 40px;
+    }
 
-.section{
-  background:linear-gradient(145deg,#020617,#0b122f);
-  padding:35px;
-  border-radius:22px;
-  margin-bottom:40px;
-}
+    body.light .section {
+      background: #ffffff;
+    }
 
-body.light .section{
-  background:#ffffff;
-}
+    .section h2 {
+      color: var(--accent);
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
 
-.section h2{
-  color:var(--accent);
-  font-size:30px;
-  margin-bottom:15px;
-}
+    .section p {
+      font-size: 18px;
+      line-height: 1.9;
+    }
 
-.section p{
-  font-size:18px;
-  line-height:1.9;
-}
+    /* image container */
+    .blog-img {
+      margin: 30px 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #020617;
+    }
 
-/* image container */
-.blog-img{
-  margin:30px 0;
-  border-radius:18px;
-  overflow:hidden;
-  background:#020617;
-}
+    .blog-img img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
 
-.blog-img img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  display:block;
-}
+    #topBtn {
+      position: fixed;
+      right: 28px;
+      bottom: 28px;
+      padding: 14px 18px;
+      border-radius: 50%;
+      border: none;
+      background: var(--accent);
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+    }
 
-#topBtn{
-  position:fixed;
-  right:28px;
-  bottom:28px;
-  padding:14px 18px;
-  border-radius:50%;
-  border:none;
-  background:var(--accent);
-  font-size:18px;
-  cursor:pointer;
-  display:none;
-}
+    @media(max-width:768px) {
+      h1 {
+        font-size: 32px;
+      }
 
-@media(max-width:768px){
-  h1{font-size:32px;}
-  .wrapper{padding:25px;}
-  .blog-img img{height:240px;}
-}
-</style>
+      .wrapper {
+        padding: 25px;
+      }
+
+      .blog-img img {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <i class="fas fa-arrow-left" onclick="history.back()"></i>
-  <i class="fas fa-moon" id="toggle"></i>
-</div>
+  <div class="topbar">
+    <i class="fas fa-arrow-left" onclick="history.back()"></i>
+    <i class="fas fa-moon" id="toggle"></i>
+  </div>
 
-<div class="wrapper">
+  <div class="wrapper">
 
-<h1>How the Internet Actually Works Behind the Scenes</h1>
+    <h1>How the Internet Actually Works Behind the Scenes</h1>
 
-<div class="section">
-<p>
-When we open a website or send a message, everything feels instant.
-Behind this simplicity exists one of the most complex systems humans
-have ever built — the internet.
-</p>
-</div>
+    <div class="section">
+      <p>
+        When we open a website or send a message, everything feels instant.
+        Behind this simplicity exists one of the most complex systems humans
+        have ever built — the internet.
+      </p>
+    </div>
 
-<div class="blog-img">
-  <img src="Futuristic illustration of global internet infrastructure showing Earth with interconnected digital nodes, deep blue tones, cinematic lighting, professional tech concept art" alt="">
-</div>
+    <div class="blog-img">
+      <img
+        src="Futuristic illustration of global internet infrastructure showing Earth with interconnected digital nodes, deep blue tones, cinematic lighting, professional tech concept art"
+        alt="">
+    </div>
 
-<div class="section">
-<h2>From Your Device to the World</h2>
-<p>
-Every action you take online starts at your device.
-Your phone or computer converts clicks into digital signals
-that your network equipment understands.
-</p>
-<p>
-These signals move to routers that decide where your request
-should go next.
-</p>
-</div>
+    <div class="section">
+      <h2>From Your Device to the World</h2>
+      <p>
+        Every action you take online starts at your device.
+        Your phone or computer converts clicks into digital signals
+        that your network equipment understands.
+      </p>
+      <p>
+        These signals move to routers that decide where your request
+        should go next.
+      </p>
+    </div>
 
-<div class="blog-img">
-  <img src="Conceptual diagram-style artwork showing routers and data packets flowing between devices, clean minimal tech visualization, dark modern UI style" alt="">
-</div>
+    <div class="blog-img">
+      <img
+        src="Conceptual diagram-style artwork showing routers and data packets flowing between devices, clean minimal tech visualization, dark modern UI style"
+        alt="">
+    </div>
 
-<div class="section">
-<h2>The Backbone of the Internet</h2>
-<p>
-The internet is not wireless magic.
-It is powered by millions of kilometers of fiber-optic cables,
-many of which run under oceans connecting continents.
-</p>
-<p>
-Data travels through these cables as light,
-allowing information to move at incredible speed.
-</p>
-</div>
+    <div class="section">
+      <h2>The Backbone of the Internet</h2>
+      <p>
+        The internet is not wireless magic.
+        It is powered by millions of kilometers of fiber-optic cables,
+        many of which run under oceans connecting continents.
+      </p>
+      <p>
+        Data travels through these cables as light,
+        allowing information to move at incredible speed.
+      </p>
+    </div>
 
-<div class="blog-img">
-  <img src="High-detail digital illustration of undersea fiber optic cables glowing with light signals on ocean floor, realistic educational technology artwork" alt="">
-</div>
+    <div class="blog-img">
+      <img
+        src="High-detail digital illustration of undersea fiber optic cables glowing with light signals on ocean floor, realistic educational technology artwork"
+        alt="">
+    </div>
 
-<div class="section">
-<h2>Servers and Data Centers</h2>
-<p>
-Servers are powerful computers designed to respond to requests.
-When your request arrives, servers process it and send back data —
-a webpage, a video stream, or a message.
-</p>
-<p>
-To ensure reliability, servers are grouped inside massive data centers
-with backups, cooling systems, and security.
-</p>
-</div>
+    <div class="section">
+      <h2>Servers and Data Centers</h2>
+      <p>
+        Servers are powerful computers designed to respond to requests.
+        When your request arrives, servers process it and send back data —
+        a webpage, a video stream, or a message.
+      </p>
+      <p>
+        To ensure reliability, servers are grouped inside massive data centers
+        with backups, cooling systems, and security.
+      </p>
+    </div>
 
-<div class="blog-img">
-  <img src="Modern futuristic data center interior with rows of servers and blue LED lighting, high-tech environment, realistic professional style" alt="">
-</div>
+    <div class="blog-img">
+      <img
+        src="Modern futuristic data center interior with rows of servers and blue LED lighting, high-tech environment, realistic professional style"
+        alt="">
+    </div>
 
-<div class="section">
-<h2>Why Everything Feels Instant</h2>
-<p>
-Smart routing, redundancy, and global infrastructure allow the internet
-to avoid failures and congestion automatically.
-</p>
-<p>
-Even if part of the network goes down,
-your data finds another path without you noticing.
-</p>
-</div>
+    <div class="section">
+      <h2>Why Everything Feels Instant</h2>
+      <p>
+        Smart routing, redundancy, and global infrastructure allow the internet
+        to avoid failures and congestion automatically.
+      </p>
+      <p>
+        Even if part of the network goes down,
+        your data finds another path without you noticing.
+      </p>
+    </div>
 
-</div>
+  </div>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const toggle=document.getElementById("toggle");
-toggle.onclick=()=>{
-  document.body.classList.toggle("light");
-  toggle.classList.toggle("fa-sun");
-};
+  <script>
+    const toggle = document.getElementById("toggle");
+    toggle.onclick = () => {
+      document.body.classList.toggle("light");
+      toggle.classList.toggle("fa-sun");
+    };
 
-const btn=document.getElementById("topBtn");
-window.onscroll=()=>{
-  btn.style.display=document.documentElement.scrollTop>300?"block":"none";
-};
-btn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
-</script>
+    const btn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      btn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
 
 </body>
+
 </html>

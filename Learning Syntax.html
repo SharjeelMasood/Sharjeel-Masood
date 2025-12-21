@@ -1,193 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Learning Logic Beats Learning Syntax</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Learning Logic Beats Learning Syntax</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: 0.4s ease;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#fff;
-  transition:0.4s ease;
-}
+    body.light {
+      background: #ffffff;
+      color: #222;
+    }
 
-body.light{
-  background:#ffffff;
-  color:#222;
-}
+    a {
+      color: #00bfff;
+    }
 
-a{color:#00bfff;}
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
 
-.top-bar{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:60px;
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:0 20px;
-  background:rgba(0,0,0,0.3);
-  z-index:1000;
-}
+    body.light .top-bar {
+      background: #f5f5f5;
+    }
 
-body.light .top-bar{
-  background:#f5f5f5;
-}
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-.top-bar i{
-  font-size:26px;
-  cursor:pointer;
-}
+    /* CONTENT */
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 60px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+    }
 
-/* CONTENT */
-.container{
-  max-width:1000px;
-  margin:100px auto 60px;
-  padding:30px;
-  background:rgba(255,255,255,0.06);
-  border-radius:14px;
-}
+    body.light .container {
+      background: #ffffff;
+    }
 
-body.light .container{
-  background:#ffffff;
-}
+    h1 {
+      font-size: 40px;
+      color: #00bfff;
+    }
 
-h1{
-  font-size:40px;
-  color:#00bfff;
-}
+    h2 {
+      margin-top: 40px;
+      color: #00bfff;
+    }
 
-h2{
-  margin-top:40px;
-  color:#00bfff;
-}
+    p {
+      font-size: 18px;
+      line-height: 1.9;
+    }
 
-p{
-  font-size:18px;
-  line-height:1.9;
-}
+    img {
+      width: 90%;
+      margin: 30px 5%;
+      border-radius: 18px;
+    }
 
-img{
-  width:90%;
-  margin:30px 5%;
-  border-radius:18px;
-}
+    /* SCROLL TO TOP — SAME AS YOUR WEBSITE */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
 
-/* SCROLL TO TOP — SAME AS YOUR WEBSITE */
-#topBtn{
-  position:fixed;
-  bottom:30px;
-  right:30px;
-  background:#007BFF;
-  color:#fff;
-  border:none;
-  padding:14px 18px;
-  border-radius:50%;
-  font-size:20px;
-  cursor:pointer;
-  display:none;
-  box-shadow:0 4px 6px rgba(0,0,0,0.3);
-}
-
-#topBtn:hover{
-  background:#0056b3;
-}
-</style>
+    #topBtn:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
-  <i class="fas fa-moon" id="theme" title="Toggle Theme"></i>
-</div>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
+    <i class="fas fa-moon" id="theme" title="Toggle Theme"></i>
+  </div>
 
-<!-- BLOG CONTENT -->
-<div class="container">
+  <!-- BLOG CONTENT -->
+  <div class="container">
 
-<h1>Why Learning Logic Beats Learning Syntax</h1>
+    <h1>Why Learning Logic Beats Learning Syntax</h1>
 
-<p>
-Many beginners believe that memorizing syntax is the key to becoming a good developer. They jump from one language to another, collecting keywords but struggling to build real projects. The truth is simple: logic matters far more than syntax.
-</p>
+    <p>
+      Many beginners believe that memorizing syntax is the key to becoming a good developer. They jump from one language
+      to another, collecting keywords but struggling to build real projects. The truth is simple: logic matters far more
+      than syntax.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1526378722484-dc04fcb04a18">
+    <img src="https://images.unsplash.com/photo-1526378722484-dc04fcb04a18">
 
-<h2>What Is Syntax?</h2>
-<p>
-Syntax is the rulebook of a programming language. It defines how code is written — keywords, symbols, and structure. Syntax is important, but it is also easy to look up and memorize when needed.
-</p>
+    <h2>What Is Syntax?</h2>
+    <p>
+      Syntax is the rulebook of a programming language. It defines how code is written — keywords, symbols, and
+      structure. Syntax is important, but it is also easy to look up and memorize when needed.
+    </p>
 
-<h2>What Is Logic?</h2>
-<p>
-Logic is the ability to break down problems, think step-by-step, and design solutions. It is language-independent. A developer with strong logic can switch languages easily because the thinking process remains the same.
-</p>
+    <h2>What Is Logic?</h2>
+    <p>
+      Logic is the ability to break down problems, think step-by-step, and design solutions. It is language-independent.
+      A developer with strong logic can switch languages easily because the thinking process remains the same.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
 
-<h2>Why Beginners Get Stuck</h2>
-<p>
-Most beginners focus on “what to write” instead of “why to write”. They copy code from tutorials without understanding the reasoning behind it. As soon as the tutorial ends, they feel lost.
-</p>
+    <h2>Why Beginners Get Stuck</h2>
+    <p>
+      Most beginners focus on “what to write” instead of “why to write”. They copy code from tutorials without
+      understanding the reasoning behind it. As soon as the tutorial ends, they feel lost.
+    </p>
 
-<h2>Logic Makes You Language-Independent</h2>
-<p>
-A developer who understands loops, conditions, data flow, and problem-solving can work with JavaScript today and switch to Python or any other language tomorrow with confidence.
-</p>
+    <h2>Logic Makes You Language-Independent</h2>
+    <p>
+      A developer who understands loops, conditions, data flow, and problem-solving can work with JavaScript today and
+      switch to Python or any other language tomorrow with confidence.
+    </p>
 
-<h2>Real Developers Think Before Coding</h2>
-<p>
-Professional developers spend more time thinking than typing. They plan, visualize outcomes, and anticipate edge cases before writing a single line of code.
-</p>
+    <h2>Real Developers Think Before Coding</h2>
+    <p>
+      Professional developers spend more time thinking than typing. They plan, visualize outcomes, and anticipate edge
+      cases before writing a single line of code.
+    </p>
 
-<img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159">
+    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159">
 
-<h2>How to Improve Your Logic</h2>
-<p>
-Build small projects, solve real problems, and debug your own mistakes. Avoid blindly copying code. Ask yourself why each line exists and what would happen if it changed.
-</p>
+    <h2>How to Improve Your Logic</h2>
+    <p>
+      Build small projects, solve real problems, and debug your own mistakes. Avoid blindly copying code. Ask yourself
+      why each line exists and what would happen if it changed.
+    </p>
 
-<h2>Final Thoughts</h2>
-<p>
-Syntax can be Googled. Logic cannot. Strong logic makes you confident, adaptable, and future-proof as a developer. If you master logic, syntax will always follow.
-</p>
+    <h2>Final Thoughts</h2>
+    <p>
+      Syntax can be Googled. Logic cannot. Strong logic makes you confident, adaptable, and future-proof as a developer.
+      If you master logic, syntax will always follow.
+    </p>
 
-</div>
+  </div>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-/* THEME TOGGLE — FIXED */
-const theme = document.getElementById("theme");
+  <script>
+    /* THEME TOGGLE — FIXED */
+    const theme = document.getElementById("theme");
 
-theme.onclick = () => {
-  document.body.classList.toggle("light");
+    theme.onclick = () => {
+      document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("light")) {
-    theme.classList.remove("fa-moon");
-    theme.classList.add("fa-sun");
-  } else {
-    theme.classList.remove("fa-sun");
-    theme.classList.add("fa-moon");
-  }
-};
+      if (document.body.classList.contains("light")) {
+        theme.classList.remove("fa-moon");
+        theme.classList.add("fa-sun");
+      } else {
+        theme.classList.remove("fa-sun");
+        theme.classList.add("fa-moon");
+      }
+    };
 
-/* SCROLL TO TOP */
-const topBtn = document.getElementById("topBtn");
-window.onscroll = () => {
-  topBtn.style.display = window.scrollY > 200 ? "block" : "none";
-};
-topBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-</script>
+    /* SCROLL TO TOP */
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => {
+      topBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
 
 </body>
+
 </html>

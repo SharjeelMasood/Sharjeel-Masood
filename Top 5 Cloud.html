@@ -1,133 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top 5 Cloud Platforms Every Developer Should Know in 2026</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<style>
-body{
-  margin:0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#fff;
-  transition: all 0.4s ease;
-}
-body.light{
-  background:#fff;
-  color:#222;
-}
-a{color:#38bdf8;}
-.top-bar{
-  position:fixed; top:0; left:0; width:100%; height:60px;
-  display:flex; align-items:center; gap:20px; padding:0 20px;
-  background:rgba(0,0,0,0.4); z-index:999;
-}
-body.light .top-bar{background:#f8f9fa;}
-.top-bar i{font-size:26px; cursor:pointer;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 5 Cloud Platforms Every Developer Should Know in 2026</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      transition: all 0.4s ease;
+    }
 
-.container{
-  max-width:1100px;
-  margin:100px auto 60px;
-  padding:30px;
-  background:rgba(255,255,255,0.05);
-  border-radius:14px;
-}
-body.light .container{background:#fff;color:#222;}
-h1{color:#34d399; font-size:44px; margin-bottom:20px; font-weight:bold;}
-h2{color:#34d399; margin-top:50px; font-weight:bold;}
-h3{color:#34d399; margin-top:25px; font-weight:bold;}
-p{font-size:18px; line-height:1.9; margin-top:15px;}
-ul{margin:10px 0 15px 25px;}
-img{width:90%; max-width:600px; display:block; margin:20px auto; border-radius:12px; border:1px solid #34d399;}
+    body.light {
+      background: #fff;
+      color: #222;
+    }
 
-.code-block{
-  position: relative;
-  background:#111;
-  color:#0f0;
-  padding:15px;
-  margin:20px 0;
-  border-radius:12px;
-  overflow-x:auto;
-  font-family: monospace;
-}
-body.light .code-block{ background:#f5f5f5; color:#111; }
-.copy-btn{
-  position:absolute; top:10px; right:10px;
-  background:#34d399; border:none; padding:5px 10px;
-  cursor:pointer; border-radius:6px; font-size:14px;
-}
-.copy-btn:hover{background:#059669;}
-#topBtn{
-  position:fixed; bottom:30px; right:30px;
-  background:#34d399; color:#000; border:none;
-  padding:12px 16px; border-radius:50%; font-size:20px;
-  cursor:pointer; display:none;
-}
-</style>
+    a {
+      color: #38bdf8;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+
+    body.light .top-bar {
+      background: #f8f9fa;
+    }
+
+    .top-bar i {
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 100px auto 60px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+    }
+
+    body.light .container {
+      background: #fff;
+      color: #222;
+    }
+
+    h1 {
+      color: #34d399;
+      font-size: 44px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #34d399;
+      margin-top: 50px;
+      font-weight: bold;
+    }
+
+    h3 {
+      color: #34d399;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.9;
+      margin-top: 15px;
+    }
+
+    ul {
+      margin: 10px 0 15px 25px;
+    }
+
+    img {
+      width: 90%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      border: 1px solid #34d399;
+    }
+
+    .code-block {
+      position: relative;
+      background: #111;
+      color: #0f0;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-family: monospace;
+    }
+
+    body.light .code-block {
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #34d399;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .copy-btn:hover {
+      background: #059669;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #34d399;
+      color: #000;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-  <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
-  <i class="fas fa-moon" id="toggleTheme" title="Toggle Theme"></i>
-</div>
+  <div class="top-bar">
+    <i class="fas fa-arrow-left" onclick="history.back()" title="Go Back"></i>
+    <i class="fas fa-moon" id="toggleTheme" title="Toggle Theme"></i>
+  </div>
 
-<div class="container">
-<h1>Top 5 Cloud Platforms Every Developer Should Know in 2026</h1>
+  <div class="container">
+    <h1>Top 5 Cloud Platforms Every Developer Should Know in 2026</h1>
 
-<p>Cloud computing is now essential for developers. Whether building scalable web apps, deploying microservices, or experimenting with AI, cloud platforms provide the infrastructure, tools, and scalability needed. In 2026, knowing the top cloud platforms is a key skill for every developer.</p>
+    <p>Cloud computing is now essential for developers. Whether building scalable web apps, deploying microservices, or
+      experimenting with AI, cloud platforms provide the infrastructure, tools, and scalability needed. In 2026, knowing
+      the top cloud platforms is a key skill for every developer.</p>
 
-<h2>1. Amazon Web Services (AWS)</h2>
-<p>AWS remains the most popular cloud platform. It offers services for computing (EC2), storage (S3), databases (RDS), AI (SageMaker), and serverless computing (Lambda). Developers can deploy scalable applications and leverage global infrastructure.</p>
-<img src="https://images.unsplash.com/photo-1581091870622-1d2c07a6f1f1" alt="AWS Cloud">
+    <h2>1. Amazon Web Services (AWS)</h2>
+    <p>AWS remains the most popular cloud platform. It offers services for computing (EC2), storage (S3), databases
+      (RDS), AI (SageMaker), and serverless computing (Lambda). Developers can deploy scalable applications and leverage
+      global infrastructure.</p>
+    <img src="https://images.unsplash.com/photo-1581091870622-1d2c07a6f1f1" alt="AWS Cloud">
 
-<h2>2. Microsoft Azure</h2>
-<p>Azure provides cloud computing services integrated with Microsoft products. It supports virtual machines, databases, AI services, and DevOps pipelines. Azure is ideal for enterprises leveraging Microsoft ecosystems.</p>
-<img src="https://images.unsplash.com/photo-1611078481090-2d4fda9611a5" alt="Microsoft Azure">
+    <h2>2. Microsoft Azure</h2>
+    <p>Azure provides cloud computing services integrated with Microsoft products. It supports virtual machines,
+      databases, AI services, and DevOps pipelines. Azure is ideal for enterprises leveraging Microsoft ecosystems.</p>
+    <img src="https://images.unsplash.com/photo-1611078481090-2d4fda9611a5" alt="Microsoft Azure">
 
-<h2>3. Google Cloud Platform (GCP)</h2>
-<p>GCP excels in AI, machine learning, and data analytics. Tools like BigQuery, AI Hub, and Cloud Functions allow developers to process large datasets and deploy serverless applications efficiently.</p>
-<img src="https://images.unsplash.com/photo-1616178269807-3d70d8676a3c" alt="Google Cloud Platform">
+    <h2>3. Google Cloud Platform (GCP)</h2>
+    <p>GCP excels in AI, machine learning, and data analytics. Tools like BigQuery, AI Hub, and Cloud Functions allow
+      developers to process large datasets and deploy serverless applications efficiently.</p>
+    <img src="https://images.unsplash.com/photo-1616178269807-3d70d8676a3c" alt="Google Cloud Platform">
 
-<h2>4. IBM Cloud</h2>
-<p>IBM Cloud focuses on hybrid cloud solutions, AI services, and enterprise-grade applications. Developers can use Watson AI, Kubernetes, and cloud-native tools to build intelligent applications.</p>
-<img src="https://images.unsplash.com/photo-1616247501860-6c1d0d2f8f3c" alt="IBM Cloud">
+    <h2>4. IBM Cloud</h2>
+    <p>IBM Cloud focuses on hybrid cloud solutions, AI services, and enterprise-grade applications. Developers can use
+      Watson AI, Kubernetes, and cloud-native tools to build intelligent applications.</p>
+    <img src="https://images.unsplash.com/photo-1616247501860-6c1d0d2f8f3c" alt="IBM Cloud">
 
-<h2>5. Oracle Cloud</h2>
-<p>Oracle Cloud provides database-driven cloud solutions, infrastructure services, and enterprise apps. Developers can leverage Oracle’s autonomous databases and cloud tools for performance-critical applications.</p>
-<img src="https://images.unsplash.com/photo-1617039159427-9b3f0fdf6e35" alt="Oracle Cloud">
+    <h2>5. Oracle Cloud</h2>
+    <p>Oracle Cloud provides database-driven cloud solutions, infrastructure services, and enterprise apps. Developers
+      can leverage Oracle’s autonomous databases and cloud tools for performance-critical applications.</p>
+    <img src="https://images.unsplash.com/photo-1617039159427-9b3f0fdf6e35" alt="Oracle Cloud">
 
-<h2>Conclusion</h2>
-<p>Understanding these cloud platforms gives developers the flexibility to choose the right tools for their applications, optimize costs, and scale efficiently. Learning cloud services is essential for modern development in 2026.</p>
+    <h2>Conclusion</h2>
+    <p>Understanding these cloud platforms gives developers the flexibility to choose the right tools for their
+      applications, optimize costs, and scale efficiently. Learning cloud services is essential for modern development
+      in 2026.</p>
 
-</div>
+  </div>
 
-<button id="topBtn">↑</button>
+  <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-// Theme toggle
-const toggle = document.getElementById("toggleTheme");
-toggle.onclick = ()=>{
-  document.body.classList.toggle("light");
-  toggle.classList.toggle("fa-moon");
-  toggle.classList.toggle("fa-sun");
-};
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById("toggleTheme");
+    toggle.onclick = () => {
+      document.body.classList.toggle("light");
+      toggle.classList.toggle("fa-moon");
+      toggle.classList.toggle("fa-sun");
+    };
 
-// To-top button
-const topBtn = document.getElementById("topBtn");
-window.onscroll = ()=>{ topBtn.style.display = (window.scrollY>300)?"block":"none"; };
-topBtn.onclick = ()=>{ window.scrollTo({top:0,behavior:"smooth"}); };
+    // To-top button
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => { topBtn.style.display = (window.scrollY > 300) ? "block" : "none"; };
+    topBtn.onclick = () => { window.scrollTo({ top: 0, behavior: "smooth" }); };
 
-// Copy code function
-function copyCode(btn){
-  const code = btn.parentElement.querySelector('pre').innerText;
-  navigator.clipboard.writeText(code);
-  btn.innerText='Copied!';
-  setTimeout(()=>{btn.innerText='Copy';},1500);
-}
-</script>
+    // Copy code function
+    function copyCode(btn) {
+      const code = btn.parentElement.querySelector('pre').innerText;
+      navigator.clipboard.writeText(code);
+      btn.innerText = 'Copied!';
+      setTimeout(() => { btn.innerText = 'Copy'; }, 1500);
+    }
+  </script>
 
 </body>
+
 </html>

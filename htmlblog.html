@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Story of HTML: History, Importance & Uses</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
@@ -107,7 +108,7 @@
     }
 
     .Berners-Lee {
-      
+
       width: 50%;
       height: 80vh;
       border-radius: 12px;
@@ -116,15 +117,16 @@
       object-position: top; */
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
+
     .img1 {
-        width: 80%;
-        height: 80vh;
-        margin:20px 10%;
-        border-radius: 20px;
-        border: 1px solid #00BFFF;
-        object-fit:fill;
-         
-         
+      width: 80%;
+      height: 80vh;
+      margin: 20px 10%;
+      border-radius: 20px;
+      border: 1px solid #00BFFF;
+      object-fit: fill;
+
+
 
     }
 
@@ -141,34 +143,38 @@
         font-size: 16px;
       }
 
-      .Berners-Lee,.img1 {
-        width:90%;
+      .Berners-Lee,
+      .img1 {
+        width: 90%;
         height: auto;
         margin: auto 5%;
-          border-radius: 20px;
+        border-radius: 20px;
       }
     }
-      /* CSS */
-  #scrollTop {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #007BFF; /* button color */
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    display: none; /* initially hidden */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.3s, transform 0.3s;
-  }
 
-  #scrollTop:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-  }
+    /* CSS */
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #007BFF;
+      /* button color */
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      /* initially hidden */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #scrollTop:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
   </style>
 </head>
 
@@ -181,12 +187,16 @@
 
   <div class="container">
     <h1>The Story of HTML: History, Importance & Uses</h1>
-    <p>HTML, or HyperText Markup Language, is the backbone of the web. But did you know it was first developed in the early 1990s? Tim Berners-Lee, a scientist at CERN, created HTML to share documents over the internet in a standardized way. His goal was simple: make it easy for anyone to access and share information online.</p>
+    <p>HTML, or HyperText Markup Language, is the backbone of the web. But did you know it was first developed in the
+      early 1990s? Tim Berners-Lee, a scientist at CERN, created HTML to share documents over the internet in a
+      standardized way. His goal was simple: make it easy for anyone to access and share information online.</p>
 
     <img src="https://freecsc.com/Images/TimBernersLee.jpg" alt="Tim Berners-Lee" class="Berners-Lee">
 
     <h2>Why HTML Was Created</h2>
-    <p>Before HTML, sharing documents between computers was messy and inconsistent. HTML allowed text, images, and links to be structured in a way that any browser could display correctly. It was the foundation for building websites, and it quickly became the universal language of the web.</p>
+    <p>Before HTML, sharing documents between computers was messy and inconsistent. HTML allowed text, images, and links
+      to be structured in a way that any browser could display correctly. It was the foundation for building websites,
+      and it quickly became the universal language of the web.</p>
 
     <img src="img/Html illustraion.png" alt="HTML code illustration" class="img1">
 
@@ -213,10 +223,11 @@
       <li>Educational content, tutorials, and e-learning platforms</li>
     </ul>
 
-    <p>Mastering HTML gives you the confidence to start any web project and is the gateway to learning CSS, JavaScript, and beyond. It’s simple, yet incredibly powerful!</p>
+    <p>Mastering HTML gives you the confidence to start any web project and is the gateway to learning CSS, JavaScript,
+      and beyond. It’s simple, yet incredibly powerful!</p>
 
   </div>
-<button id="scrollTop">↑</button>
+  <button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
   <script>
     const themeToggle = document.getElementById('themeToggle');
     themeToggle.addEventListener('click', () => {
@@ -231,24 +242,24 @@
     });
 
     function goBack() { window.history.back(); }
-      const scrollTopBtn = document.getElementById('scrollTop');
+    const scrollTopBtn = document.getElementById('scrollTop');
 
-  // Show button after scrolling 200px
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollTopBtn.style.display = "block";
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
-  };
+    // Show button after scrolling 200px
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
 
-  // Scroll to top on click
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    // Scroll to top on click
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
   </script>
 
 </body>
